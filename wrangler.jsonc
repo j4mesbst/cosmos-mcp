@@ -1,0 +1,8 @@
+{
+  "name": "cosmos-mcp",
+  "main": "remote/worker.mjs",
+  "compatibility_date": "2026-11-25",
+  "compatibility_flags": ["nodejs_compat"],
+  "workers_dev": true,
+  "preview_urls": false
+}

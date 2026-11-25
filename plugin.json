@@ -1,0 +1,60 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "cosmos",
+  "version": "2.4.1",
+  "description": "Research screenshot flows, generate design tokens, implement with real components and verify rendered UI.",
+  "author": {
+    "name": "Cosmos",
+    "email": "hello@cosmos.design",
+    "url": "https://cosmos.design"
+  },
+  "homepage": "https://cosmos.design",
+  "license": "UNLICENSED",
+  "keywords": [
+    "design",
+    "motion",
+    "apps",
+    "sites"
+  ],
+  "extensions": {
+    "com.openai": {
+      "interface": {
+        "displayName": "Cosmos",
+        "shortDescription": "Design with visual references",
+        "longDescription": "Cosmos searches and opens design references, generates design files with UI/UX Pro Max, verifies HeroUI components and exact theSVG brand assets, and compares the rendered interface with its references.",
+        "developerName": "Cosmos",
+        "category": "Creativity",
+        "capabilities": [
+          "Search and open screenshot flows",
+          "Generate design tokens and use real UI components",
+          "Verify code and rendered interface evidence"
+        ],
+        "websiteURL": "https://cosmos.design",
+        "supportURL": "https://cosmos.design/about.html",
+        "privacyPolicyURL": "https://cosmos.design/privacy.html",
+        "termsOfServiceURL": "https://cosmos.design/terms.html",
+        "defaultPrompt": [
+          "Search the design library for Grok chat screens.",
+          "Design an original SwiftUI chat using Cosmos references.",
+          "Audit my landing page for mobile layout and keyboard access."
+        ],
+        "brandColor": "#111111",
+        "brandColorDark": "#F5F5F5",
+        "logo": "./assets/logo.png",
+        "logoDark": "./assets/logo-dark.png",
+        "composerIcon": "./assets/icon.png",
+        "composerIconDark": "./assets/icon-dark.png"
+      },
+      "onboardingSkill": "./skills/get-started/SKILL.md",
+      "publication": {
+        "release_notes": "Measure agreed visible design choices, require real keyboard state changes, and bind review to a browser audit run by Cosmos.",
+        "translations": {
+          "fr-FR": {
+            "subtitle": "Design et références visuelles",
+            "description": "Cosmos relie les références visuelles à de vrais fichiers de design, aux composants HeroUI, aux logos theSVG et à la vérification du rendu."
+          }
+        }
+      }
+    }
+  }
+}

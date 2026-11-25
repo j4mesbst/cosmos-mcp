@@ -1,0 +1,14 @@
+node_modules/
+.wrangler/
+__pycache__/
+*.py[cod]
+.DS_Store
+.env
+.env.*
+.dev.vars
+.dev.vars.*
+*.pem
+*.key
+*.p12
+credentials.json
+secrets.json

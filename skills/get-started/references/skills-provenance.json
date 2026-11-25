@@ -1,0 +1,58 @@
+[
+  {
+    "name": "frontend-design",
+    "sourceArchive": "skills-e4bb5d960d87126ff3b3a8af1a104b7db67560ba.zip",
+    "commit": "e4bb5d960d87126ff3b3a8af1a104b7db67560ba",
+    "mode": "all",
+    "license": "Apache-2.0"
+  },
+  {
+    "name": "web-accessibility",
+    "sourceArchive": "skills-2a415a43311584573d054b6f7702071c2bc0b370.zip",
+    "commit": "2a415a43311584573d054b6f7702071c2bc0b370",
+    "mode": "all",
+    "license": "MIT"
+  },
+  {
+    "name": "ui-ux-pro-max",
+    "sourceArchive": "ui-ux-pro-max-skill-2de1134dc4d1cfe112934611ae5803ae17a1bd7e.zip",
+    "commit": "2de1134dc4d1cfe112934611ae5803ae17a1bd7e",
+    "mode": "all",
+    "license": "MIT"
+  },
+  {
+    "name": "shadcn",
+    "sourceArchive": "ui-45bbf9ba23c9c0f63d38887947e5fb06f59c7da3.zip",
+    "commit": "45bbf9ba23c9c0f63d38887947e5fb06f59c7da3",
+    "mode": "markdown",
+    "license": "MIT"
+  },
+  {
+    "name": "impeccable",
+    "sourceArchive": "impeccable-b49177d32788f2dc585c42831d845dacf1ebed2c.zip",
+    "commit": "b49177d32788f2dc585c42831d845dacf1ebed2c",
+    "mode": "selected",
+    "license": "Apache-2.0"
+  },
+  {
+    "name": "taste-skill",
+    "sourceArchive": "taste-skill-f6b76575f949707b4e3c37cd86cb44b0b98643e8.zip",
+    "commit": "f6b76575f949707b4e3c37cd86cb44b0b98643e8",
+    "mode": "selected",
+    "license": "MIT"
+  },
+  {
+    "name": "superpowers",
+    "sourceArchive": "superpowers-22f0b463e7a5e579904dd6211a520321035526f7.zip",
+    "commit": "22f0b463e7a5e579904dd6211a520321035526f7",
+    "mode": "selected",
+    "license": "MIT"
+  },
+  {
+    "name": "web-design-guidelines",
+    "sourceArchive": "agent-skills-1a2c79d4e6c4a2283dc2c614b6538cbe1ed5ca62.zip",
+    "commit": "1a2c79d4e6c4a2283dc2c614b6538cbe1ed5ca62",
+    "mode": "selected",
+    "license": "MIT"
+  }
+]

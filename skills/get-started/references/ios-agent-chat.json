@@ -1,0 +1,15 @@
+{
+  "id": "ios-agent-chat",
+  "guidance": "Compare at least two reference states. Study the information hierarchy and compare at component scale. For Grok Bot, inspect 029 (idle), 035 (draft), 036/037 (outgoing and waiting) and the desktop view 080–082 if needed. Keep the requested white canvas. Give the active agent an original avatar, a back action and a distinct computer action. Remove product mastheads and decorative separators. Put send inside the input capsule, leaving the auxiliary plus outside. Match the relative geometry of these controls, then inspect the real render again after corrections.",
+  "regions": {
+    "canvas": "White chat surface without a decorative masthead or divider",
+    "back": "Back chevron at leading edge with a usable target",
+    "agent": "Active agent name beside a compact original avatar",
+    "avatar": "Original mark inside agent chip, legible at small size",
+    "computer": "Computer action at trailing edge leading to the agent workspace",
+    "messages": "Incoming bubbles aligned left low on the initial screen, with space above",
+    "composer": "Input capsule at the bottom of the conversation",
+    "add": "Separate circular auxiliary button",
+    "send": "Trailing compact send control inside the composer"
+  }
+}

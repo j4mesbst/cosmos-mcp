@@ -1,0 +1,100 @@
+{
+  "frontend-design": {
+    "apply": "Choose a distinctive visual direction before writing UI code.",
+    "web": [
+      "Derive the hero composition from the product's strongest visible proof. Establish an alignment grid, a type hierarchy, and one intentional focal point before styling supporting sections.",
+      "Write two plausible visual directions and choose the more product-specific one. Carry its typography, spacing, and color decisions into the actual component styles."
+    ],
+    "check": "Point to the implemented hero, the visible product proof, and one deliberate departure from the obvious template.",
+    "ios": [
+      "Use the most useful screen state as the starting point. Decide the visual hierarchy and one product-specific focal point, then apply them to the native layout.",
+      "Turn reference observations into an original color and type system. Keep native navigation, input and safe areas familiar."
+    ]
+  },
+  "ui-ux-pro-max": {
+    "apply": "Translate the brief into a small consistent design system.",
+    "web": [
+      "Define reusable tokens for surface, foreground, accent, type, spacing and interaction states. Resolve contrast and density before choosing ornamental details.",
+      "Design the primary journey and include useful empty, loading, error and success states wherever the product actually needs them."
+    ],
+    "ios": [
+      "Use semantic colors, system text styles and native controls. Test the primary journey at larger Dynamic Type sizes.",
+      "Keep actionable states, hit areas and spacing consistent with the app's existing navigation and components."
+    ],
+    "check": "Identify the tokens and interaction states implemented in code. Treat any unverified platform behavior as pending."
+  },
+  "taste-skill": {
+    "apply": "Refine the copy, composition and rhythm around what the product does.",
+    "web": [
+      "Name the product and user outcome in plain language. Give each section one purpose and remove claims or badges without evidence.",
+      "Use shared alignment and varied section density. Reserve motion for a meaningful entrance, transition or input response and provide a reduced-motion path."
+    ],
+    "check": "Verify the landing reads in order on a narrow viewport and the primary action leads somewhere useful.",
+    "ios": [
+      "Make the empty, drafting and submitted states read clearly in the user’s language. Give each view one primary purpose.",
+      "Keep visual rhythm consistent across the timeline and composer. Use motion only for state changes that benefit from it and honor Reduce Motion."
+    ]
+  },
+  "impeccable": {
+    "apply": "Inspect the actual rendered result and fix the most consequential problem.",
+    "web": [
+      "Decide whether the page persuades, supports a task, or serves reading. Judge the hierarchy, typography, and interaction states against that goal in the actual captures.",
+      "Record a visible issue, its user impact and precise location. Apply a targeted fix and inspect a fresh capture under the same conditions."
+    ],
+    "ios": [
+      "Inspect a simulator or device capture of the primary state and one stress state, such as larger type. Check layout priority, navigation and touch targets.",
+      "Fix the most consequential visible problem and rerun the same state. Leave the visual check pending when a capture is unavailable."
+    ],
+    "check": "Link the actual evidence and one correction or pass condition per inspected state."
+  },
+  "web-accessibility": {
+    "apply": "Implement and verify keyboard and screen-reader access to the primary flow.",
+    "web": [
+      "Use native elements and visible labels. Ensure meaningful accessible names, logical Tab order, visible focus, and announcements for relevant state changes.",
+      "Exercise the primary flow by keyboard. Verify measured contrast, navigation landmarks, target size and reduced-motion behavior where applicable."
+    ],
+    "check": "Record keyboard steps and reported outcomes. Distinguish spot checks from a full accessibility audit."
+  },
+  "web-design-guidelines": {
+    "apply": "Find reproducible web UI defects and make them actionable.",
+    "web": [
+      "Inspect narrow and wide layouts, long content, focus, forms, loading and error recovery as applicable. Exercise links, filters and buttons in the rendered page.",
+      "Give each confirmed finding a location, reproduction step, impact and targeted fix. Recheck after changes and state which conditions remain unmeasured."
+    ],
+    "check": "Record viewport sizes, interaction exercised, overflow, and any console errors."
+  },
+  "shadcn": {
+    "apply": "Reuse the project's installed shadcn primitives and conventions.",
+    "web": [
+      "Inspect components.json, existing UI imports and installed dependencies. Determine which primitive implementation the project uses before composing a control.",
+      "Use the project’s shadcn Button for suitable buttons and its Textarea or Dialog when appropriate. Respect existing variants and tokens, and verify keyboard behavior."
+    ],
+    "check": "Point to an existing imported primitive or explain why a new one is needed."
+  },
+  "superpowers": {
+    "apply": "Verify behavior with fresh evidence before claiming completion.",
+    "web": [
+      "For a defect, capture a reproducible failing case and trace its cause before patching. Exercise the same case after the patch.",
+      "Run relevant existing checks and inspect current output. Report the exact evidence and name any checks that could not run."
+    ],
+    "ios": [
+      "For a defect, reproduce the exact navigation or state on the target device or simulator before patching when available.",
+      "Run relevant build and interaction checks and confirm the output. Distinguish source inspection from a native execution."
+    ],
+    "check": "Report the executed check, result and any specific limitation."
+  },
+  "heroui": {
+    "apply": "Use verified HeroUI primitives for React UI.",
+    "web": [
+      "Install the pinned React and styles packages. Read the matching local component documentation."
+    ],
+    "check": "Verify package versions, imports, browser components, and keyboard interaction."
+  },
+  "thesvg": {
+    "apply": "Render real brand marks from the approved local catalogue.",
+    "web": [
+      "Declare brand slugs, retrieve each SVG, and render the exact asset with an accessible name."
+    ],
+    "check": "Verify SHA-256 on disk and in Chromium, or record why the brief needs no third-party marks."
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "url": "http://127.0.0.1:4191/",
+  "designProbes": {
+    "composition": {"selector":"#messages p","text":"Salut, je suis Sillage."},
+    "copy": {"selector":"#agent-name","text":"Sillage"},
+    "token": {"selector":"#agent-name","property":"color","token":"--cosmos-foreground"}
+  },
+  "referenceTargets": ["#chat","#back","#agent","#avatar","#computer","#messages","#composer","#add","#send"],
+  "agentChat": {
+    "canvas":"#chat","back":"#back","agent":"#agent","avatar":"#avatar","computer":"#computer",
+    "messages":"#messages","composer":"#composer","add":"#add","send":"#send"
+  },
+  "agentChatDraft": {"selector":"#draft","text":"Repère · Passerelle nord"},
+  "steps": [
+    {"action":"press","selector":"#back","value":"Enter"},
+    {"action":"visible","selector":"#threads-title"},
+    {"action":"press","selector":"#reopen","value":"Enter"},
+    {"action":"press","selector":"#add","value":"Enter"},
+    {"action":"value","selector":"#draft","value":"Repère · "},
+    {"action":"fill","selector":"#draft","value":"Repère · Passerelle nord"},
+    {"action":"press","selector":"#send","value":"Enter"},
+    {"action":"text","selector":"#messages .sent","value":"Passerelle nord"},
+    {"action":"press","selector":"#computer","value":"Enter"},
+    {"action":"text","selector":"#markers li","value":"Passerelle nord"}
+  ]
+}

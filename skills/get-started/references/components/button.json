@@ -1,0 +1,13 @@
+{
+  "registry": "shadcn/ui new-york-v4",
+  "source": "https://github.com/shadcn-ui/ui/blob/45bbf9ba23c9c0f63d38887947e5fb06f59c7da3/apps/v4/registry/new-york-v4/ui/button.tsx",
+  "license": "MIT",
+  "path": "src/components/ui/button.tsx",
+  "dependencies": [
+    "@radix-ui/react-slot",
+    "class-variance-authority",
+    "clsx",
+    "tailwind-merge"
+  ],
+  "adaptation": "Local cn and Radix Slot import paths for standalone React projects."
+}
