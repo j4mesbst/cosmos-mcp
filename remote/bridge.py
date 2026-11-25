@@ -65,6 +65,9 @@ class Handler(BaseHTTPRequestHandler):
         return True
 
     def do_GET(self):
+        if self.path == "/healthz":
+            self.send(200, b'{"status":"ok"}')
+            return
         if self.authorized():
             self.send(405)
 
@@ -121,9 +124,10 @@ if __name__ == "__main__":
     if len(TOKEN) < 24:
         sys.exit("Set COSMOS_ORIGIN_TOKEN to a strong secret.")
     parser = argparse.ArgumentParser()
-    parser.add_argument("--port", type=int, default=8765)
-    port = parser.parse_args().port
-    with ThreadingHTTPServer(("127.0.0.1", port), Handler) as http:
+    parser.add_argument("--host", default="127.0.0.1", choices=("127.0.0.1", "0.0.0.0"))
+    parser.add_argument("--port", type=int, default=os.environ.get("PORT", 8765))
+    args = parser.parse_args()
+    with ThreadingHTTPServer((args.host, args.port), Handler) as http:
         try:
             http.serve_forever()
         finally:

@@ -1,0 +1,11 @@
+services:
+  - type: web
+    name: cosmos-mcp-origin
+    runtime: docker
+    plan: free
+    dockerfilePath: ./remote/Dockerfile.render
+    healthCheckPath: /healthz
+    autoDeployTrigger: "off"
+    envVars:
+      - key: COSMOS_ORIGIN_TOKEN
+        sync: false

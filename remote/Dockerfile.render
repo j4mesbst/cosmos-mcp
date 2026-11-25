@@ -1,0 +1,14 @@
+FROM node:24-bookworm-slim
+
+RUN apt-get update \
+    && apt-get install -y --no-install-recommends chromium python3 \
+    && rm -rf /var/lib/apt/lists/*
+
+WORKDIR /opt/cosmos
+COPY --chown=node:node skills/ ./skills/
+COPY --chown=node:node remote/bridge.py ./remote/bridge.py
+
+ENV PYTHONDONTWRITEBYTECODE=1 COSMOS_CHROMIUM=/usr/bin/chromium
+USER node
+EXPOSE 10000
+CMD ["python3", "remote/bridge.py", "--host", "0.0.0.0"]

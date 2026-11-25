@@ -1,0 +1,6 @@
+**
+!skills/
+!skills/**
+!remote/
+!remote/bridge.py
+!remote/Dockerfile.render
