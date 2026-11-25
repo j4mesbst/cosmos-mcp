@@ -1,0 +1,990 @@
+{
+  "server": {
+    "name": "cosmos-local",
+    "version": "2.4.1"
+  },
+  "direction": {
+    "workflowId": "0056ac362b534a688a9bb41d1809f421",
+    "stage": "implementation",
+    "direction": "Atelier web français sur fond blanc et quadrillage fin",
+    "visualSignature": "Grand texte sélectionné en bleu",
+    "primaryAction": "Voir les projets",
+    "copySample": "Studio web indépendant",
+    "tokenGenerator": "ui-ux-pro-max/scripts/search.py",
+    "skillPlan": {
+      "frontend-design": {
+        "skill": "frontend-design",
+        "application": "Composed the title and a blue selection on a grid.",
+        "verification": "Check the rendered result and src/main.jsx.",
+        "renderCheck": {
+          "selector": ".selected-text",
+          "property": "font-size",
+          "operator": "min-px",
+          "value": "40"
+        }
+      },
+      "heroui": {
+        "skill": "heroui",
+        "application": "Render the selected components from HeroUI.",
+        "verification": "Check the rendered result and src/main.jsx."
+      },
+      "impeccable": {
+        "skill": "impeccable",
+        "application": "Keep the collaboration fragment distinct from real integrations.",
+        "verification": "Check the rendered result and src/main.jsx.",
+        "renderCheck": {
+          "selector": ".selected-text",
+          "property": "background-color",
+          "operator": "equals",
+          "value": "rgba(203, 224, 255, 0.72)"
+        }
+      },
+      "superpowers": {
+        "skill": "superpowers",
+        "application": "Audit the full keyboard flow.",
+        "verification": "Check the rendered result and .cosmos/review/browser-report.json."
+      },
+      "taste-skill": {
+        "skill": "taste-skill",
+        "application": "Use a specific positioning line and direct action.",
+        "verification": "Check the rendered result and src/main.jsx."
+      },
+      "thesvg": {
+        "skill": "thesvg",
+        "application": "Render locally verified brand assets.",
+        "verification": "Check the rendered result and src/main.jsx."
+      },
+      "ui-ux-pro-max": {
+        "skill": "ui-ux-pro-max",
+        "application": "Apply a generated primary color token.",
+        "verification": "Check the rendered result and src/cosmos-tokens.css."
+      },
+      "web-accessibility": {
+        "skill": "web-accessibility",
+        "application": "Label the modal close action.",
+        "verification": "Check the rendered result and src/main.jsx."
+      },
+      "web-design-guidelines": {
+        "skill": "web-design-guidelines",
+        "application": "Provide a skip link.",
+        "verification": "Check the rendered result and src/main.jsx."
+      }
+    },
+    "auditAgentChat": {},
+    "references": [
+      "brief-001",
+      "brief-002"
+    ],
+    "referenceDecisions": [
+      {
+        "id": "brief-001",
+        "region": "Central selected title",
+        "visibleProperties": "Large black headline over pale blue selection with handles.",
+        "adaptation": "Use the original two-line Trait d’Union headline with selected blue second line.",
+        "renderTarget": ".selected-text"
+      },
+      {
+        "id": "brief-002",
+        "region": "Work-in-progress canvas",
+        "visibleProperties": "Quiet dotted grid with small detached work fragments.",
+        "adaptation": "Place original studio notes, tooling and a wireframe on the perimeter of the canvas.",
+        "renderTarget": "[data-fragment=collaboration]"
+      }
+    ],
+    "noReferenceReason": null,
+    "workflow": {
+      "task": "implementation",
+      "platform": "web",
+      "execute": "Apply the selected skill instructions in the implementation or review. When files can be edited, implement the requested artifact. Verify what changed and report the evidence or the exact check that was unavailable.",
+      "skills": [
+        {
+          "id": "heroui",
+          "path": "skills/heroui/SKILL.md",
+          "apply": "Use verified HeroUI primitives for React UI.",
+          "instructions": [
+            "Install the pinned React and styles packages. Read the matching local component documentation."
+          ],
+          "check": "Verify package versions, imports, browser components, and keyboard interaction."
+        },
+        {
+          "id": "thesvg",
+          "path": "skills/thesvg/SKILL.md",
+          "apply": "Render real brand marks from the approved local catalogue.",
+          "instructions": [
+            "Declare brand slugs, retrieve each SVG, and render the exact asset with an accessible name."
+          ],
+          "check": "Verify SHA-256 on disk and in Chromium, or record why the brief needs no third-party marks."
+        },
+        {
+          "id": "ui-ux-pro-max",
+          "path": "skills/ui-ux-pro-max/SKILL.md",
+          "apply": "Translate the brief into a small consistent design system.",
+          "instructions": [
+            "Define reusable tokens for surface, foreground, accent, type, spacing and interaction states. Resolve contrast and density before choosing ornamental details.",
+            "Design the primary journey and include useful empty, loading, error and success states wherever the product actually needs them."
+          ],
+          "check": "Identify the tokens and interaction states implemented in code. Treat any unverified platform behavior as pending."
+        },
+        {
+          "id": "web-accessibility",
+          "path": "skills/web-accessibility/SKILL.md",
+          "apply": "Implement and verify keyboard and screen-reader access to the primary flow.",
+          "instructions": [
+            "Use native elements and visible labels. Ensure meaningful accessible names, logical Tab order, visible focus, and announcements for relevant state changes.",
+            "Exercise the primary flow by keyboard. Verify measured contrast, navigation landmarks, target size and reduced-motion behavior where applicable."
+          ],
+          "check": "Record keyboard steps and reported outcomes. Distinguish spot checks from a full accessibility audit."
+        },
+        {
+          "id": "superpowers",
+          "path": "skills/superpowers/SKILL.md",
+          "apply": "Verify behavior with fresh evidence before claiming completion.",
+          "instructions": [
+            "For a defect, capture a reproducible failing case and trace its cause before patching. Exercise the same case after the patch.",
+            "Run relevant existing checks and inspect current output. Report the exact evidence and name any checks that could not run."
+          ],
+          "check": "Report the executed check, result and any specific limitation."
+        }
+      ],
+      "completionChecks": [],
+      "evidence": "Open the actual page and inspect mobile, tablet and desktop. Exercise the primary path using keyboard and pointer, record console and overflow checks, and retest after corrections."
+    },
+    "next": "Call get_design_assets for the generated files. Implement and then submit the actual entry, imported design files and component sources."
+  },
+  "review": {
+    "workflowId": "0056ac362b534a688a9bb41d1809f421",
+    "stage": "complete",
+    "references": [
+      "brief-001",
+      "brief-002"
+    ],
+    "pendingChecks": [],
+    "renderEvidence": "Chromium 390, 768, 1440 plus paired brief references.",
+    "visualCorrection": "Kept decorative elements at the perimeter of the central headline.",
+    "checks": [
+      {
+        "check": "render",
+        "status": "pass",
+        "evidence": "Executed browser audit."
+      },
+      {
+        "check": "responsive",
+        "status": "pass",
+        "evidence": "Executed browser audit."
+      },
+      {
+        "check": "keyboard",
+        "status": "pass",
+        "evidence": "Executed browser audit."
+      },
+      {
+        "check": "primary-flow",
+        "status": "pass",
+        "evidence": "Executed browser audit."
+      },
+      {
+        "check": "reduced-motion",
+        "status": "pass",
+        "evidence": "Executed browser audit."
+      }
+    ],
+    "openedScreenshots": [
+      {
+        "path": ".cosmos/review/render-390.png",
+        "width": 390,
+        "height": 900,
+        "sha256": "35a3b12177298d7e32b8d024c9ad72a9a95aa2f83dda48989924fbf458e58856"
+      },
+      {
+        "path": ".cosmos/review/render-1440.png",
+        "width": 1440,
+        "height": 900,
+        "sha256": "fe29745794df64b1ca3615f9399db57d528e5ae9eeb4eda45a8ae448e077646c"
+      }
+    ],
+    "sourceVerification": {
+      "entry": "src/main.jsx",
+      "tokenFile": "src/cosmos-tokens.css",
+      "approvedCopyFoundInSource": true,
+      "shadcnButton": null,
+      "artifacts": {
+        "package.json": "44456cbdb7affda789557330a6e4f68ed26b75ba9bdca6153f0e5865252546b7",
+        "index.html": "f7684bdd457c12e1791f38e3cb7e8ec5f59316c3c1e750c74478bf73f908619e",
+        "src/cosmos-tokens.css": "f229eee9e47a94915d6c29c9f495788d8458642e6f1b4922d29c4c5c51d19970",
+        "src/main.jsx": "55cb7d6ab0db070543decd3d40b5500df75ff80f74bb7fee09a75cda0f016851",
+        "src/styles.css": "2a69b7fa1aa66d2fc5e5add9a89b4c6e7441a6b48528dcce05c8e3d6ee2b6f3b"
+      },
+      "heroui": {
+        "version": "3.2.8",
+        "components": [
+          "Button",
+          "Card",
+          "Link",
+          "Modal"
+        ]
+      },
+      "theSVG": {
+        "figma": "edd1f3ddaafb525eda38bd975b675aa799393b90d8b52583deafdc2f7a4840dd",
+        "notion": "0d94471649fb9badd434394846079c279876fdd224cf49ed46b6c09fbd3a041f",
+        "vercel": "a9ae5ad4ea10c39122cc6b07927132f9c684dd2f1a7bef5337b0eb7364e139ae"
+      }
+    },
+    "referenceLimit": null,
+    "referenceStatus": "compared",
+    "referenceFailures": {},
+    "comparisons": [
+      {
+        "id": "brief-001",
+        "screenshot": ".cosmos/review/render-1440.png",
+        "imageBlocks": [
+          3,
+          4
+        ],
+        "referenceSize": [
+          2048,
+          985
+        ],
+        "renderSize": [
+          1440,
+          900
+        ],
+        "referenceSha256": "bd45cf7390db5b58cfd734657cd4a3fc95c41b8317debf2171bab47b510a312e",
+        "renderSha256": "fe29745794df64b1ca3615f9399db57d528e5ae9eeb4eda45a8ae448e077646c",
+        "decisionIndices": [
+          1
+        ]
+      },
+      {
+        "id": "brief-002",
+        "screenshot": ".cosmos/review/render-1440.png",
+        "imageBlocks": [
+          5,
+          6
+        ],
+        "referenceSize": [
+          2048,
+          985
+        ],
+        "renderSize": [
+          1440,
+          900
+        ],
+        "referenceSha256": "22fccac16339dda07280409a8fbf9bbe8f476aca55bffb41358c6ccf5497c2a1",
+        "renderSha256": "fe29745794df64b1ca3615f9399db57d528e5ae9eeb4eda45a8ae448e077646c",
+        "decisionIndices": [
+          2
+        ]
+      }
+    ],
+    "visualResults": [
+      {
+        "decisionIndex": 1,
+        "screenshot": ".cosmos/review/render-1440.png",
+        "status": "pass",
+        "observation": "Use the original two-line Trait d’Union headline with selected blue second line."
+      },
+      {
+        "decisionIndex": 2,
+        "screenshot": ".cosmos/review/render-1440.png",
+        "status": "pass",
+        "observation": "Place original studio notes, tooling and a wireframe on the perimeter of the canvas."
+      }
+    ],
+    "browserVerification": {
+      "path": ".cosmos/review/browser-report.json",
+      "widths": [
+        390,
+        768,
+        1440
+      ],
+      "screenshots": {
+        ".cosmos/review/render-390.png": "35a3b12177298d7e32b8d024c9ad72a9a95aa2f83dda48989924fbf458e58856",
+        ".cosmos/review/render-768.png": "c38c091f4338a130350192b983e1e72825759dc70a815b7d41408beac5a93190",
+        ".cosmos/review/render-1440.png": "fe29745794df64b1ca3615f9399db57d528e5ae9eeb4eda45a8ae448e077646c"
+      },
+      "viewports": [
+        {
+          "width": 390,
+          "screenshot": ".cosmos/review/render-390.png",
+          "designProbes": [
+            {
+              "key": "composition",
+              "selector": ".selected-text",
+              "text": "pour le web.",
+              "actual": "pour le web.",
+              "expected": "pour le web."
+            },
+            {
+              "key": "copy",
+              "selector": ".studio-label",
+              "text": "STUDIO WEB INDÉPENDANT",
+              "actual": "STUDIO WEB INDÉPENDANT",
+              "expected": "STUDIO WEB INDÉPENDANT"
+            },
+            {
+              "key": "token",
+              "selector": ".studio-label",
+              "property": "color",
+              "token": "--cosmos-primary",
+              "actual": "rgb(24, 24, 27)",
+              "expected": "rgb(24, 24, 27)"
+            }
+          ],
+          "referenceTargets": [
+            "#hero-title",
+            ".selected-text",
+            "[data-fragment=collaboration]",
+            "[data-fragment=wireframe]"
+          ],
+          "uiKit": {
+            "controls": [
+              {
+                "status": "heroui",
+                "slot": "link",
+                "label": "Aller au contenu"
+              },
+              {
+                "status": "heroui",
+                "slot": "link",
+                "label": "Trait d’Union, accueil"
+              },
+              {
+                "status": "heroui",
+                "slot": "link",
+                "label": "Projets"
+              },
+              {
+                "status": "heroui",
+                "slot": "link",
+                "label": "Contact"
+              },
+              {
+                "status": "heroui",
+                "slot": "link",
+                "label": "Voir les projets"
+              },
+              {
+                "status": "heroui",
+                "slot": "button",
+                "label": "Voir le projet Sillage"
+              },
+              {
+                "status": "heroui",
+                "slot": "button",
+                "label": "Voir le projet Ligne Claire"
+              },
+              {
+                "status": "heroui",
+                "slot": "link",
+                "label": "Écrire au studio"
+              },
+              {
+                "status": "heroui",
+                "slot": "modal-close-trigger",
+                "label": "Fermer le projet"
+              },
+              {
+                "status": "heroui",
+                "slot": "button",
+                "label": "Retour aux projets"
+              }
+            ],
+            "logos": [
+              {
+                "slug": "figma",
+                "status": "loaded",
+                "sha256": "edd1f3ddaafb525eda38bd975b675aa799393b90d8b52583deafdc2f7a4840dd"
+              },
+              {
+                "slug": "notion",
+                "status": "loaded",
+                "sha256": "0d94471649fb9badd434394846079c279876fdd224cf49ed46b6c09fbd3a041f"
+              },
+              {
+                "slug": "vercel",
+                "status": "loaded",
+                "sha256": "a9ae5ad4ea10c39122cc6b07927132f9c684dd2f1a7bef5337b0eb7364e139ae"
+              }
+            ],
+            "slots": [
+              "link",
+              "card",
+              "card-header",
+              "card-title",
+              "card-description",
+              "card-footer",
+              "button",
+              "modal-backdrop",
+              "modal-container",
+              "modal-dialog",
+              "modal-close-trigger",
+              "modal-header",
+              "modal-heading",
+              "modal-body",
+              "modal-footer"
+            ]
+          },
+          "skillVisuals": [
+            {
+              "skill": "frontend-design",
+              "selector": ".selected-text",
+              "property": "font-size",
+              "operator": "min-px",
+              "value": "40",
+              "actual": "47.58px",
+              "pass": true
+            },
+            {
+              "skill": "impeccable",
+              "selector": ".selected-text",
+              "property": "background-color",
+              "operator": "equals",
+              "value": "rgba(203, 224, 255, 0.72)",
+              "actual": "rgba(203, 224, 255, 0.72)",
+              "pass": true
+            }
+          ],
+          "keyboardTransition": true,
+          "overflow": false,
+          "axeViolations": 0,
+          "keyboard": true,
+          "reducedMotion": true,
+          "primaryFlow": true,
+          "errors": 0,
+          "violations": []
+        },
+        {
+          "width": 768,
+          "screenshot": ".cosmos/review/render-768.png",
+          "designProbes": [
+            {
+              "key": "composition",
+              "selector": ".selected-text",
+              "text": "pour le web.",
+              "actual": "pour le web.",
+              "expected": "pour le web."
+            },
+            {
+              "key": "copy",
+              "selector": ".studio-label",
+              "text": "STUDIO WEB INDÉPENDANT",
+              "actual": "STUDIO WEB INDÉPENDANT",
+              "expected": "STUDIO WEB INDÉPENDANT"
+            },
+            {
+              "key": "token",
+              "selector": ".studio-label",
+              "property": "color",
+              "token": "--cosmos-primary",
+              "actual": "rgb(24, 24, 27)",
+              "expected": "rgb(24, 24, 27)"
+            }
+          ],
+          "referenceTargets": [
+            "#hero-title",
+            ".selected-text",
+            "[data-fragment=collaboration]",
+            "[data-fragment=wireframe]"
+          ],
+          "uiKit": {
+            "controls": [
+              {
+                "status": "heroui",
+                "slot": "link",
+                "label": "Aller au contenu"
+              },
+              {
+                "status": "heroui",
+                "slot": "link",
+                "label": "Trait d’Union, accueil"
+              },
+              {
+                "status": "heroui",
+                "slot": "link",
+                "label": "Projets"
+              },
+              {
+                "status": "heroui",
+                "slot": "link",
+                "label": "Contact"
+              },
+              {
+                "status": "heroui",
+                "slot": "link",
+                "label": "Voir les projets"
+              },
+              {
+                "status": "heroui",
+                "slot": "button",
+                "label": "Voir le projet Sillage"
+              },
+              {
+                "status": "heroui",
+                "slot": "button",
+                "label": "Voir le projet Ligne Claire"
+              },
+              {
+                "status": "heroui",
+                "slot": "link",
+                "label": "Écrire au studio"
+              },
+              {
+                "status": "heroui",
+                "slot": "modal-close-trigger",
+                "label": "Fermer le projet"
+              },
+              {
+                "status": "heroui",
+                "slot": "button",
+                "label": "Retour aux projets"
+              }
+            ],
+            "logos": [
+              {
+                "slug": "figma",
+                "status": "loaded",
+                "sha256": "edd1f3ddaafb525eda38bd975b675aa799393b90d8b52583deafdc2f7a4840dd"
+              },
+              {
+                "slug": "notion",
+                "status": "loaded",
+                "sha256": "0d94471649fb9badd434394846079c279876fdd224cf49ed46b6c09fbd3a041f"
+              },
+              {
+                "slug": "vercel",
+                "status": "loaded",
+                "sha256": "a9ae5ad4ea10c39122cc6b07927132f9c684dd2f1a7bef5337b0eb7364e139ae"
+              }
+            ],
+            "slots": [
+              "link",
+              "card",
+              "card-header",
+              "card-title",
+              "card-description",
+              "card-footer",
+              "button",
+              "modal-backdrop",
+              "modal-container",
+              "modal-dialog",
+              "modal-close-trigger",
+              "modal-header",
+              "modal-heading",
+              "modal-body",
+              "modal-footer"
+            ]
+          },
+          "skillVisuals": [
+            {
+              "skill": "frontend-design",
+              "selector": ".selected-text",
+              "property": "font-size",
+              "operator": "min-px",
+              "value": "40",
+              "actual": "70px",
+              "pass": true
+            },
+            {
+              "skill": "impeccable",
+              "selector": ".selected-text",
+              "property": "background-color",
+              "operator": "equals",
+              "value": "rgba(203, 224, 255, 0.72)",
+              "actual": "rgba(203, 224, 255, 0.72)",
+              "pass": true
+            }
+          ],
+          "keyboardTransition": true,
+          "overflow": false,
+          "axeViolations": 0,
+          "keyboard": true,
+          "reducedMotion": true,
+          "primaryFlow": true,
+          "errors": 0,
+          "violations": []
+        },
+        {
+          "width": 1440,
+          "screenshot": ".cosmos/review/render-1440.png",
+          "designProbes": [
+            {
+              "key": "composition",
+              "selector": ".selected-text",
+              "text": "pour le web.",
+              "actual": "pour le web.",
+              "expected": "pour le web."
+            },
+            {
+              "key": "copy",
+              "selector": ".studio-label",
+              "text": "STUDIO WEB INDÉPENDANT",
+              "actual": "STUDIO WEB INDÉPENDANT",
+              "expected": "STUDIO WEB INDÉPENDANT"
+            },
+            {
+              "key": "token",
+              "selector": ".studio-label",
+              "property": "color",
+              "token": "--cosmos-primary",
+              "actual": "rgb(24, 24, 27)",
+              "expected": "rgb(24, 24, 27)"
+            }
+          ],
+          "referenceTargets": [
+            "#hero-title",
+            ".selected-text",
+            "[data-fragment=collaboration]",
+            "[data-fragment=wireframe]"
+          ],
+          "uiKit": {
+            "controls": [
+              {
+                "status": "heroui",
+                "slot": "link",
+                "label": "Aller au contenu"
+              },
+              {
+                "status": "heroui",
+                "slot": "link",
+                "label": "Trait d’Union, accueil"
+              },
+              {
+                "status": "heroui",
+                "slot": "link",
+                "label": "Projets"
+              },
+              {
+                "status": "heroui",
+                "slot": "link",
+                "label": "Contact"
+              },
+              {
+                "status": "heroui",
+                "slot": "link",
+                "label": "Voir les projets"
+              },
+              {
+                "status": "heroui",
+                "slot": "button",
+                "label": "Voir le projet Sillage"
+              },
+              {
+                "status": "heroui",
+                "slot": "button",
+                "label": "Voir le projet Ligne Claire"
+              },
+              {
+                "status": "heroui",
+                "slot": "link",
+                "label": "Écrire au studio"
+              },
+              {
+                "status": "heroui",
+                "slot": "modal-close-trigger",
+                "label": "Fermer le projet"
+              },
+              {
+                "status": "heroui",
+                "slot": "button",
+                "label": "Retour aux projets"
+              }
+            ],
+            "logos": [
+              {
+                "slug": "figma",
+                "status": "loaded",
+                "sha256": "edd1f3ddaafb525eda38bd975b675aa799393b90d8b52583deafdc2f7a4840dd"
+              },
+              {
+                "slug": "notion",
+                "status": "loaded",
+                "sha256": "0d94471649fb9badd434394846079c279876fdd224cf49ed46b6c09fbd3a041f"
+              },
+              {
+                "slug": "vercel",
+                "status": "loaded",
+                "sha256": "a9ae5ad4ea10c39122cc6b07927132f9c684dd2f1a7bef5337b0eb7364e139ae"
+              }
+            ],
+            "slots": [
+              "link",
+              "card",
+              "card-header",
+              "card-title",
+              "card-description",
+              "card-footer",
+              "button",
+              "modal-backdrop",
+              "modal-container",
+              "modal-dialog",
+              "modal-close-trigger",
+              "modal-header",
+              "modal-heading",
+              "modal-body",
+              "modal-footer"
+            ]
+          },
+          "skillVisuals": [
+            {
+              "skill": "frontend-design",
+              "selector": ".selected-text",
+              "property": "font-size",
+              "operator": "min-px",
+              "value": "40",
+              "actual": "119.52px",
+              "pass": true
+            },
+            {
+              "skill": "impeccable",
+              "selector": ".selected-text",
+              "property": "background-color",
+              "operator": "equals",
+              "value": "rgba(203, 224, 255, 0.72)",
+              "actual": "rgba(203, 224, 255, 0.72)",
+              "pass": true
+            }
+          ],
+          "keyboardTransition": true,
+          "overflow": false,
+          "axeViolations": 0,
+          "keyboard": true,
+          "reducedMotion": true,
+          "primaryFlow": true,
+          "errors": 0,
+          "violations": []
+        }
+      ]
+    },
+    "skillEvidence": {
+      "frontend-design": {
+        "skill": "frontend-design",
+        "path": "src/main.jsx",
+        "excerpt": "className=\"selected-text\"",
+        "decision": "Composed the title and a blue selection on a grid.",
+        "fileSha256": "55cb7d6ab0db070543decd3d40b5500df75ff80f74bb7fee09a75cda0f016851",
+        "instructionSha256": "d91970639e9f5c37682ac7ab60094d35f1c7c1f38d731bd56396563aee10c1d3"
+      },
+      "heroui": {
+        "skill": "heroui",
+        "path": "src/main.jsx",
+        "excerpt": "from '@heroui/react'",
+        "decision": "Render the selected components from HeroUI.",
+        "fileSha256": "55cb7d6ab0db070543decd3d40b5500df75ff80f74bb7fee09a75cda0f016851",
+        "instructionSha256": "792cf7eea21fcd224c2aed8bc74f1bd4e3390a90b866db97ef52bca7bbe2ac24"
+      },
+      "impeccable": {
+        "skill": "impeccable",
+        "path": "src/main.jsx",
+        "excerpt": "data-fragment=\"collaboration\"",
+        "decision": "Keep the collaboration fragment distinct from real integrations.",
+        "fileSha256": "55cb7d6ab0db070543decd3d40b5500df75ff80f74bb7fee09a75cda0f016851",
+        "instructionSha256": "97912dfa716aee1f75aa75542935d3a820df1397a57870c1dafade47c7ff9e45"
+      },
+      "superpowers": {
+        "skill": "superpowers",
+        "path": ".cosmos/review/browser-report.json",
+        "excerpt": "\"primaryFlow\": true",
+        "decision": "Audit the full keyboard flow.",
+        "fileSha256": "2bf0b614a363b70780dc7faf0d4df71f1adc414315fcf8652735fa22f285938f",
+        "instructionSha256": "174cf7c3374ca8c8462323d566556fdedb0cf513b97766919556a712424c8394"
+      },
+      "taste-skill": {
+        "skill": "taste-skill",
+        "path": "src/main.jsx",
+        "excerpt": "Sites et outils numériques pour les marques indépendantes.",
+        "decision": "Use a specific positioning line and direct action.",
+        "fileSha256": "55cb7d6ab0db070543decd3d40b5500df75ff80f74bb7fee09a75cda0f016851",
+        "instructionSha256": "7552c48b6bcda864a98abcef6fde66f55542a99601c92b1a64589b41d48b1887"
+      },
+      "thesvg": {
+        "skill": "thesvg",
+        "path": "src/main.jsx",
+        "excerpt": "data-cosmos-logo",
+        "decision": "Render locally verified brand assets.",
+        "fileSha256": "55cb7d6ab0db070543decd3d40b5500df75ff80f74bb7fee09a75cda0f016851",
+        "instructionSha256": "e262f0e2581f9d7bda65f97b5e1abfeb937192985b28559447ff8156e2d00886"
+      },
+      "ui-ux-pro-max": {
+        "skill": "ui-ux-pro-max",
+        "path": "src/cosmos-tokens.css",
+        "excerpt": "--cosmos-primary:",
+        "decision": "Apply a generated primary color token.",
+        "fileSha256": "f229eee9e47a94915d6c29c9f495788d8458642e6f1b4922d29c4c5c51d19970",
+        "instructionSha256": "b4a9f6db1442abc6d245e7eec7d283f94374b7111891bb31dd1540152f8d2b73"
+      },
+      "web-accessibility": {
+        "skill": "web-accessibility",
+        "path": "src/main.jsx",
+        "excerpt": "Fermer le projet",
+        "decision": "Label the modal close action.",
+        "fileSha256": "55cb7d6ab0db070543decd3d40b5500df75ff80f74bb7fee09a75cda0f016851",
+        "instructionSha256": "6fab00fca34c0d18c98b28dbadd33fff63601282305ba8e9404dacfb971427ef"
+      },
+      "web-design-guidelines": {
+        "skill": "web-design-guidelines",
+        "path": "src/main.jsx",
+        "excerpt": "Aller au contenu",
+        "decision": "Provide a skip link.",
+        "fileSha256": "55cb7d6ab0db070543decd3d40b5500df75ff80f74bb7fee09a75cda0f016851",
+        "instructionSha256": "159b7ef43f34fe9ea2ed3a5150cea5740bb9ea12d34adf5d4e2f5598f576522d"
+      }
+    },
+    "skillPlan": {
+      "frontend-design": {
+        "skill": "frontend-design",
+        "application": "Composed the title and a blue selection on a grid.",
+        "verification": "Check the rendered result and src/main.jsx.",
+        "renderCheck": {
+          "selector": ".selected-text",
+          "property": "font-size",
+          "operator": "min-px",
+          "value": "40"
+        }
+      },
+      "heroui": {
+        "skill": "heroui",
+        "application": "Render the selected components from HeroUI.",
+        "verification": "Check the rendered result and src/main.jsx."
+      },
+      "impeccable": {
+        "skill": "impeccable",
+        "application": "Keep the collaboration fragment distinct from real integrations.",
+        "verification": "Check the rendered result and src/main.jsx.",
+        "renderCheck": {
+          "selector": ".selected-text",
+          "property": "background-color",
+          "operator": "equals",
+          "value": "rgba(203, 224, 255, 0.72)"
+        }
+      },
+      "superpowers": {
+        "skill": "superpowers",
+        "application": "Audit the full keyboard flow.",
+        "verification": "Check the rendered result and .cosmos/review/browser-report.json."
+      },
+      "taste-skill": {
+        "skill": "taste-skill",
+        "application": "Use a specific positioning line and direct action.",
+        "verification": "Check the rendered result and src/main.jsx."
+      },
+      "thesvg": {
+        "skill": "thesvg",
+        "application": "Render locally verified brand assets.",
+        "verification": "Check the rendered result and src/main.jsx."
+      },
+      "ui-ux-pro-max": {
+        "skill": "ui-ux-pro-max",
+        "application": "Apply a generated primary color token.",
+        "verification": "Check the rendered result and src/cosmos-tokens.css."
+      },
+      "web-accessibility": {
+        "skill": "web-accessibility",
+        "application": "Label the modal close action.",
+        "verification": "Check the rendered result and src/main.jsx."
+      },
+      "web-design-guidelines": {
+        "skill": "web-design-guidelines",
+        "application": "Provide a skip link.",
+        "verification": "Check the rendered result and src/main.jsx."
+      }
+    },
+    "designProfile": null,
+    "auditReportSha256": "2bf0b614a363b70780dc7faf0d4df71f1adc414315fcf8652735fa22f285938f",
+    "evidenceStatus": "Cosmos ran Chromium and checked the registered implementation evidence. Visual fidelity also involves reviewer judgment."
+  },
+  "skills": [
+    {
+      "skill": "frontend-design",
+      "sha256": "d91970639e9f5c37682ac7ab60094d35f1c7c1f38d731bd56396563aee10c1d3"
+    },
+    {
+      "skill": "heroui",
+      "sha256": "792cf7eea21fcd224c2aed8bc74f1bd4e3390a90b866db97ef52bca7bbe2ac24"
+    },
+    {
+      "skill": "impeccable",
+      "sha256": "97912dfa716aee1f75aa75542935d3a820df1397a57870c1dafade47c7ff9e45"
+    },
+    {
+      "skill": "superpowers",
+      "sha256": "174cf7c3374ca8c8462323d566556fdedb0cf513b97766919556a712424c8394"
+    },
+    {
+      "skill": "taste-skill",
+      "sha256": "7552c48b6bcda864a98abcef6fde66f55542a99601c92b1a64589b41d48b1887"
+    },
+    {
+      "skill": "thesvg",
+      "sha256": "e262f0e2581f9d7bda65f97b5e1abfeb937192985b28559447ff8156e2d00886"
+    },
+    {
+      "skill": "ui-ux-pro-max",
+      "sha256": "b4a9f6db1442abc6d245e7eec7d283f94374b7111891bb31dd1540152f8d2b73"
+    },
+    {
+      "skill": "web-accessibility",
+      "sha256": "6fab00fca34c0d18c98b28dbadd33fff63601282305ba8e9404dacfb971427ef"
+    },
+    {
+      "skill": "web-design-guidelines",
+      "sha256": "159b7ef43f34fe9ea2ed3a5150cea5740bb9ea12d34adf5d4e2f5598f576522d"
+    }
+  ],
+  "pairs": [
+    {
+      "id": "brief-001",
+      "screenshot": ".cosmos/review/render-1440.png",
+      "imageBlocks": [
+        3,
+        4
+      ],
+      "referenceSize": [
+        2048,
+        985
+      ],
+      "renderSize": [
+        1440,
+        900
+      ],
+      "referenceSha256": "bd45cf7390db5b58cfd734657cd4a3fc95c41b8317debf2171bab47b510a312e",
+      "renderSha256": "fe29745794df64b1ca3615f9399db57d528e5ae9eeb4eda45a8ae448e077646c",
+      "decisionIndices": [
+        1
+      ]
+    },
+    {
+      "id": "brief-002",
+      "screenshot": ".cosmos/review/render-1440.png",
+      "imageBlocks": [
+        5,
+        6
+      ],
+      "referenceSize": [
+        2048,
+        985
+      ],
+      "renderSize": [
+        1440,
+        900
+      ],
+      "referenceSha256": "22fccac16339dda07280409a8fbf9bbe8f476aca55bffb41358c6ccf5497c2a1",
+      "renderSha256": "fe29745794df64b1ca3615f9399db57d528e5ae9eeb4eda45a8ae448e077646c",
+      "decisionIndices": [
+        2
+      ]
+    }
+  ],
+  "negativeChecks": [
+    "missing references",
+    "missing skills",
+    "incomplete plan",
+    "unretrieved marks",
+    "native button",
+    "modified SVG bytes",
+    "missing visual measurements",
+    "no interaction",
+    "removed visual styling",
+    "tampered browser report",
+    "fabricated skill claims"
+  ]
+}

@@ -1,0 +1,644 @@
+{
+  "restored": {
+    "roles": {
+      "canvas": "#chat",
+      "back": "#back",
+      "agent": "#agent",
+      "avatar": "#avatar",
+      "computer": "#computer",
+      "messages": "#messages",
+      "composer": "#composer",
+      "add": "#add",
+      "send": "#send"
+    },
+    "measurements": {
+      "box": {
+        "canvas": {
+          "left": 0,
+          "top": 0,
+          "width": 390,
+          "height": 900,
+          "right": 390,
+          "bottom": 900
+        },
+        "back": {
+          "left": 18,
+          "top": 21,
+          "width": 44,
+          "height": 44,
+          "right": 62,
+          "bottom": 65
+        },
+        "agent": {
+          "left": 72,
+          "top": 21,
+          "width": 102.359375,
+          "height": 44,
+          "right": 174.359375,
+          "bottom": 65
+        },
+        "avatar": {
+          "left": 79,
+          "top": 28,
+          "width": 30,
+          "height": 30,
+          "right": 109,
+          "bottom": 58
+        },
+        "computer": {
+          "left": 328,
+          "top": 21,
+          "width": 44,
+          "height": 44,
+          "right": 372,
+          "bottom": 65
+        },
+        "messages": {
+          "left": 18,
+          "top": 696.84375,
+          "width": 354,
+          "height": 117.15625,
+          "right": 372,
+          "bottom": 814
+        },
+        "composer": {
+          "left": 72,
+          "top": 830,
+          "width": 300,
+          "height": 50,
+          "right": 372,
+          "bottom": 880
+        },
+        "add": {
+          "left": 18,
+          "top": 833,
+          "width": 44,
+          "height": 44,
+          "right": 62,
+          "bottom": 877
+        },
+        "send": {
+          "left": 327,
+          "top": 835,
+          "width": 40,
+          "height": 40,
+          "right": 367,
+          "bottom": 875
+        }
+      },
+      "color": "rgb(255, 255, 255)",
+      "divider": 0,
+      "agentContainsAvatar": true,
+      "composerContainsSend": true,
+      "sendEnabled": true,
+      "composerContainsAdd": false,
+      "composerRadius": 28,
+      "addRadius": 50,
+      "bubble": {
+        "left": 18,
+        "top": 696.84375,
+        "width": 175.640625,
+        "height": 42.71875,
+        "right": 193.640625,
+        "bottom": 739.5625,
+        "radius": 18
+      },
+      "viewportHeight": 900
+    }
+  },
+  "send-inside": {
+    "roles": {
+      "canvas": "#chat",
+      "back": "#back",
+      "agent": "#agent",
+      "avatar": "#avatar",
+      "computer": "#computer",
+      "messages": "#messages",
+      "composer": "#composer",
+      "add": "#add",
+      "send": "#send"
+    },
+    "measurements": {
+      "box": {
+        "canvas": {
+          "left": 0,
+          "top": 0,
+          "width": 390,
+          "height": 900,
+          "right": 390,
+          "bottom": 900
+        },
+        "back": {
+          "left": 18,
+          "top": 21,
+          "width": 44,
+          "height": 44,
+          "right": 62,
+          "bottom": 65
+        },
+        "agent": {
+          "left": 72,
+          "top": 21,
+          "width": 102.359375,
+          "height": 44,
+          "right": 174.359375,
+          "bottom": 65
+        },
+        "avatar": {
+          "left": 79,
+          "top": 28,
+          "width": 30,
+          "height": 30,
+          "right": 109,
+          "bottom": 58
+        },
+        "computer": {
+          "left": 328,
+          "top": 21,
+          "width": 44,
+          "height": 44,
+          "right": 372,
+          "bottom": 65
+        },
+        "messages": {
+          "left": 18,
+          "top": 648.125,
+          "width": 354,
+          "height": 117.15625,
+          "right": 372,
+          "bottom": 765.28125
+        },
+        "composer": {
+          "left": 72,
+          "top": 781.28125,
+          "width": 300,
+          "height": 48.71875,
+          "right": 372,
+          "bottom": 830
+        },
+        "add": {
+          "left": 18,
+          "top": 783.640625,
+          "width": 44,
+          "height": 44,
+          "right": 62,
+          "bottom": 827.640625
+        },
+        "send": {
+          "left": 18,
+          "top": 840,
+          "width": 40,
+          "height": 40,
+          "right": 58,
+          "bottom": 880
+        }
+      },
+      "color": "rgb(255, 255, 255)",
+      "divider": 0,
+      "agentContainsAvatar": true,
+      "composerContainsSend": false,
+      "sendEnabled": false,
+      "composerContainsAdd": false,
+      "composerRadius": 28,
+      "addRadius": 50,
+      "bubble": {
+        "left": 18,
+        "top": 648.125,
+        "width": 175.640625,
+        "height": 42.71875,
+        "right": 193.640625,
+        "bottom": 690.84375,
+        "radius": 18
+      },
+      "viewportHeight": 900
+    }
+  },
+  "white-canvas": {
+    "roles": {
+      "canvas": "#chat",
+      "back": "#back",
+      "agent": "#agent",
+      "avatar": "#avatar",
+      "computer": "#computer",
+      "messages": "#messages",
+      "composer": "#composer",
+      "add": "#add",
+      "send": "#send"
+    },
+    "measurements": {
+      "box": {
+        "canvas": {
+          "left": 0,
+          "top": 0,
+          "width": 390,
+          "height": 900,
+          "right": 390,
+          "bottom": 900
+        },
+        "back": {
+          "left": 18,
+          "top": 21,
+          "width": 44,
+          "height": 44,
+          "right": 62,
+          "bottom": 65
+        },
+        "agent": {
+          "left": 72,
+          "top": 21,
+          "width": 102.359375,
+          "height": 44,
+          "right": 174.359375,
+          "bottom": 65
+        },
+        "avatar": {
+          "left": 79,
+          "top": 28,
+          "width": 30,
+          "height": 30,
+          "right": 109,
+          "bottom": 58
+        },
+        "computer": {
+          "left": 328,
+          "top": 21,
+          "width": 44,
+          "height": 44,
+          "right": 372,
+          "bottom": 65
+        },
+        "messages": {
+          "left": 18,
+          "top": 696.84375,
+          "width": 354,
+          "height": 117.15625,
+          "right": 372,
+          "bottom": 814
+        },
+        "composer": {
+          "left": 72,
+          "top": 830,
+          "width": 300,
+          "height": 50,
+          "right": 372,
+          "bottom": 880
+        },
+        "add": {
+          "left": 18,
+          "top": 833,
+          "width": 44,
+          "height": 44,
+          "right": 62,
+          "bottom": 877
+        },
+        "send": {
+          "left": 327,
+          "top": 835,
+          "width": 40,
+          "height": 40,
+          "right": 367,
+          "bottom": 875
+        }
+      },
+      "color": "rgb(245, 245, 220)",
+      "divider": 0,
+      "agentContainsAvatar": true,
+      "composerContainsSend": true,
+      "sendEnabled": false,
+      "composerContainsAdd": false,
+      "composerRadius": 28,
+      "addRadius": 50,
+      "bubble": {
+        "left": 18,
+        "top": 696.84375,
+        "width": 175.640625,
+        "height": 42.71875,
+        "right": 193.640625,
+        "bottom": 739.5625,
+        "radius": 18
+      },
+      "viewportHeight": 900
+    }
+  },
+  "header-without-divider": {
+    "roles": {
+      "canvas": "#chat",
+      "back": "#back",
+      "agent": "#agent",
+      "avatar": "#avatar",
+      "computer": "#computer",
+      "messages": "#messages",
+      "composer": "#composer",
+      "add": "#add",
+      "send": "#send"
+    },
+    "measurements": {
+      "box": {
+        "canvas": {
+          "left": 0,
+          "top": 0,
+          "width": 390,
+          "height": 900,
+          "right": 390,
+          "bottom": 900
+        },
+        "back": {
+          "left": 18,
+          "top": 21,
+          "width": 44,
+          "height": 44,
+          "right": 62,
+          "bottom": 65
+        },
+        "agent": {
+          "left": 72,
+          "top": 21,
+          "width": 102.359375,
+          "height": 44,
+          "right": 174.359375,
+          "bottom": 65
+        },
+        "avatar": {
+          "left": 79,
+          "top": 28,
+          "width": 30,
+          "height": 30,
+          "right": 109,
+          "bottom": 58
+        },
+        "computer": {
+          "left": 328,
+          "top": 21,
+          "width": 44,
+          "height": 44,
+          "right": 372,
+          "bottom": 65
+        },
+        "messages": {
+          "left": 18,
+          "top": 696.84375,
+          "width": 354,
+          "height": 117.15625,
+          "right": 372,
+          "bottom": 814
+        },
+        "composer": {
+          "left": 72,
+          "top": 830,
+          "width": 300,
+          "height": 50,
+          "right": 372,
+          "bottom": 880
+        },
+        "add": {
+          "left": 18,
+          "top": 833,
+          "width": 44,
+          "height": 44,
+          "right": 62,
+          "bottom": 877
+        },
+        "send": {
+          "left": 327,
+          "top": 835,
+          "width": 40,
+          "height": 40,
+          "right": 367,
+          "bottom": 875
+        }
+      },
+      "color": "rgb(255, 255, 255)",
+      "divider": 1,
+      "agentContainsAvatar": true,
+      "composerContainsSend": true,
+      "sendEnabled": false,
+      "composerContainsAdd": false,
+      "composerRadius": 28,
+      "addRadius": 50,
+      "bubble": {
+        "left": 18,
+        "top": 696.84375,
+        "width": 175.640625,
+        "height": 42.71875,
+        "right": 193.640625,
+        "bottom": 739.5625,
+        "radius": 18
+      },
+      "viewportHeight": 900
+    }
+  },
+  "agent-avatar": {
+    "roles": {
+      "canvas": "#chat",
+      "back": "#back",
+      "agent": "#agent",
+      "avatar": "#avatar",
+      "computer": "#computer",
+      "messages": "#messages",
+      "composer": "#composer",
+      "add": "#add",
+      "send": "#send"
+    },
+    "measurements": {
+      "box": {
+        "canvas": {
+          "left": 0,
+          "top": 0,
+          "width": 390,
+          "height": 900,
+          "right": 390,
+          "bottom": 900
+        },
+        "back": {
+          "left": 18,
+          "top": 21,
+          "width": 44,
+          "height": 44,
+          "right": 62,
+          "bottom": 65
+        },
+        "agent": {
+          "left": 72,
+          "top": 21,
+          "width": 64.359375,
+          "height": 44,
+          "right": 136.359375,
+          "bottom": 65
+        },
+        "avatar": {
+          "left": 18,
+          "top": 75,
+          "width": 30,
+          "height": 30,
+          "right": 48,
+          "bottom": 105
+        },
+        "computer": {
+          "left": 328,
+          "top": 21,
+          "width": 44,
+          "height": 44,
+          "right": 372,
+          "bottom": 65
+        },
+        "messages": {
+          "left": 18,
+          "top": 696.84375,
+          "width": 354,
+          "height": 117.15625,
+          "right": 372,
+          "bottom": 814
+        },
+        "composer": {
+          "left": 72,
+          "top": 830,
+          "width": 300,
+          "height": 50,
+          "right": 372,
+          "bottom": 880
+        },
+        "add": {
+          "left": 18,
+          "top": 833,
+          "width": 44,
+          "height": 44,
+          "right": 62,
+          "bottom": 877
+        },
+        "send": {
+          "left": 327,
+          "top": 835,
+          "width": 40,
+          "height": 40,
+          "right": 367,
+          "bottom": 875
+        }
+      },
+      "color": "rgb(255, 255, 255)",
+      "divider": 0,
+      "agentContainsAvatar": false,
+      "composerContainsSend": true,
+      "sendEnabled": false,
+      "composerContainsAdd": false,
+      "composerRadius": 28,
+      "addRadius": 50,
+      "bubble": {
+        "left": 18,
+        "top": 696.84375,
+        "width": 175.640625,
+        "height": 42.71875,
+        "right": 193.640625,
+        "bottom": 739.5625,
+        "radius": 18
+      },
+      "viewportHeight": 900
+    }
+  },
+  "message-bubble": {
+    "roles": {
+      "canvas": "#chat",
+      "back": "#back",
+      "agent": "#agent",
+      "avatar": "#avatar",
+      "computer": "#computer",
+      "messages": "#messages",
+      "composer": "#composer",
+      "add": "#add",
+      "send": "#send"
+    },
+    "measurements": {
+      "box": {
+        "canvas": {
+          "left": 0,
+          "top": 0,
+          "width": 390,
+          "height": 900,
+          "right": 390,
+          "bottom": 900
+        },
+        "back": {
+          "left": 18,
+          "top": 21,
+          "width": 44,
+          "height": 44,
+          "right": 62,
+          "bottom": 65
+        },
+        "agent": {
+          "left": 72,
+          "top": 21,
+          "width": 102.359375,
+          "height": 44,
+          "right": 174.359375,
+          "bottom": 65
+        },
+        "avatar": {
+          "left": 79,
+          "top": 28,
+          "width": 30,
+          "height": 30,
+          "right": 109,
+          "bottom": 58
+        },
+        "computer": {
+          "left": 328,
+          "top": 21,
+          "width": 44,
+          "height": 44,
+          "right": 372,
+          "bottom": 65
+        },
+        "messages": {
+          "left": 18,
+          "top": 95.03125,
+          "width": 354,
+          "height": 117.15625,
+          "right": 372,
+          "bottom": 212.1875
+        },
+        "composer": {
+          "left": 72,
+          "top": 830,
+          "width": 300,
+          "height": 50,
+          "right": 372,
+          "bottom": 880
+        },
+        "add": {
+          "left": 18,
+          "top": 833,
+          "width": 44,
+          "height": 44,
+          "right": 62,
+          "bottom": 877
+        },
+        "send": {
+          "left": 327,
+          "top": 835,
+          "width": 40,
+          "height": 40,
+          "right": 367,
+          "bottom": 875
+        }
+      },
+      "color": "rgb(255, 255, 255)",
+      "divider": 0,
+      "agentContainsAvatar": true,
+      "composerContainsSend": true,
+      "sendEnabled": false,
+      "composerContainsAdd": false,
+      "composerRadius": 28,
+      "addRadius": 50,
+      "bubble": {
+        "left": 18,
+        "top": 95.03125,
+        "width": 175.640625,
+        "height": 42.71875,
+        "right": 193.640625,
+        "bottom": 137.75,
+        "radius": 18
+      },
+      "viewportHeight": 900
+    }
+  }
+}

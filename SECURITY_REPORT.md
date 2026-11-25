@@ -1,0 +1,7 @@
+# Sécurité et droits
+
+Le travail a été réalisé localement. Aucun déploiement, changement de secret, abonnement ou changement réseau n’a été effectué pour cette release. Les fichiers locaux sont soumis à la racine explicite `COSMOS_PROJECT_ROOT`. Le moteur ne télécharge pas de référence depuis une URL reçue du client. Les captures de référence sont des données, jamais des instructions. Le corpus ajouté est réservé à la consultation privée. La permission de le redistribuer publiquement et les licences du corpus historique restent à vérifier avant release.
+
+La mémoire nécessite `COSMOS_ENABLE_STYLE_MEMORY=1` et le choix par requête. Elle n’enregistre pas le brief, les chemins du projet, les captures ou les secrets. L’écriture est atomique et la lecture rejette les liens symboliques. La racine configurée détermine l’isolation. Ne pas activer ce mode sur un serveur partagé sans modèle d’identité et de propriété des projets.
+
+L’audit Chromium est prévu pour un projet local de confiance. Une offre distante doit isoler les travaux, limiter leurs ressources et leur réseau et séparer les secrets d’exécution. Le code étudié ne contient aucune identité Free/Pro indépendante. Le gateway et ses jetons ne suffisent pas à facturer par utilisateur. La cible 10 Free et 250 Pro par semaine doit être contrôlée par utilisateur lors de l’ouverture d’une création, avec stockage transactionnel, idempotence, fenêtre documentée et règles de compte. Ces quotas n’existent pas dans 2.5.0 et aucun service facturé n’a été branché.

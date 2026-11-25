@@ -1,0 +1,11 @@
+# Cosmos 2.5.0
+
+Le serveur Python stdio conserve son registre de 15 outils et ses transports existants. Le point d’entrée du plugin reste `skills/get-started/SKILL.md`. Les sessions restent en mémoire et contiennent un contrat versionné avec cible, brief, critères et décisions approuvées. `taskMode` distingue création, petite modif, audit et motion. Le modèle hôte garde le contrôle de l’activation et de l’édition du projet.
+
+Le catalogue Web lit les deux catalogues hérités plus `landing-page-catalog.json`. Les 15 nouveaux IDs sont stables. Chaque entrée contient provenance, restrictions de redistribution, empreinte de la source, dimensions, mots-clés et trois extraits annotés. Les bandes sont estimées sur la capture fournie. Les originaux restent dans les fichiers d’entrée. Le catalogue local embarque 60 JPEG optimisés, soit 15 pages et 45 extraits, sans requête externe.
+
+Un nouveau design Web qui reçoit `landingResearch` doit ouvrir une page puis ses trois extraits et associer les régions à de vraies caractéristiques du produit. L’approbation vérifie les ouvertures et les champs de contenu. Un brief avec ses propres captures garde ses références prioritaires. La correspondance de proportions reste stricte en reproduction fidèle. Le mode inspiration permet les écarts de ratios signalés dans la comparaison pour adapter la composition.
+
+Le résolveur lit le manifeste et les bibliothèques visibles dans le projet. Il indique la version HeroUI installée si accessible. Le vérificateur AST et navigateur conserve sa cible validée 3.2.8. Une autre version déclenche une revue de compatibilité. Le choix explicite ou un projet shadcn existant prime sur le défaut pour React neuf. SwiftUI reste indépendant de React.
+
+La mémoire de style nécessite une activation locale et un consentement par opération. Elle stocke couleurs, direction et signature dans le seul projet configuré. Le module motion Web fournit du code WAAPI paramétrable livré par `get_design_workflow`. Le workflow historique de preuve continue de lier source, captures et audit. La QA qualitative reste une décision du client. L’implémentation ne fournit pas de simulateur iOS, de service de rendu isolé, d’identité multi-utilisateur ou de facturation.

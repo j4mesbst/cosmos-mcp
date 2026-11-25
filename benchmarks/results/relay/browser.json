@@ -1,0 +1,86 @@
+{
+  "browser": "153.0.8010.0",
+  "checks": [
+    {
+      "width": 1440,
+      "overflow": 0,
+      "controls": 6,
+      "navigationMs": 51,
+      "keyboard": true,
+      "interaction": true,
+      "errors": [],
+      "motion": [
+        {
+          "delay": 0,
+          "duration": 1600,
+          "rate": 0.5
+        },
+        {
+          "delay": 1000,
+          "duration": 1600,
+          "rate": 0.5
+        },
+        {
+          "delay": 2000,
+          "duration": 1600,
+          "rate": 0.5
+        }
+      ],
+      "reducedMotion": true
+    },
+    {
+      "width": 768,
+      "overflow": 0,
+      "controls": 6,
+      "navigationMs": 37,
+      "keyboard": true,
+      "interaction": true,
+      "errors": [],
+      "motion": [
+        {
+          "delay": 0,
+          "duration": 1600,
+          "rate": 0.5
+        },
+        {
+          "delay": 1000,
+          "duration": 1600,
+          "rate": 0.5
+        },
+        {
+          "delay": 2000,
+          "duration": 1600,
+          "rate": 0.5
+        }
+      ],
+      "reducedMotion": true
+    },
+    {
+      "width": 390,
+      "overflow": 0,
+      "controls": 6,
+      "navigationMs": 29,
+      "keyboard": true,
+      "interaction": true,
+      "errors": [],
+      "motion": [
+        {
+          "delay": 0,
+          "duration": 1600,
+          "rate": 0.5
+        },
+        {
+          "delay": 1000,
+          "duration": 1600,
+          "rate": 0.5
+        },
+        {
+          "delay": 2000,
+          "duration": 1600,
+          "rate": 0.5
+        }
+      ],
+      "reducedMotion": true
+    }
+  ]
+}

@@ -1,0 +1,401 @@
+{
+  "brief": {
+    "goal": "Crée en HTML une interface d’agent IA au style iOS",
+    "audience": "Équipe terrain",
+    "constraints": null
+  },
+  "initial": {
+    "matches": [
+      {
+        "id": "grok-029",
+        "title": "Grok Bot / Initial chat view with an AI assistant prompting for primary work focus",
+        "kind": "screenshot",
+        "platform": "ios",
+        "app": "Grok Bot",
+        "category": "Agent IA",
+        "productCategory": "Agent IA",
+        "screenType": "Chat",
+        "states": [
+          "first",
+          "focus",
+          "initial"
+        ],
+        "components": [
+          "button",
+          "composer",
+          "input"
+        ],
+        "structure": "Initial chat view with an AI assistant prompting for primary work focus.",
+        "adapt": "Analyze the interaction and layout principles. Apply them in an original visual design.",
+        "previewAvailable": true
+      },
+      {
+        "id": "grok-012",
+        "title": "Grok Bot / Account authorization prompt showing selected user profile",
+        "kind": "screenshot",
+        "platform": "ios",
+        "app": "Grok Bot",
+        "category": "Agent IA",
+        "productCategory": "Agent IA",
+        "screenType": "Chat",
+        "states": [],
+        "components": [],
+        "structure": "Account authorization prompt showing selected user profile.",
+        "adapt": "Analyze the interaction and layout principles. Apply them in an original visual design.",
+        "previewAvailable": true
+      },
+      {
+        "id": "grok-013",
+        "title": "Grok Bot / Success message indicating sign-in completion in browser",
+        "kind": "screenshot",
+        "platform": "ios",
+        "app": "Grok Bot",
+        "category": "Agent IA",
+        "productCategory": "Agent IA",
+        "screenType": "Chat",
+        "states": [
+          "success"
+        ],
+        "components": [],
+        "structure": "Success message indicating sign-in completion in browser.",
+        "adapt": "Analyze the interaction and layout principles. Apply them in an original visual design.",
+        "previewAvailable": true
+      },
+      {
+        "id": "grok-017",
+        "title": "Grok Bot / Centered loading spinner with status text for bot setup",
+        "kind": "screenshot",
+        "platform": "ios",
+        "app": "Grok Bot",
+        "category": "Agent IA",
+        "productCategory": "Agent IA",
+        "screenType": "Chat",
+        "states": [
+          "loading"
+        ],
+        "components": [],
+        "structure": "Centered loading spinner with status text for bot setup.",
+        "adapt": "Analyze the interaction and layout principles. Apply them in an original visual design.",
+        "previewAvailable": true
+      },
+      {
+        "id": "grok-018",
+        "title": "Grok Bot / Onboarding walkthrough slide introducing the bot with a prompt input example and page dots",
+        "kind": "screenshot",
+        "platform": "ios",
+        "app": "Grok Bot",
+        "category": "Agent IA",
+        "productCategory": "Agent IA",
+        "screenType": "Chat",
+        "states": [],
+        "components": [
+          "input"
+        ],
+        "structure": "Onboarding walkthrough slide introducing the bot with a prompt input example and page dots.",
+        "adapt": "Analyze the interaction and layout principles. Apply them in an original visual design.",
+        "previewAvailable": true
+      }
+    ],
+    "count": 5,
+    "workflowId": "4babc5fd2a7a4c3a8f5982f6680dd0b1",
+    "nextOffset": 5,
+    "referencePlatform": "ios",
+    "expandedToRelatedInteractions": false,
+    "status": "found",
+    "flows": [
+      {
+        "id": "first-conversation",
+        "title": "Draft a message and wait for a reply",
+        "frames": 4,
+        "ids": [
+          "grok-029",
+          "grok-035",
+          "grok-036",
+          "grok-037"
+        ]
+      }
+    ]
+  },
+  "opened": [
+    "grok-029",
+    "grok-035",
+    "grok-036",
+    "grok-037"
+  ],
+  "decisions": [
+    {
+      "id": "grok-029",
+      "componentRole": "canvas",
+      "region": "canvas",
+      "visibleProperties": "Fond blanc, sans séparation au-dessous du header",
+      "adaptation": "Fond blanc sans titre produit",
+      "renderTarget": "#chat"
+    },
+    {
+      "id": "grok-029",
+      "componentRole": "back",
+      "region": "back",
+      "visibleProperties": "Chevron simple dans un cercle côté gauche",
+      "adaptation": "Retour réel vers les discussions",
+      "renderTarget": "#back"
+    },
+    {
+      "id": "grok-029",
+      "componentRole": "agent",
+      "region": "agent",
+      "visibleProperties": "Nom court et avatar regroupés à gauche",
+      "adaptation": "Afficher le nom de l’agent Sillage",
+      "renderTarget": "#agent"
+    },
+    {
+      "id": "grok-029",
+      "componentRole": "avatar",
+      "region": "avatar",
+      "visibleProperties": "Petit pictogramme clair dans une forme sombre",
+      "adaptation": "Créer une marque topographique bleu ardoise",
+      "renderTarget": "#avatar"
+    },
+    {
+      "id": "grok-029",
+      "componentRole": "computer",
+      "region": "computer",
+      "visibleProperties": "Moniteur isolé en haut à droite",
+      "adaptation": "Ouvrir l’espace local des repères",
+      "renderTarget": "#computer"
+    },
+    {
+      "id": "grok-029",
+      "componentRole": "messages",
+      "region": "messages",
+      "visibleProperties": "Bulles entrantes grises en bas sous une grande zone libre",
+      "adaptation": "Deux messages courts, fond gris presque blanc",
+      "renderTarget": "#messages"
+    },
+    {
+      "id": "grok-035",
+      "componentRole": "composer",
+      "region": "composer",
+      "visibleProperties": "Capsule blanche en bas, à droite du bouton plus",
+      "adaptation": "Regrouper le champ et la validation",
+      "renderTarget": "#composer"
+    },
+    {
+      "id": "grok-035",
+      "componentRole": "add",
+      "region": "add",
+      "visibleProperties": "Bouton plus séparé, rond et clair",
+      "adaptation": "Préremplir un repère de terrain",
+      "renderTarget": "#add"
+    },
+    {
+      "id": "grok-035",
+      "componentRole": "send",
+      "region": "send",
+      "visibleProperties": "Flèche montante dans un petit disque sombre à droite à l’intérieur de la capsule",
+      "adaptation": "Envoyer et afficher une bulle sombre à droite",
+      "renderTarget": "#send"
+    }
+  ],
+  "comparison": [
+    {
+      "id": "grok-029",
+      "screenshot": ".cosmos/review/render-390.png",
+      "imageBlocks": [
+        4,
+        5
+      ],
+      "referenceSize": [
+        1180,
+        2650
+      ],
+      "renderSize": [
+        390,
+        900
+      ],
+      "referenceSha256": "10b17026b94801bcee98c97f5254e5452a34e168592faffa798e0c45a79f9da4",
+      "renderSha256": "fe5194067fbe5b7226df7dab2344e575bedf8da68dfb5a24ddef54b270724a86",
+      "decisionIndices": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ]
+    },
+    {
+      "id": "grok-035",
+      "screenshot": ".cosmos/review/agent-draft-390.png",
+      "imageBlocks": [
+        6,
+        7
+      ],
+      "referenceSize": [
+        1180,
+        2650
+      ],
+      "renderSize": [
+        390,
+        900
+      ],
+      "referenceSha256": "2af3baf270cf04be388bbee6639239c624ac91c656838d844533303e83aad866",
+      "renderSha256": "8bee61b825fb2981571f3e5ae456f46e31ad53c3c77e9079e981f23a58c2f519",
+      "decisionIndices": [
+        7,
+        8,
+        9
+      ]
+    }
+  ],
+  "review": [
+    {
+      "decisionIndex": 1,
+      "screenshot": ".cosmos/review/render-390.png",
+      "status": "pass",
+      "observation": "Fond blanc sans titre produit"
+    },
+    {
+      "decisionIndex": 2,
+      "screenshot": ".cosmos/review/render-390.png",
+      "status": "pass",
+      "observation": "Retour réel vers les discussions"
+    },
+    {
+      "decisionIndex": 3,
+      "screenshot": ".cosmos/review/render-390.png",
+      "status": "pass",
+      "observation": "Afficher le nom de l’agent Sillage"
+    },
+    {
+      "decisionIndex": 4,
+      "screenshot": ".cosmos/review/render-390.png",
+      "status": "pass",
+      "observation": "Créer une marque topographique bleu ardoise"
+    },
+    {
+      "decisionIndex": 5,
+      "screenshot": ".cosmos/review/render-390.png",
+      "status": "pass",
+      "observation": "Ouvrir l’espace local des repères"
+    },
+    {
+      "decisionIndex": 6,
+      "screenshot": ".cosmos/review/render-390.png",
+      "status": "pass",
+      "observation": "Deux messages courts, fond gris presque blanc"
+    },
+    {
+      "decisionIndex": 7,
+      "screenshot": ".cosmos/review/agent-draft-390.png",
+      "status": "pass",
+      "observation": "Regrouper le champ et la validation"
+    },
+    {
+      "decisionIndex": 8,
+      "screenshot": ".cosmos/review/agent-draft-390.png",
+      "status": "pass",
+      "observation": "Préremplir un repère de terrain"
+    },
+    {
+      "decisionIndex": 9,
+      "screenshot": ".cosmos/review/agent-draft-390.png",
+      "status": "pass",
+      "observation": "Envoyer et afficher une bulle sombre à droite"
+    }
+  ],
+  "skills": {
+    "frontend-design": {
+      "skill": "frontend-design",
+      "path": "index.html",
+      "excerpt": "justify-content: flex-end",
+      "decision": "Zone libre au-dessus de la conversation",
+      "fileSha256": "9e726674ced6ec378d00367c9dbed64b4b62d65a6a766e29516196989e79e781",
+      "instructionSha256": "d91970639e9f5c37682ac7ab60094d35f1c7c1f38d731bd56396563aee10c1d3"
+    },
+    "impeccable": {
+      "skill": "impeccable",
+      "path": "index.html",
+      "excerpt": "margin: 0; background: #fff",
+      "decision": "Supprimer le titre produit, le trait et la toile beige du prototype précédent",
+      "fileSha256": "9e726674ced6ec378d00367c9dbed64b4b62d65a6a766e29516196989e79e781",
+      "instructionSha256": "97912dfa716aee1f75aa75542935d3a820df1397a57870c1dafade47c7ff9e45"
+    },
+    "superpowers": {
+      "skill": "superpowers",
+      "path": ".cosmos/review/browser-report.json",
+      "excerpt": "\"keyboardTransition\": true",
+      "decision": "Rétablir la position interne de la flèche et rejouer le défaut",
+      "fileSha256": "f4879e015a41b2615f4228bdacbea31770c3959f042cc9e334c09c48deb73041",
+      "instructionSha256": "174cf7c3374ca8c8462323d566556fdedb0cf513b97766919556a712424c8394"
+    },
+    "taste-skill": {
+      "skill": "taste-skill",
+      "path": "index.html",
+      "excerpt": "Un itinéraire à préparer ou un repère à retrouver",
+      "decision": "Nom de l’agent et texte d’accueil liés au contexte terrain",
+      "fileSha256": "9e726674ced6ec378d00367c9dbed64b4b62d65a6a766e29516196989e79e781",
+      "instructionSha256": "7552c48b6bcda864a98abcef6fde66f55542a99601c92b1a64589b41d48b1887"
+    },
+    "ui-ux-pro-max": {
+      "skill": "ui-ux-pro-max",
+      "path": "index.html",
+      "excerpt": "color: var(--cosmos-foreground)",
+      "decision": "Couleur sémantique appliquée au nom de l’agent",
+      "fileSha256": "9e726674ced6ec378d00367c9dbed64b4b62d65a6a766e29516196989e79e781",
+      "instructionSha256": "b4a9f6db1442abc6d245e7eec7d283f94374b7111891bb31dd1540152f8d2b73"
+    },
+    "web-accessibility": {
+      "skill": "web-accessibility",
+      "path": "index.html",
+      "excerpt": "aria-label=\"Envoyer le message\" disabled",
+      "decision": "Nom accessible du bouton d’envoi et attribut disabled",
+      "fileSha256": "9e726674ced6ec378d00367c9dbed64b4b62d65a6a766e29516196989e79e781",
+      "instructionSha256": "6fab00fca34c0d18c98b28dbadd33fff63601282305ba8e9404dacfb971427ef"
+    },
+    "web-design-guidelines": {
+      "skill": "web-design-guidelines",
+      "path": "index.html",
+      "excerpt": "aria-label=\"Retour aux discussions\"",
+      "decision": "Toute la navigation reste accessible sur mobile",
+      "fileSha256": "9e726674ced6ec378d00367c9dbed64b4b62d65a6a766e29516196989e79e781",
+      "instructionSha256": "159b7ef43f34fe9ea2ed3a5150cea5740bb9ea12d34adf5d4e2f5598f576522d"
+    }
+  },
+  "skillPlan": {
+    "frontend-design": {
+      "skill": "frontend-design",
+      "application": "Zone libre au-dessus de la conversation",
+      "verification": "Contrôle de la position verticale des bulles"
+    },
+    "taste-skill": {
+      "skill": "taste-skill",
+      "application": "Nom de l’agent et texte d’accueil liés au contexte terrain",
+      "verification": "Contrôle des textes visibles dans Chromium"
+    },
+    "ui-ux-pro-max": {
+      "skill": "ui-ux-pro-max",
+      "application": "Couleur sémantique appliquée au nom de l’agent",
+      "verification": "Comparaison du style calculé et du jeton produit"
+    },
+    "web-accessibility": {
+      "skill": "web-accessibility",
+      "application": "Nom accessible du bouton d’envoi et attribut disabled",
+      "verification": "Test axe et envoi au clavier"
+    },
+    "web-design-guidelines": {
+      "skill": "web-design-guidelines",
+      "application": "Toute la navigation reste accessible sur mobile",
+      "verification": "Retour, repère, envoi, ordinateur à 390, 768, 1440"
+    },
+    "impeccable": {
+      "skill": "impeccable",
+      "application": "Supprimer le titre produit, le trait et la toile beige du prototype précédent",
+      "verification": "Comparer le rendu et les mesures"
+    },
+    "superpowers": {
+      "skill": "superpowers",
+      "application": "Rétablir la position interne de la flèche et rejouer le défaut",
+      "verification": "Détection de l’envoi hors capsule"
+    }
+  }
+}

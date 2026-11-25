@@ -1,0 +1,26 @@
+{
+  "development": [
+    {"id":"LP01","domain":"web","brief":"Crée une landing page pour un outil SaaS de documentation produit. Montre l’éditeur, la gestion des versions et un aperçu testable. CTA : Essayer l’éditeur."},
+    {"id":"LP02","domain":"web","brief":"Crée un site pour un atelier de maroquinerie. Présente un seul sac, ses matières et ses détails. Prévois une demande de disponibilité."},
+    {"id":"LP03","domain":"web","brief":"Crée une landing page pour un studio de design spécialisé en signalétique. Fais passer les usages des projets avant la liste des services."},
+    {"id":"LP04","domain":"web","brief":"Crée un portfolio interactif de photographie botanique. L’exploration doit fonctionner aussi au clavier et sur mobile."},
+    {"id":"LP05","domain":"web","brief":"Crée une boutique de carnets au design soigné. Montre les formats, le papier et les méthodes de livraison. Rends les variantes sélectionnables."},
+    {"id":"LP06","domain":"web","brief":"Crée la page d’un enregistreur portable. Fais comprendre où il se fixe, comment on enregistre et comment on récupère l’audio."},
+    {"id":"UI01","domain":"ios","brief":"Crée un écran de lecture musicale en SwiftUI, avec progression, état de lecture et contrôle accessible au VoiceOver."},
+    {"id":"UI02","domain":"ios","brief":"Crée un écran iOS natif de dépenses hebdomadaires et un état vide. N’invente aucune transaction personnelle."},
+    {"id":"UI03","domain":"ios","brief":"Crée un écran iOS natif de tâches du jour avec filtres et état terminé. Vérifie les tailles Dynamic Type."},
+    {"id":"UI04","domain":"ios","brief":"Crée un écran SwiftUI de suivi de séances. Prévois un état sans séance et une navigation vers le détail."},
+    {"id":"MO01","domain":"motion","brief":"Anime trois aperçus produit dans l’ordre gauche, milieu, droite, à 0,5×, avec des départs décalés de 1 s. Fournis un équivalent statique."},
+    {"id":"MO02","domain":"motion","brief":"Compose une animation de titre en deux temps, par mot puis par ligne. Le texte doit rester lisible et disponible en mouvement réduit."},
+    {"id":"MO03","domain":"motion","brief":"Crée une démonstration d’assemblage en trois étapes déclenchées au scroll. Le retour en arrière doit être cohérent."},
+    {"id":"MO04","domain":"motion","brief":"Crée une vue 3D interactive d’un boîtier original. Prévois rotation au clavier et rendu fixe si WebGL est indisponible."},
+    {"id":"ED01","domain":"edit","brief":"Déplace le bouton d’envoi à l’intérieur du champ sur la fixture de chat. Préserve textes, styles, navigation et états."}
+  ],
+  "holdout": [
+    {"id":"H01","domain":"web","brief":"Crée une page d’inscription pour un outil de transcription de réunions. L’interface doit montrer comment retrouver une décision."},
+    {"id":"H02","domain":"ios","brief":"Conçois des réglages SwiftUI de rappels avec permissions refusées, noms VoiceOver et tailles de texte larges."},
+    {"id":"H03","domain":"motion","brief":"Fais passer une galerie de diagrammes de l’état compact à l’état détaillé avec clavier et mouvement réduit."},
+    {"id":"H04","domain":"negative","brief":"Explique la différence entre flex et grid. N’écris aucun projet."},
+    {"id":"H05","domain":"negative","brief":"Corrige cette requête SQL agrégée sans modifier le front-end."}
+  ]
+}

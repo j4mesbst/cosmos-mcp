@@ -1,0 +1,138 @@
+<!doctype html>
+<html lang="fr">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Discussion · Sillage</title>
+<link rel="stylesheet" href="src/cosmos-tokens.css">
+<style>
+  * { box-sizing: border-box; }
+  :root { color-scheme: light; font: 16px/1.42 -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; }
+  body { margin: 0; background: #fff; color: #191c20; }
+  #chat { width: min(100%, 640px); margin: auto; height: 100dvh; background: #fff; display: flex; flex-direction: column; padding: max(env(safe-area-inset-top), 16px) 18px max(env(safe-area-inset-bottom), 20px); }
+  [hidden] { display: none !important; }
+  button, input { font: inherit; color: inherit; }
+  button { cursor: pointer; border: 0; }
+  button:focus-visible, input:focus-visible { outline: 2px solid #204a6d; outline-offset: 2px; }
+  .sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }
+  .toolbar { display: grid; grid-template-columns: 44px auto 1fr 44px; align-items: center; gap: 10px; padding-top: 5px; }
+  .round, .agent { background: #fff; box-shadow: 0 3px 14px #313b5010, 0 0 0 1px #35404f0b; }
+  .round { width: 44px; height: 44px; border-radius: 50%; padding: 0; display: grid; place-items: center; }
+  .round:hover, .agent:hover { background: #f4f5f6; }
+  svg { width: 19px; height: 19px; fill: none; stroke: currentColor; stroke-width: 1.75; stroke-linecap: round; stroke-linejoin: round; }
+  #computer { grid-column: 4; }
+  .agent { display: flex; align-items: center; gap: 8px; padding: 6px 13px 6px 7px; min-height: 44px; border-radius: 16px; }
+  .avatar { display: grid; place-items: center; width: 30px; height: 30px; border-radius: 11px; color: white; background: linear-gradient(145deg,#456b86,#172c43); }
+  .avatar svg { width: 17px; height: 17px; }
+  .agent-name { color: var(--cosmos-foreground); font-size: .91rem; font-weight: 660; letter-spacing: -.025em; }
+  #timeline { flex: 1; min-height: 0; overflow: auto; display: flex; flex-direction: column; justify-content: flex-end; }
+  .thread-scroll { overflow-y: auto; overscroll-behavior: contain; scrollbar-width: thin; }
+  .today { color: #636970; text-align: center; font-size: .75rem; margin: 0 0 13px; }
+  #messages { display: grid; gap: 6px; padding-bottom: 3px; }
+  .bubble { margin: 0; padding: 10px 14px; justify-self: start; max-width: 86%; width: fit-content; background: #f0f1f2; border-radius: 18px; overflow-wrap: anywhere; }
+  .bubble.received:last-child { border-bottom-left-radius: 7px; }
+  .bubble.sent { justify-self: end; color: #fff; background: #22262b; border-bottom-right-radius: 7px; }
+  .entry { margin-top: 16px; display: grid; grid-template-columns: 44px minmax(0, 1fr); gap: 10px; align-items: center; }
+  .composer { background: #fff; border: 1px solid #e7e8eb; box-shadow: 0 4px 15px #333b4510; border-radius: 28px; padding: 4px; display: flex; gap: 4px; align-items: center; }
+  #draft { flex: 1; min-width: 0; padding: 8px 9px; background: transparent; border: 0; border-radius: 22px; }
+  #draft::placeholder { color: #626975; }
+  #send { display: grid; place-items: center; border-radius: 50%; width: 40px; height: 40px; flex: 0 0 40px; background: #22262b; color: #fff; }
+  #send:disabled { cursor: default; background: #f0f1f3; color: #626975; }
+  dialog { max-width: min(380px, calc(100% - 36px)); width: 100%; border: 1px solid #e8e8e8; border-radius: 22px; padding: 22px; color: inherit; box-shadow: 0 20px 70px #29324325; }
+  dialog::backdrop { background: #27303c28; }
+  dialog h2, #threads h1 { margin: 0 0 10px; font-size: 1.2rem; }
+  dialog p { margin: 0 0 12px; }
+  .action { border-radius: 14px; padding: 10px 14px; min-height: 44px; text-align: left; background: #f3f4f5; }
+  #threads { width: min(100%,640px); margin: auto; padding: 24px 18px; }
+  @media (min-width: 760px) { #chat { padding-block: 32px 24px; } }
+</style>
+<main id="chat" aria-labelledby="agent-name">
+  <header class="toolbar">
+    <button type="button" id="back" class="round" aria-label="Retour aux discussions">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m15 5-7 7 7 7"/></svg>
+    </button>
+    <button type="button" id="agent" class="agent" aria-label="À propos de Sillage">
+      <span class="avatar" id="avatar" aria-hidden="true">
+        <svg viewBox="0 0 24 24"><path d="m5 15 5-6 4 3 5-6m-6 11 3 2 4-4"/><circle cx="5" cy="15" r="1" fill="currentColor" stroke="none"/></svg>
+      </span>
+      <span class="agent-name" id="agent-name">Sillage</span>
+    </button>
+    <button type="button" id="computer" class="round" aria-label="Ouvrir l’espace de l’agent">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3.5" y="5" width="17" height="12" rx="2.2"/><path d="M12 17v3m-4 0h8"/></svg>
+    </button>
+  </header>
+  <section id="timeline" aria-label="Conversation">
+    <div class="thread-scroll" id="scroll">
+      <p class="today">Aujourd’hui</p>
+      <div id="messages" role="log" aria-label="Messages">
+        <p class="bubble received">Salut, je suis Sillage.</p>
+        <p class="bubble received">Un itinéraire à préparer ou un repère à retrouver&nbsp;?</p>
+      </div>
+    </div>
+  </section>
+  <form class="entry" aria-label="Envoyer un message">
+    <button id="add" class="round" type="button" aria-label="Ajouter un repère">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg>
+    </button>
+    <div id="composer" class="composer">
+      <input id="draft" aria-label="Message à Sillage" placeholder="Écrire à Sillage…" autocomplete="off">
+      <button id="send" aria-label="Envoyer le message" disabled>
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 19V5m-6 6 6-6 6 6"/></svg>
+      </button>
+    </div>
+  </form>
+</main>
+<section id="threads" aria-labelledby="threads-title" hidden>
+  <h1 id="threads-title">Discussions</h1>
+  <button type="button" id="reopen" class="action">Sillage</button>
+</section>
+<dialog id="desktop" aria-labelledby="desktop-title">
+  <h2 id="desktop-title">Espace de Sillage</h2>
+  <p>Les repères envoyés apparaissent ici.</p>
+  <ul id="markers"></ul>
+  <form method="dialog"><button class="action">Fermer</button></form>
+</dialog>
+<dialog id="about" aria-labelledby="about-title">
+  <h2 id="about-title">Sillage</h2>
+  <p>Un agent de terrain pour préparer un itinéraire et garder des repères.</p>
+  <form method="dialog"><button class="action">Fermer</button></form>
+</dialog>
+<script>
+  const $ = id => document.getElementById(id)
+  const updateSend = () => { $('send').disabled = !$('draft').value.trim() }
+  $('draft').addEventListener('input', updateSend)
+  $('back').onclick = () => {
+    $('chat').hidden = true
+    $('threads').hidden = false
+    $('reopen').focus()
+  }
+  $('reopen').onclick = () => {
+    $('threads').hidden = true
+    $('chat').hidden = false
+    $('back').focus()
+  }
+  $('computer').onclick = () => $('desktop').showModal()
+  $('agent').onclick = () => $('about').showModal()
+  $('add').onclick = () => {
+    if (!$('draft').value.trim()) $('draft').value = 'Repère · '
+    updateSend()
+    $('draft').focus()
+  }
+  document.querySelector('.entry').addEventListener('submit', event => {
+    event.preventDefault()
+    const message = $('draft').value.trim()
+    if (!message) return
+    const bubble = document.createElement('p')
+    bubble.className = 'bubble sent'
+    bubble.textContent = message
+    $('messages').append(bubble)
+    if (message.startsWith('Repère · ')) {
+      const marker = document.createElement('li')
+      marker.textContent = message.slice('Repère · '.length)
+      $('markers').append(marker)
+    }
+    $('scroll').scrollTop = $('scroll').scrollHeight
+    $('draft').value = ''
+    updateSend()
+    $('draft').focus()
+  })
+</script>

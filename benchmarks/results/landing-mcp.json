@@ -1,0 +1,492 @@
+[
+  {
+    "method": "initialize",
+    "ms": 840.94,
+    "responseBytes": 544
+  },
+  {
+    "method": "tools/list",
+    "ms": 0.74,
+    "responseBytes": 15850
+  },
+  {
+    "method": "search_patterns",
+    "ms": 2.55,
+    "responseBytes": 8834
+  },
+  {
+    "method": "search_patterns",
+    "ms": 1.7,
+    "responseBytes": 8954
+  },
+  {
+    "method": "search_patterns",
+    "ms": 1.47,
+    "responseBytes": 8950
+  },
+  {
+    "method": "search_patterns",
+    "ms": 26.95,
+    "responseBytes": 2228
+  },
+  {
+    "method": "read_pattern",
+    "ms": 3.14,
+    "responseBytes": 156191
+  },
+  {
+    "method": "read_pattern",
+    "ms": 0.79,
+    "responseBytes": 31374
+  },
+  {
+    "method": "read_pattern",
+    "ms": 0.54,
+    "responseBytes": 76970
+  },
+  {
+    "method": "read_pattern",
+    "ms": 0.19,
+    "responseBytes": 11612
+  },
+  {
+    "method": "search_patterns",
+    "ms": 23.17,
+    "responseBytes": 2100
+  },
+  {
+    "method": "read_pattern",
+    "ms": 2.24,
+    "responseBytes": 189897
+  },
+  {
+    "method": "read_pattern",
+    "ms": 0.48,
+    "responseBytes": 56066
+  },
+  {
+    "method": "read_pattern",
+    "ms": 0.79,
+    "responseBytes": 84896
+  },
+  {
+    "method": "read_pattern",
+    "ms": 0.42,
+    "responseBytes": 47726
+  },
+  {
+    "method": "search_patterns",
+    "ms": 44.9,
+    "responseBytes": 3081
+  },
+  {
+    "method": "read_pattern",
+    "ms": 1.64,
+    "responseBytes": 172533
+  },
+  {
+    "method": "read_pattern",
+    "ms": 0.52,
+    "responseBytes": 57828
+  },
+  {
+    "method": "read_pattern",
+    "ms": 0.62,
+    "responseBytes": 72314
+  },
+  {
+    "method": "read_pattern",
+    "ms": 0.62,
+    "responseBytes": 22976
+  },
+  {
+    "method": "search_patterns",
+    "ms": 45.38,
+    "responseBytes": 4081
+  },
+  {
+    "method": "read_pattern",
+    "ms": 1.33,
+    "responseBytes": 144185
+  },
+  {
+    "method": "read_pattern",
+    "ms": 0.4,
+    "responseBytes": 25304
+  },
+  {
+    "method": "read_pattern",
+    "ms": 0.46,
+    "responseBytes": 41670
+  },
+  {
+    "method": "read_pattern",
+    "ms": 0.22,
+    "responseBytes": 6054
+  },
+  {
+    "method": "search_patterns",
+    "ms": 21.05,
+    "responseBytes": 2060
+  },
+  {
+    "method": "read_pattern",
+    "ms": 1.49,
+    "responseBytes": 153415
+  },
+  {
+    "method": "read_pattern",
+    "ms": 0.39,
+    "responseBytes": 38174
+  },
+  {
+    "method": "read_pattern",
+    "ms": 0.56,
+    "responseBytes": 73278
+  },
+  {
+    "method": "read_pattern",
+    "ms": 0.27,
+    "responseBytes": 20632
+  },
+  {
+    "method": "search_patterns",
+    "ms": 26.95,
+    "responseBytes": 2126
+  },
+  {
+    "method": "read_pattern",
+    "ms": 0.87,
+    "responseBytes": 145429
+  },
+  {
+    "method": "read_pattern",
+    "ms": 0.33,
+    "responseBytes": 31126
+  },
+  {
+    "method": "read_pattern",
+    "ms": 0.26,
+    "responseBytes": 30718
+  },
+  {
+    "method": "read_pattern",
+    "ms": 0.13,
+    "responseBytes": 5160
+  },
+  {
+    "method": "search_patterns",
+    "ms": 24.13,
+    "responseBytes": 2130
+  },
+  {
+    "method": "read_pattern",
+    "ms": 1.1,
+    "responseBytes": 126465
+  },
+  {
+    "method": "read_pattern",
+    "ms": 0.34,
+    "responseBytes": 21298
+  },
+  {
+    "method": "read_pattern",
+    "ms": 0.27,
+    "responseBytes": 20098
+  },
+  {
+    "method": "read_pattern",
+    "ms": 0.18,
+    "responseBytes": 5162
+  },
+  {
+    "method": "search_patterns",
+    "ms": 21.77,
+    "responseBytes": 2134
+  },
+  {
+    "method": "read_pattern",
+    "ms": 0.69,
+    "responseBytes": 107761
+  },
+  {
+    "method": "read_pattern",
+    "ms": 0.33,
+    "responseBytes": 26934
+  },
+  {
+    "method": "read_pattern",
+    "ms": 0.39,
+    "responseBytes": 37884
+  },
+  {
+    "method": "read_pattern",
+    "ms": 0.15,
+    "responseBytes": 7690
+  },
+  {
+    "method": "search_patterns",
+    "ms": 22.34,
+    "responseBytes": 2182
+  },
+  {
+    "method": "read_pattern",
+    "ms": 2.05,
+    "responseBytes": 81361
+  },
+  {
+    "method": "read_pattern",
+    "ms": 0.31,
+    "responseBytes": 9184
+  },
+  {
+    "method": "read_pattern",
+    "ms": 0.27,
+    "responseBytes": 35970
+  },
+  {
+    "method": "read_pattern",
+    "ms": 0.13,
+    "responseBytes": 9272
+  },
+  {
+    "method": "search_patterns",
+    "ms": 21.38,
+    "responseBytes": 2138
+  },
+  {
+    "method": "read_pattern",
+    "ms": 0.73,
+    "responseBytes": 108567
+  },
+  {
+    "method": "read_pattern",
+    "ms": 4.46,
+    "responseBytes": 17950
+  },
+  {
+    "method": "read_pattern",
+    "ms": 0.31,
+    "responseBytes": 23988
+  },
+  {
+    "method": "read_pattern",
+    "ms": 0.16,
+    "responseBytes": 8938
+  },
+  {
+    "method": "search_patterns",
+    "ms": 21.69,
+    "responseBytes": 2136
+  },
+  {
+    "method": "read_pattern",
+    "ms": 1.0,
+    "responseBytes": 155361
+  },
+  {
+    "method": "read_pattern",
+    "ms": 0.99,
+    "responseBytes": 17678
+  },
+  {
+    "method": "read_pattern",
+    "ms": 0.42,
+    "responseBytes": 41286
+  },
+  {
+    "method": "read_pattern",
+    "ms": 0.39,
+    "responseBytes": 25030
+  },
+  {
+    "method": "search_patterns",
+    "ms": 22.12,
+    "responseBytes": 2110
+  },
+  {
+    "method": "read_pattern",
+    "ms": 0.73,
+    "responseBytes": 115283
+  },
+  {
+    "method": "read_pattern",
+    "ms": 0.22,
+    "responseBytes": 14924
+  },
+  {
+    "method": "read_pattern",
+    "ms": 0.46,
+    "responseBytes": 46078
+  },
+  {
+    "method": "read_pattern",
+    "ms": 0.16,
+    "responseBytes": 8346
+  },
+  {
+    "method": "search_patterns",
+    "ms": 23.47,
+    "responseBytes": 2140
+  },
+  {
+    "method": "read_pattern",
+    "ms": 1.04,
+    "responseBytes": 173463
+  },
+  {
+    "method": "read_pattern",
+    "ms": 0.39,
+    "responseBytes": 23600
+  },
+  {
+    "method": "read_pattern",
+    "ms": 0.47,
+    "responseBytes": 75312
+  },
+  {
+    "method": "read_pattern",
+    "ms": 0.25,
+    "responseBytes": 27768
+  },
+  {
+    "method": "search_patterns",
+    "ms": 25.86,
+    "responseBytes": 2184
+  },
+  {
+    "method": "read_pattern",
+    "ms": 0.82,
+    "responseBytes": 120511
+  },
+  {
+    "method": "read_pattern",
+    "ms": 0.34,
+    "responseBytes": 17446
+  },
+  {
+    "method": "read_pattern",
+    "ms": 0.54,
+    "responseBytes": 59924
+  },
+  {
+    "method": "read_pattern",
+    "ms": 0.19,
+    "responseBytes": 7378
+  },
+  {
+    "method": "search_patterns",
+    "ms": 28.07,
+    "responseBytes": 2132
+  },
+  {
+    "method": "read_pattern",
+    "ms": 1.49,
+    "responseBytes": 121259
+  },
+  {
+    "method": "read_pattern",
+    "ms": 0.35,
+    "responseBytes": 12822
+  },
+  {
+    "method": "read_pattern",
+    "ms": 0.38,
+    "responseBytes": 61060
+  },
+  {
+    "method": "read_pattern",
+    "ms": 0.23,
+    "responseBytes": 13164
+  },
+  {
+    "method": "plan_design",
+    "ms": 14.98,
+    "responseBytes": 24607
+  },
+  {
+    "method": "read_pattern",
+    "ms": 0.17,
+    "responseBytes": 161
+  },
+  {
+    "method": "read_pattern",
+    "ms": 0.83,
+    "responseBytes": 126527
+  },
+  {
+    "method": "choose_design_direction",
+    "ms": 0.17,
+    "responseBytes": 189
+  },
+  {
+    "method": "read_pattern",
+    "ms": 0.2,
+    "responseBytes": 21360
+  },
+  {
+    "method": "read_pattern",
+    "ms": 0.22,
+    "responseBytes": 20160
+  },
+  {
+    "method": "read_pattern",
+    "ms": 0.11,
+    "responseBytes": 5224
+  },
+  {
+    "method": "choose_design_direction",
+    "ms": 0.1,
+    "responseBytes": 232
+  },
+  {
+    "method": "read_design_skill",
+    "ms": 0.73,
+    "responseBytes": 19484
+  },
+  {
+    "method": "read_design_skill",
+    "ms": 0.87,
+    "responseBytes": 38794
+  },
+  {
+    "method": "read_design_skill",
+    "ms": 0.4,
+    "responseBytes": 2561
+  },
+  {
+    "method": "choose_design_direction",
+    "ms": 119.03,
+    "responseBytes": 10113
+  },
+  {
+    "method": "get_design_assets",
+    "ms": 0.2,
+    "responseBytes": 3349
+  },
+  {
+    "method": "plan_design",
+    "ms": 13.57,
+    "responseBytes": 23584
+  },
+  {
+    "method": "search_patterns",
+    "ms": 1.57,
+    "responseBytes": 445
+  },
+  {
+    "method": "plan_design",
+    "ms": 4.19,
+    "responseBytes": 170
+  },
+  {
+    "method": "get_design_workflow",
+    "ms": 0.3,
+    "responseBytes": 7668
+  },
+  {
+    "method": "get_design_workflow",
+    "ms": 0.15,
+    "responseBytes": 4131
+  }
+]

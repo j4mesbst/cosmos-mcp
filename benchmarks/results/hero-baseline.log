@@ -1,0 +1,10 @@
+Traceback (most recent call last):
+  File "/workspace/scratch/1a4b61be74b1/work/cosmos-design-engine/../cosmos-import/skills/get-started/tests/test_heroui_benchmark.py", line 187, in <module>
+    run()
+  File "/workspace/scratch/1a4b61be74b1/work/cosmos-design-engine/../cosmos-import/skills/get-started/tests/test_heroui_benchmark.py", line 144, in run
+    audit = call("run_design_audit",**audit_args)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/scratch/1a4b61be74b1/work/cosmos-design-engine/../cosmos-import/skills/get-started/tests/test_heroui_benchmark.py", line 29, in call
+    assert not blocks.get("isError"), blocks["content"][0]["text"][:900]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: Chromium audit failed: 390px: frontend-design font-size=, impeccable background-color=; 768px: frontend-design font-size=, impeccable background-color=; 1440px: frontend-design font-size=, impeccable background-color=

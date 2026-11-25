@@ -1,0 +1,13 @@
+127.0.0.1 - - [25/Nov/2026 16:10:23] "GET /benchmarks/fixtures/relay/index.html HTTP/1.1" 200 -
+127.0.0.1 - - [25/Nov/2026 16:10:23] "GET /benchmarks/fixtures/relay/style.css HTTP/1.1" 200 -
+127.0.0.1 - - [25/Nov/2026 16:10:23] "GET /benchmarks/fixtures/relay/demo.mjs HTTP/1.1" 200 -
+127.0.0.1 - - [25/Nov/2026 16:10:23] "GET /skills/get-started/scripts/cosmos-stagger.mjs HTTP/1.1" 200 -
+127.0.0.1 - - [25/Nov/2026 16:10:27] "GET /benchmarks/fixtures/relay/index.html HTTP/1.1" 200 -
+127.0.0.1 - - [25/Nov/2026 16:10:27] "GET /benchmarks/fixtures/relay/demo.mjs HTTP/1.1" 200 -
+127.0.0.1 - - [25/Nov/2026 16:10:27] "GET /benchmarks/fixtures/relay/style.css HTTP/1.1" 200 -
+127.0.0.1 - - [25/Nov/2026 16:10:27] "GET /skills/get-started/scripts/cosmos-stagger.mjs HTTP/1.1" 200 -
+127.0.0.1 - - [25/Nov/2026 16:10:27] "GET /benchmarks/fixtures/relay/index.html HTTP/1.1" 200 -
+127.0.0.1 - - [25/Nov/2026 16:10:27] "GET /benchmarks/fixtures/relay/demo.mjs HTTP/1.1" 200 -
+127.0.0.1 - - [25/Nov/2026 16:10:27] "GET /benchmarks/fixtures/relay/style.css HTTP/1.1" 200 -
+127.0.0.1 - - [25/Nov/2026 16:10:27] "GET /skills/get-started/scripts/cosmos-stagger.mjs HTTP/1.1" 200 -
+PASS: three viewports, keyboard, live preview, motion offsets and reduced motion.

@@ -1,0 +1,7 @@
+Traceback (most recent call last):
+  File "/workspace/scratch/1a4b61be74b1/work/cosmos-design-engine/skills/get-started/tests/test_heroui_benchmark.py", line 187, in <module>
+    run()
+  File "/workspace/scratch/1a4b61be74b1/work/cosmos-design-engine/skills/get-started/tests/test_heroui_benchmark.py", line 49, in run
+    assert identity["version"] == "2.4.1", identity
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: {'name': 'cosmos-local', 'version': '2.5.0'}

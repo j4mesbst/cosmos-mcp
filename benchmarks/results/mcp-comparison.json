@@ -1,0 +1,231 @@
+{
+  "scope": "Retrieval and MCP discovery only. Fixtures target the newly supplied assets.",
+  "baseline": {
+    "name": "cosmos-local",
+    "version": "2.4.1",
+    "tools": [
+      "read_design_skill",
+      "plan_design",
+      "search_patterns",
+      "search_brand_logos",
+      "read_brand_logo",
+      "read_pattern",
+      "open_reference_flow",
+      "choose_design_direction",
+      "get_design_assets",
+      "record_design_implementation",
+      "run_design_audit",
+      "open_design_render",
+      "record_design_review",
+      "get_design_workflow",
+      "review_evidence"
+    ],
+    "cases": [
+      {
+        "query": "landing-mintlify",
+        "expected": "landing-mintlify",
+        "hits": [
+          "pixlpin-airtable-web_001",
+          "pixlpin-airtable-web_430",
+          "pixlpin-apple-web_001",
+          "pixlpin-apple-web_003",
+          "pixlpin-apple-web_082"
+        ],
+        "inTopFive": false,
+        "latencyMs": 102.49,
+        "responseBytes": 4926
+      },
+      {
+        "query": "Vercel infrastructure developer landing page",
+        "expected": "landing-vercel",
+        "hits": [
+          "pixlpin-airtable-web_001",
+          "pixlpin-airtable-web_430",
+          "pixlpin-apple-web_001",
+          "pixlpin-apple-web_003",
+          "pixlpin-apple-web_082"
+        ],
+        "inTopFive": false,
+        "latencyMs": 92.54,
+        "responseBytes": 4926
+      },
+      {
+        "query": "landing-page fintech carte banque",
+        "expected": "landing-x-money",
+        "hits": [
+          "pixlpin-airtable-web_001",
+          "pixlpin-airtable-web_430",
+          "pixlpin-apple-web_001",
+          "pixlpin-apple-web_003",
+          "pixlpin-apple-web_082"
+        ],
+        "inTopFive": false,
+        "latencyMs": 93.36,
+        "responseBytes": 4926
+      },
+      {
+        "query": "landing page productivité adhd",
+        "expected": "landing-fixa",
+        "hits": [
+          "pixlpin-airtable-web_001",
+          "pixlpin-airtable-web_430",
+          "pixlpin-apple-web_001",
+          "pixlpin-apple-web_003",
+          "pixlpin-apple-web_082"
+        ],
+        "inTopFive": false,
+        "latencyMs": 133.33,
+        "responseBytes": 4926
+      },
+      {
+        "query": "landing page agent marketing analytics",
+        "expected": "landing-profound",
+        "hits": [
+          "pixlpin-airtable-web_430",
+          "pixlpin-cursor-web_282",
+          "pixlpin-linear-web_001",
+          "pixlpin-linear-web_287",
+          "pixlpin-linear-web_432"
+        ],
+        "inTopFive": false,
+        "latencyMs": 93.85,
+        "responseBytes": 5012
+      }
+    ],
+    "recallAtFive": 0.0,
+    "medianMs": 93.85
+  },
+  "current": {
+    "name": "cosmos-local",
+    "version": "2.5.0",
+    "tools": [
+      "read_design_skill",
+      "plan_design",
+      "search_patterns",
+      "search_brand_logos",
+      "read_brand_logo",
+      "read_pattern",
+      "open_reference_flow",
+      "choose_design_direction",
+      "get_design_assets",
+      "record_design_implementation",
+      "run_design_audit",
+      "open_design_render",
+      "record_design_review",
+      "get_design_workflow",
+      "review_evidence"
+    ],
+    "cases": [
+      {
+        "query": "landing-mintlify",
+        "expected": "landing-mintlify",
+        "hits": [
+          "landing-mintlify"
+        ],
+        "inTopFive": true,
+        "latencyMs": 20.54,
+        "responseBytes": 2134
+      },
+      {
+        "query": "Vercel infrastructure developer landing page",
+        "expected": "landing-vercel",
+        "hits": [
+          "landing-vercel"
+        ],
+        "inTopFive": true,
+        "latencyMs": 20.11,
+        "responseBytes": 2249
+      },
+      {
+        "query": "landing-page fintech carte banque",
+        "expected": "landing-x-money",
+        "hits": [
+          "landing-x-money",
+          "landing-serus",
+          "landing-aside",
+          "landing-berd",
+          "landing-cosmos"
+        ],
+        "inTopFive": true,
+        "latencyMs": 97.33,
+        "responseBytes": 8968
+      },
+      {
+        "query": "landing page productivité adhd",
+        "expected": "landing-fixa",
+        "hits": [
+          "landing-fixa",
+          "landing-aside",
+          "landing-berd",
+          "landing-cosmos",
+          "landing-cursor"
+        ],
+        "inTopFive": true,
+        "latencyMs": 95.07,
+        "responseBytes": 8852
+      },
+      {
+        "query": "landing page agent marketing analytics",
+        "expected": "landing-profound",
+        "hits": [
+          "landing-profound",
+          "landing-cursor",
+          "landing-runner",
+          "landing-aside",
+          "landing-berd"
+        ],
+        "inTopFive": true,
+        "latencyMs": 106.97,
+        "responseBytes": 9023
+      }
+    ],
+    "recallAtFive": 1.0,
+    "medianMs": 95.07
+  },
+  "shadcn": {
+    "name": "shadcn",
+    "version": "1.0.0",
+    "tools": [
+      "get_project_registries",
+      "list_items_in_registries",
+      "search_items_in_registries",
+      "view_items_in_registries",
+      "get_item_examples_from_registries",
+      "get_add_command_for_items",
+      "get_audit_checklist"
+    ],
+    "verified": "MCP initialization and tools/list"
+  },
+  "playwright-mcp": {
+    "name": "Playwright",
+    "version": "1.66.0-alpha-2026-11-18",
+    "tools": [
+      "browser_close",
+      "browser_resize",
+      "browser_console_messages",
+      "browser_handle_dialog",
+      "browser_emulate_media",
+      "browser_evaluate",
+      "browser_file_upload",
+      "browser_drop",
+      "browser_find",
+      "browser_fill_form",
+      "browser_press_key",
+      "browser_type",
+      "browser_navigate",
+      "browser_navigate_back",
+      "browser_network_requests",
+      "browser_network_request",
+      "browser_run_code_unsafe",
+      "browser_take_screenshot",
+      "browser_snapshot",
+      "browser_click",
+      "browser_drag",
+      "browser_hover",
+      "browser_select_option",
+      "browser_tabs",
+      "browser_wait_for"
+    ],
+    "verified": "MCP initialization and tools/list"
+  }
+}

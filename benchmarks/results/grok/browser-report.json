@@ -1,0 +1,631 @@
+{
+  "schema": "cosmos-browser-1",
+  "viewports": [
+    {
+      "width": 390,
+      "screenshot": ".cosmos/review/render-390.png",
+      "designProbes": [
+        {
+          "key": "composition",
+          "selector": "#messages p",
+          "text": "Salut, je suis Sillage.",
+          "actual": "Salut, je suis Sillage.",
+          "expected": "Salut, je suis Sillage."
+        },
+        {
+          "key": "copy",
+          "selector": "#agent-name",
+          "text": "Sillage",
+          "actual": "Sillage",
+          "expected": "Sillage"
+        },
+        {
+          "key": "token",
+          "selector": "#agent-name",
+          "property": "color",
+          "token": "--cosmos-foreground",
+          "actual": "rgb(19, 78, 74)",
+          "expected": "rgb(19, 78, 74)"
+        }
+      ],
+      "referenceTargets": [
+        "#chat",
+        "#back",
+        "#agent",
+        "#avatar",
+        "#computer",
+        "#messages",
+        "#composer",
+        "#add",
+        "#send"
+      ],
+      "agentChat": {
+        "roles": {
+          "canvas": "#chat",
+          "back": "#back",
+          "agent": "#agent",
+          "avatar": "#avatar",
+          "computer": "#computer",
+          "messages": "#messages",
+          "composer": "#composer",
+          "add": "#add",
+          "send": "#send"
+        },
+        "measurements": {
+          "box": {
+            "canvas": {
+              "left": 0,
+              "top": 0,
+              "width": 390,
+              "height": 900,
+              "right": 390,
+              "bottom": 900
+            },
+            "back": {
+              "left": 18,
+              "top": 21,
+              "width": 44,
+              "height": 44,
+              "right": 62,
+              "bottom": 65
+            },
+            "agent": {
+              "left": 72,
+              "top": 21,
+              "width": 102.359375,
+              "height": 44,
+              "right": 174.359375,
+              "bottom": 65
+            },
+            "avatar": {
+              "left": 79,
+              "top": 28,
+              "width": 30,
+              "height": 30,
+              "right": 109,
+              "bottom": 58
+            },
+            "computer": {
+              "left": 328,
+              "top": 21,
+              "width": 44,
+              "height": 44,
+              "right": 372,
+              "bottom": 65
+            },
+            "messages": {
+              "left": 18,
+              "top": 696.84375,
+              "width": 354,
+              "height": 117.15625,
+              "right": 372,
+              "bottom": 814
+            },
+            "composer": {
+              "left": 72,
+              "top": 830,
+              "width": 300,
+              "height": 50,
+              "right": 372,
+              "bottom": 880
+            },
+            "add": {
+              "left": 18,
+              "top": 833,
+              "width": 44,
+              "height": 44,
+              "right": 62,
+              "bottom": 877
+            },
+            "send": {
+              "left": 327,
+              "top": 835,
+              "width": 40,
+              "height": 40,
+              "right": 367,
+              "bottom": 875
+            }
+          },
+          "color": "rgb(255, 255, 255)",
+          "divider": 0,
+          "agentContainsAvatar": true,
+          "composerContainsSend": true,
+          "sendEnabled": false,
+          "composerContainsAdd": false,
+          "composerRadius": 28,
+          "addRadius": 50,
+          "bubble": {
+            "left": 18,
+            "top": 696.84375,
+            "width": 175.640625,
+            "height": 42.71875,
+            "right": 193.640625,
+            "bottom": 739.5625,
+            "radius": 18
+          },
+          "viewportHeight": 900
+        }
+      },
+      "skillVisuals": [],
+      "keyboardTransition": true,
+      "overflow": false,
+      "axeViolations": 0,
+      "keyboard": true,
+      "reducedMotion": true,
+      "primaryFlow": true,
+      "errors": 0,
+      "violations": []
+    },
+    {
+      "width": 390,
+      "screenshot": ".cosmos/review/agent-draft-390.png",
+      "designProbes": [
+        {
+          "key": "composition",
+          "selector": "#messages p",
+          "text": "Salut, je suis Sillage.",
+          "actual": "Salut, je suis Sillage.",
+          "expected": "Salut, je suis Sillage."
+        },
+        {
+          "key": "copy",
+          "selector": "#agent-name",
+          "text": "Sillage",
+          "actual": "Sillage",
+          "expected": "Sillage"
+        },
+        {
+          "key": "token",
+          "selector": "#agent-name",
+          "property": "color",
+          "token": "--cosmos-foreground",
+          "actual": "rgb(19, 78, 74)",
+          "expected": "rgb(19, 78, 74)"
+        }
+      ],
+      "referenceTargets": [
+        "#chat",
+        "#back",
+        "#agent",
+        "#avatar",
+        "#computer",
+        "#messages",
+        "#composer",
+        "#add",
+        "#send"
+      ],
+      "agentChat": {
+        "roles": {
+          "canvas": "#chat",
+          "back": "#back",
+          "agent": "#agent",
+          "avatar": "#avatar",
+          "computer": "#computer",
+          "messages": "#messages",
+          "composer": "#composer",
+          "add": "#add",
+          "send": "#send"
+        },
+        "measurements": {
+          "box": {
+            "canvas": {
+              "left": 0,
+              "top": 0,
+              "width": 390,
+              "height": 900,
+              "right": 390,
+              "bottom": 900
+            },
+            "back": {
+              "left": 18,
+              "top": 21,
+              "width": 44,
+              "height": 44,
+              "right": 62,
+              "bottom": 65
+            },
+            "agent": {
+              "left": 72,
+              "top": 21,
+              "width": 102.359375,
+              "height": 44,
+              "right": 174.359375,
+              "bottom": 65
+            },
+            "avatar": {
+              "left": 79,
+              "top": 28,
+              "width": 30,
+              "height": 30,
+              "right": 109,
+              "bottom": 58
+            },
+            "computer": {
+              "left": 328,
+              "top": 21,
+              "width": 44,
+              "height": 44,
+              "right": 372,
+              "bottom": 65
+            },
+            "messages": {
+              "left": 18,
+              "top": 696.84375,
+              "width": 354,
+              "height": 117.15625,
+              "right": 372,
+              "bottom": 814
+            },
+            "composer": {
+              "left": 72,
+              "top": 830,
+              "width": 300,
+              "height": 50,
+              "right": 372,
+              "bottom": 880
+            },
+            "add": {
+              "left": 18,
+              "top": 833,
+              "width": 44,
+              "height": 44,
+              "right": 62,
+              "bottom": 877
+            },
+            "send": {
+              "left": 327,
+              "top": 835,
+              "width": 40,
+              "height": 40,
+              "right": 367,
+              "bottom": 875
+            }
+          },
+          "color": "rgb(255, 255, 255)",
+          "divider": 0,
+          "agentContainsAvatar": true,
+          "composerContainsSend": true,
+          "sendEnabled": true,
+          "composerContainsAdd": false,
+          "composerRadius": 28,
+          "addRadius": 50,
+          "bubble": {
+            "left": 18,
+            "top": 696.84375,
+            "width": 175.640625,
+            "height": 42.71875,
+            "right": 193.640625,
+            "bottom": 739.5625,
+            "radius": 18
+          },
+          "viewportHeight": 900
+        }
+      },
+      "skillVisuals": [],
+      "keyboardTransition": true,
+      "overflow": false,
+      "axeViolations": 0,
+      "keyboard": true,
+      "reducedMotion": true,
+      "primaryFlow": true,
+      "errors": 0,
+      "violations": []
+    },
+    {
+      "width": 768,
+      "screenshot": ".cosmos/review/render-768.png",
+      "designProbes": [
+        {
+          "key": "composition",
+          "selector": "#messages p",
+          "text": "Salut, je suis Sillage.",
+          "actual": "Salut, je suis Sillage.",
+          "expected": "Salut, je suis Sillage."
+        },
+        {
+          "key": "copy",
+          "selector": "#agent-name",
+          "text": "Sillage",
+          "actual": "Sillage",
+          "expected": "Sillage"
+        },
+        {
+          "key": "token",
+          "selector": "#agent-name",
+          "property": "color",
+          "token": "--cosmos-foreground",
+          "actual": "rgb(19, 78, 74)",
+          "expected": "rgb(19, 78, 74)"
+        }
+      ],
+      "referenceTargets": [
+        "#chat",
+        "#back",
+        "#agent",
+        "#avatar",
+        "#computer",
+        "#messages",
+        "#composer",
+        "#add",
+        "#send"
+      ],
+      "agentChat": {
+        "roles": {
+          "canvas": "#chat",
+          "back": "#back",
+          "agent": "#agent",
+          "avatar": "#avatar",
+          "computer": "#computer",
+          "messages": "#messages",
+          "composer": "#composer",
+          "add": "#add",
+          "send": "#send"
+        },
+        "measurements": {
+          "box": {
+            "canvas": {
+              "left": 64,
+              "top": 0,
+              "width": 640,
+              "height": 900,
+              "right": 704,
+              "bottom": 900
+            },
+            "back": {
+              "left": 82,
+              "top": 37,
+              "width": 44,
+              "height": 44,
+              "right": 126,
+              "bottom": 81
+            },
+            "agent": {
+              "left": 136,
+              "top": 37,
+              "width": 102.359375,
+              "height": 44,
+              "right": 238.359375,
+              "bottom": 81
+            },
+            "avatar": {
+              "left": 143,
+              "top": 44,
+              "width": 30,
+              "height": 30,
+              "right": 173,
+              "bottom": 74
+            },
+            "computer": {
+              "left": 642,
+              "top": 37,
+              "width": 44,
+              "height": 44,
+              "right": 686,
+              "bottom": 81
+            },
+            "messages": {
+              "left": 82,
+              "top": 715.5625,
+              "width": 604,
+              "height": 94.4375,
+              "right": 686,
+              "bottom": 810
+            },
+            "composer": {
+              "left": 136,
+              "top": 826,
+              "width": 550,
+              "height": 50,
+              "right": 686,
+              "bottom": 876
+            },
+            "add": {
+              "left": 82,
+              "top": 829,
+              "width": 44,
+              "height": 44,
+              "right": 126,
+              "bottom": 873
+            },
+            "send": {
+              "left": 641,
+              "top": 831,
+              "width": 40,
+              "height": 40,
+              "right": 681,
+              "bottom": 871
+            }
+          },
+          "color": "rgb(255, 255, 255)",
+          "divider": 0,
+          "agentContainsAvatar": true,
+          "composerContainsSend": true,
+          "sendEnabled": false,
+          "composerContainsAdd": false,
+          "composerRadius": 28,
+          "addRadius": 50,
+          "bubble": {
+            "left": 82,
+            "top": 715.5625,
+            "width": 175.640625,
+            "height": 42.71875,
+            "right": 257.640625,
+            "bottom": 758.28125,
+            "radius": 18
+          },
+          "viewportHeight": 900
+        }
+      },
+      "skillVisuals": [],
+      "keyboardTransition": true,
+      "overflow": false,
+      "axeViolations": 0,
+      "keyboard": true,
+      "reducedMotion": true,
+      "primaryFlow": true,
+      "errors": 0,
+      "violations": []
+    },
+    {
+      "width": 1440,
+      "screenshot": ".cosmos/review/render-1440.png",
+      "designProbes": [
+        {
+          "key": "composition",
+          "selector": "#messages p",
+          "text": "Salut, je suis Sillage.",
+          "actual": "Salut, je suis Sillage.",
+          "expected": "Salut, je suis Sillage."
+        },
+        {
+          "key": "copy",
+          "selector": "#agent-name",
+          "text": "Sillage",
+          "actual": "Sillage",
+          "expected": "Sillage"
+        },
+        {
+          "key": "token",
+          "selector": "#agent-name",
+          "property": "color",
+          "token": "--cosmos-foreground",
+          "actual": "rgb(19, 78, 74)",
+          "expected": "rgb(19, 78, 74)"
+        }
+      ],
+      "referenceTargets": [
+        "#chat",
+        "#back",
+        "#agent",
+        "#avatar",
+        "#computer",
+        "#messages",
+        "#composer",
+        "#add",
+        "#send"
+      ],
+      "agentChat": {
+        "roles": {
+          "canvas": "#chat",
+          "back": "#back",
+          "agent": "#agent",
+          "avatar": "#avatar",
+          "computer": "#computer",
+          "messages": "#messages",
+          "composer": "#composer",
+          "add": "#add",
+          "send": "#send"
+        },
+        "measurements": {
+          "box": {
+            "canvas": {
+              "left": 400,
+              "top": 0,
+              "width": 640,
+              "height": 900,
+              "right": 1040,
+              "bottom": 900
+            },
+            "back": {
+              "left": 418,
+              "top": 37,
+              "width": 44,
+              "height": 44,
+              "right": 462,
+              "bottom": 81
+            },
+            "agent": {
+              "left": 472,
+              "top": 37,
+              "width": 102.359375,
+              "height": 44,
+              "right": 574.359375,
+              "bottom": 81
+            },
+            "avatar": {
+              "left": 479,
+              "top": 44,
+              "width": 30,
+              "height": 30,
+              "right": 509,
+              "bottom": 74
+            },
+            "computer": {
+              "left": 978,
+              "top": 37,
+              "width": 44,
+              "height": 44,
+              "right": 1022,
+              "bottom": 81
+            },
+            "messages": {
+              "left": 418,
+              "top": 715.5625,
+              "width": 604,
+              "height": 94.4375,
+              "right": 1022,
+              "bottom": 810
+            },
+            "composer": {
+              "left": 472,
+              "top": 826,
+              "width": 550,
+              "height": 50,
+              "right": 1022,
+              "bottom": 876
+            },
+            "add": {
+              "left": 418,
+              "top": 829,
+              "width": 44,
+              "height": 44,
+              "right": 462,
+              "bottom": 873
+            },
+            "send": {
+              "left": 977,
+              "top": 831,
+              "width": 40,
+              "height": 40,
+              "right": 1017,
+              "bottom": 871
+            }
+          },
+          "color": "rgb(255, 255, 255)",
+          "divider": 0,
+          "agentContainsAvatar": true,
+          "composerContainsSend": true,
+          "sendEnabled": false,
+          "composerContainsAdd": false,
+          "composerRadius": 28,
+          "addRadius": 50,
+          "bubble": {
+            "left": 418,
+            "top": 715.5625,
+            "width": 175.640625,
+            "height": 42.71875,
+            "right": 593.640625,
+            "bottom": 758.28125,
+            "radius": 18
+          },
+          "viewportHeight": 900
+        }
+      },
+      "skillVisuals": [],
+      "keyboardTransition": true,
+      "overflow": false,
+      "axeViolations": 0,
+      "keyboard": true,
+      "reducedMotion": true,
+      "primaryFlow": true,
+      "errors": 0,
+      "violations": []
+    }
+  ],
+  "screenshots": {
+    ".cosmos/review/agent-draft-390.png": "8bee61b825fb2981571f3e5ae456f46e31ad53c3c77e9079e981f23a58c2f519",
+    ".cosmos/review/render-390.png": "fe5194067fbe5b7226df7dab2344e575bedf8da68dfb5a24ddef54b270724a86",
+    ".cosmos/review/render-768.png": "86ead87f585f1fa1df1a991d5d6939b4ad0134fa560e791757a86b06ab761c28",
+    ".cosmos/review/render-1440.png": "dd72dda9e288214f7a2cdc718f43b1bfbece8a40ec90c10ed76e36a198e69204"
+  }
+}

@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="fr">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Relais — Documentation produit</title>
+<link rel="stylesheet" href="style.css">
+<header class="shell"><a class="wordmark" href="#">Relais<span>.</span></a><nav aria-label="Navigation"><a href="#features">Fonctionnalités</a><a class="small-link" href="#conversion">Essayer l’éditeur →</a></nav></header>
+<main>
+  <section id="hero" class="shell hero">
+    <div class="intro"><h1>Vos guides suivent vos versions.</h1><p>Écrivez et prévisualisez votre documentation produit au même endroit. Vos lecteurs retrouvent le guide de leur version.</p><a class="cta" href="#conversion">Essayer l’éditeur <span aria-hidden="true">→</span></a></div>
+    <div class="art"><div class="window"><div class="window-bar"><span class="dot"></span><span>Relais · Intégration</span><span class="version">v2.4</span></div><div class="work"><div class="side"><b>Guides</b><span>Démarrage</span><span class="active">Publier un guide</span><span>Suivre les versions</span></div><div class="document"><small>DÉMARRAGE / PUBLICATION</small><h2>Publier un guide</h2><p>Vérifiez l’aperçu avant de partager votre guide.</p><code>relais publish --version 2.4</code></div></div></div></div>
+  </section>
+  <section id="features" class="shell features"><h2>Du brouillon à la bonne version.</h2><div class="features-grid">
+    <article><div class="example"><span class="snippet"><b>Édition</b><br>## Votre premier guide</span><span class="snippet"><b>Aperçu</b><br>Votre premier guide</span></div><h3>Prévisualisation en direct</h3><p>Vérifiez les titres et la mise en page au fil de la rédaction.</p></article>
+    <article><div class="example versions"><span>v2.3 <small>En ligne</small></span><span>v2.4 <small>Brouillon</small></span></div><h3>Un guide pour chaque version</h3><p>Mettez à jour une version en gardant les anciennes disponibles.</p></article>
+    <article><div class="example"><span class="review-mark" aria-hidden="true">✓</span><span class="snippet">Guide relu<br><b>Prêt à partager</b></span></div><h3>Relecture avant publication</h3><p>Relisez le guide dans sa mise en page de lecture avant de le diffuser.</p></article>
+  </div></section>
+  <section id="conversion" class="shell conversion"><div><h2>Essayez l’aperçu.</h2><p>Changez le titre. La version lecteur se met à jour ici même.</p></div><div class="live"><label for="guide">Titre du guide</label><input id="guide" value="Votre premier guide" maxlength="80"><div class="preview"><small>APERÇU LECTEUR</small><h3 id="result" aria-live="polite">Votre premier guide</h3></div><button type="button" id="replay">Rejouer l’aperçu</button></div></section>
+</main>
+<footer class="shell"><span class="wordmark">Relais<span>.</span></span><span>Démo de documentation produit</span></footer>
+<script type="module" src="demo.mjs"></script>
+</html>

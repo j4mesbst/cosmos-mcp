@@ -1,0 +1,20 @@
+:root {
+  --cosmos-primary: #0D9488;
+  --cosmos-on-primary: #000000;
+  --cosmos-background: #F0FDFA;
+  --cosmos-foreground: #134E4A;
+  --cosmos-card: #FFFFFF;
+  --cosmos-muted: #E8F1F4;
+  --cosmos-muted-foreground: #475569;
+  --cosmos-border: #99F6E4;
+  --cosmos-ring: #0D9488;
+  --primary: var(--cosmos-primary);
+  --primary-foreground: var(--cosmos-on-primary);
+  --background: var(--cosmos-background);
+  --foreground: var(--cosmos-foreground);
+  --card: var(--cosmos-card);
+  --muted: var(--cosmos-muted);
+  --muted-foreground: var(--cosmos-muted-foreground);
+  --border: var(--cosmos-border);
+  --ring: var(--cosmos-ring);
+}
