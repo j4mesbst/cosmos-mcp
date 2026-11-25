@@ -1,3 +1,4 @@
+import {Buffer} from 'node:buffer';
 import {timingSafeEqual} from 'node:crypto';
 
 function authenticated(request, token) {
@@ -27,8 +28,15 @@ export default {
       const value=request.headers.get(name);
       if (value) headers.set(name,value);
     }
+    let body;
+    if (request.method === 'POST') {
+      const length=Number(request.headers.get('Content-Length'));
+      if (!Number.isInteger(length) || length < 1 || length > 2_000_000) return new Response(null,{status:413});
+      body=await request.arrayBuffer();
+      if (body.byteLength !== length) return new Response(null,{status:400});
+    }
     try {
-      const upstream=await fetch(target,{method:request.method,headers,body:request.body,redirect:'manual'});
+      const upstream=await fetch(target,{method:request.method,headers,body,redirect:'manual'});
       if (upstream.status >= 300 && upstream.status < 400) return new Response('Unexpected origin redirect',{status:502});
       return upstream;
     } catch {
