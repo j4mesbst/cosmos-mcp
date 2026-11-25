@@ -4,7 +4,9 @@ Le moteur Python et les ressources du plugin sont conservés. Le Worker sert de 
 
 ## Configuration
 
-Le moteur se lie à 127.0.0.1:8765. Faire pointer une origine HTTPS contrôlée vers ce port. Le Worker doit recevoir COSMOS_UPSTREAM avec l’URL complète de l’origine MCP, ainsi que deux secrets différents COSMOS_CLIENT_TOKEN et COSMOS_ORIGIN_TOKEN. Configurer ces secrets via Wrangler et les transmettre à la machine d’origine par son environnement. Exécuter python3 remote/bridge.py sur l’origine. Pour auditer un projet, fixer COSMOS_PROJECT_ROOT à un répertoire de projet dédié et installé. Les traces d’audit peuvent lire les fichiers de ce répertoire. Réserver cet accès aux utilisateurs autorisés. Le moteur doit rester en ligne.
+Le moteur se lie à `127.0.0.1:8765`. Le Worker peut le joindre par un tunnel Cloudflare privé et un service VPC HTTP ciblant `127.0.0.1:8765`. Ajouter ce service à `vpc_services` sous le nom de binding `COSMOS_VPC`, puis faire tourner `cloudflared` sur la machine du moteur. La passerelle prend aussi en charge une origine HTTPS contrôlée via `COSMOS_UPSTREAM`, qui doit alors contenir l’URL complète de l’origine MCP.
+
+Configurer deux secrets distincts, `COSMOS_CLIENT_TOKEN` et `COSMOS_ORIGIN_TOKEN`, dans le Worker via Wrangler. Fournir uniquement `COSMOS_ORIGIN_TOKEN` à `python3 remote/bridge.py` sur la machine d’origine via son environnement. Pour auditer un projet, fixer `COSMOS_PROJECT_ROOT` à un répertoire de projet dédié et installé. Les traces d’audit peuvent lire les fichiers de ce répertoire. Réserver cet accès aux utilisateurs autorisés. Le moteur doit rester en ligne.
 
 Le Worker refuse les appels sans jeton. Pour un client qui exige une URL seule et un flux d’autorisation standard, ajouter un fournisseur OAuth avant de publier le connecteur. Ne pas mettre de jeton dans une URL ou dans un fichier suivi. Le connecteur Claude n’a pas été testé avec cette passerelle.
 
