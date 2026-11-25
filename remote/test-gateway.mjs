@@ -63,6 +63,9 @@ try {
     }
   }
   assert.ok(ready, 'The local bridge did not start.');
+  const health = await fetch(new URL('/healthz', origin));
+  assert.equal(health.status, 200);
+  assert.deepEqual(await health.json(), { status: 'ok' });
   assert.equal((await gateway.fetch(new Request(endpoint), env)).status, 401);
   assert.equal((await gateway.fetch(new Request(endpoint), {})).status, 503);
   const init = await rpc('initialize', { protocolVersion: '2025-11-25', capabilities: {},
