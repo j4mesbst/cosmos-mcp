@@ -33,7 +33,7 @@ def tokens(value):
 
 
 def indexed_entries():
-    for filename in ("catalog.json", "pixlpin-catalog.json"):
+    for filename in ("catalog.json", "pixlpin-catalog.json", "landing-page-catalog.json"):
         for row in json.loads((REFERENCES / filename).read_text(encoding="utf-8")):
             label = tokens(row["structure"] + " " + row.get("classificationReason", ""))
             row.setdefault("app", row["collection"])
@@ -61,12 +61,15 @@ COUNTS = {platform: dict(sorted(Counter(row["category"] for row in CATALOG if ro
           for platform in ("ios", "web")}
 APPS = {row["app"] for row in CATALOG}
 SEARCH_INDEX = [(row, tokens(" ".join([row["structure"], row["category"], row["screenType"],
+                                       row["productCategory"] or "", *row.get("tags", []),
                                        *row["states"], *row["components"]]))) for row in CATALOG]
 
 
 def infer_app(query):
     plain = " " + normalize(query) + " "
-    for app in sorted(APPS, key=lambda name: (-len(name), name)):
+    for app in sorted(APPS, key=lambda name: (-len(normalize(name).removesuffix(" web")), name)):
+        if app == "Cosmos" and "cosmos" != plain.strip() and not re.search(r"(?:inspir|reference|app|site|landing).{0,25}cosmos", plain):
+            continue
         name = normalize(app).removesuffix(" web").split()
         if len(name) > 1 and re.fullmatch(r"[a-z0-9]{4}", name[-1]) and any(c.isdigit() for c in name[-1]):
             name.pop()
@@ -77,21 +80,26 @@ def infer_app(query):
     return None
 
 
-def find(query, platform, kind, app=None, category=None, screen_type=None, state=None, component=None):
+def find(query, platform, kind, app=None, category=None, screen_type=None, state=None, component=None,
+         full_page_only=False, offset=0, limit=5):
     terms = tokens(query)
     app = app or infer_app(query)
     if app:
         terms -= tokens(app)
     if any(value and not tokens(value) for value in (category, screen_type, state, component)):
-        return [], False
+        return [], False, None
     filters = [tokens(value) for value in (screen_type, state, component) if value]
     category_words = tokens(category or "")
+    landing_intent = {"landing", "page"} <= (terms | tokens(screen_type or "") | category_words)
     narrow, related = [], []
     for row, words in SEARCH_INDEX:
+        if full_page_only and not row.get("fullPage"):
+            continue
         if (platform and row["platform"] != platform) or (kind and row["kind"] != kind):
             continue
         exact = query.strip().casefold() == row["id"]
-        if app and not normalize(row["app"]).startswith(normalize(app)):
+        if app and not exact and not (normalize(row["app"]).startswith(normalize(app)) or
+                                      normalize(app).startswith(normalize(row["app"]) + " web")):
             continue
         overlap = terms & words
         strict = all(group <= words for group in filters)
@@ -109,8 +117,19 @@ def find(query, platform, kind, app=None, category=None, screen_type=None, state
         score += 20 * ("first" in terms and bool({"first","initial"} & words))
         if row["id"] == "grok-029" and (app == "Grok Bot" or category == "Agent IA"):
             score += 100 if "first" in terms else 12
+        if row.get("fullPage") and landing_intent:
+            score += 30 + 7 * len(terms & set(row["tags"]))
         target.append((-score, row["id"], row))
     expanded = len(narrow) < 2 and bool(related) and bool(category_words or filters)
     ranked = sorted(narrow) + (sorted(related) if expanded else [])
     keys = ("id","title","kind","platform","app","category","productCategory","screenType","states","components","structure","adapt")
-    return [{key: row[key] for key in keys} for _, _, row in ranked[:5]], expanded
+    results = []
+    for _, _, row in ranked[offset:offset + limit]:
+        entry = {key: row[key] for key in keys}
+        entry["previewAvailable"] = (REFERENCES / row["preview"]).is_file()
+        if row.get("fullPage"):
+            entry.update(fullPage=True, sections=[s["id"] for s in row["sections"]],
+                         matchReasons=sorted(terms & set(row["tags"])), rights=row["rights"])
+        results.append(entry)
+    next_offset = offset + limit if len(ranked) > offset + limit else None
+    return results, expanded, next_offset

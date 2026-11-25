@@ -14,6 +14,48 @@ from design_assets import project_file
 PACKAGE = Path(__file__).resolve().parents[2]
 LOGO_ARCHIVE = PACKAGE / "thesvg/references/the-svg-4.0.16.zip"
 HERO_VERSION = "3.2.8"
+HERO_EXPORTS = {"primary-action": "Button", "navigation": "Link", "dialog": "Modal",
+                "selection": "Switch", "group": "Card"}
+
+
+def project_ui():
+    try:
+        package = json.loads(project_file("package.json"))
+    except (ValueError, OSError):
+        return {"status": "unavailable"}
+    dependencies = {**package.get("devDependencies", {}), **package.get("dependencies", {})}
+    lockfiles = []
+    for name in ("package-lock.json", "pnpm-lock.yaml", "yarn.lock", "bun.lock", "bun.lockb"):
+        root = Path(os.environ["COSMOS_PROJECT_ROOT"]).resolve()
+        if (root / name).is_file():
+            lockfiles.append(name)
+    report = {"status": "detected", "react": dependencies.get("react"), "tailwind": dependencies.get("tailwindcss"),
+              "packageManager": package.get("packageManager"), "lockfiles": lockfiles}
+    if "@heroui/react" in dependencies:
+        report["herouiDeclared"] = dependencies["@heroui/react"]
+        try:
+            report["herouiInstalled"] = json.loads(project_file("node_modules/@heroui/react/package.json"))["version"]
+        except (ValueError, OSError, KeyError):
+            pass
+    return report
+
+
+def hero_assets(project):
+    if project.get("herouiDeclared"):
+        version = project.get("herouiInstalled")
+        install = None
+        status = "verified-version" if version == HERO_VERSION else "requires-version-specific-review"
+    else:
+        version, status = HERO_VERSION, "validated-new-project-version"
+        install = f"npm install -E @heroui/react@{version} @heroui/styles@{version} @babel/parser" if not (
+            project.get("packageManager") and not project["packageManager"].startswith("npm@")
+            or set(project.get("lockfiles", [])) - {"package-lock.json"}
+        ) else None
+    return {"library": "HeroUI", "version": version, "install": install, "status": status,
+            "required": "Preserve the declared manager and dependencies. Import Tailwind CSS before HeroUI styles.",
+            "docs": "https://heroui.com/en/docs/react",
+            "roles": [{"role": role, "module": "@heroui/react", "export": export}
+                      for role, export in HERO_EXPORTS.items()] if version == HERO_VERSION else []}
 
 
 @lru_cache(maxsize=1)

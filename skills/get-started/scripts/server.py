@@ -12,8 +12,9 @@ from uuid import uuid4
 from pathlib import Path
 
 from design_assets import project_file, component_assets, design_tokens, inspect_browser_report, inspect_implementation, inspect_render
+from project_style import load_style, save_style
 
-from brand_assets import HERO_VERSION, find_logos, logo_asset, verify_brand_assets, verify_heroui_source
+from brand_assets import find_logos, hero_assets, logo_asset, project_ui, verify_brand_assets, verify_heroui_source
 from chat_contract import PROFILE, failures as chat_failures, validate_direction as validate_chat_direction
 from patterns import REFERENCES, CATALOG, PATTERNS, COUNTS, find, infer_app, normalize, tokens
 
@@ -23,7 +24,9 @@ TEXT = {"type": "string", "minLength": 1, "maxLength": 600}
 PLATFORM = {"type": "string", "enum": ["web", "ios"]}
 COUNT = {"type": "integer", "minimum": 0, "maximum": 1000000}
 WORKFLOW_ID = {"type": "string", "maxLength": 32}
-REFERENCE_ID = {"type": "string", "pattern": "^(grok-[0-9]{3}|brief-[0-9]{3}|pixlpin-[a-z0-9-]+_[0-9]+)$", "maxLength": 96}
+REFERENCE_ID = {"type": "string", "pattern": "^(grok-[0-9]{3}|brief-[0-9]{3}|pixlpin-[a-z0-9-]+_[0-9]+|landing-[a-z0-9-]+)$", "maxLength": 96}
+LANDING_SECTION = {"type": "string", "enum": ["hero", "features", "conversion"]}
+TASK_MODE = {"type": "string", "enum": ["create", "edit", "audit", "motion"]}
 REVIEW_CHECKS = {
     "web": ["render", "responsive", "keyboard", "primary-flow", "reduced-motion"],
     "ios": ["render", "build", "voiceover", "dynamic-type", "primary-flow", "reduced-motion"],
@@ -60,6 +63,9 @@ class DesignSession:
     copy_sample: str = ""
     implementation: dict | None = None
     reviewed_images: list = field(default_factory=list)
+    opened_sections: set = field(default_factory=set)
+    landing_candidates: set = field(default_factory=set)
+    contract: dict = field(default_factory=dict)
 
 
 SESSIONS = {}
@@ -132,12 +138,16 @@ REFERENCE_DECISION = record({
     "adaptation": TEXT, "renderTarget": TEXT,
 })
 REFERENCE_DECISION["properties"]["measurements"] = TEXT
+REFERENCE_DECISION["properties"]["sectionId"] = LANDING_SECTION
+REFERENCE_DECISION["properties"]["productFeature"] = TEXT
 REFERENCE_DECISION["properties"]["componentRole"] = {"type":"string","enum":list(PROFILE["regions"])}
 VISUAL_RESULT = record({
     "decisionIndex": {"type": "integer", "minimum": 1, "maximum": 12},
     "screenshot": TEXT, "observation": TEXT, "status": {"type":"string","enum":["pass","fail"]},
 })
 VISUAL_RESULT["properties"]["measurements"] = TEXT
+COMPARISON_PAIR = record({"id":REFERENCE_ID,"screenshot":TEXT})
+COMPARISON_PAIR["properties"]["sectionId"] = LANDING_SECTION
 MODE = {"type":"string","enum":["inspiration","faithful"]}
 
 SKILL_PLAN = record({"skill":{"type":"string","enum":sorted(PLAYBOOKS)},
@@ -161,12 +171,17 @@ TOOLS = [
         "priority": {"type": "string", "enum": ["editorial", "transaction", "exploration"]},
         "brandLogos": array_of(TEXT, 12, 1), "logoExclusion": TEXT,
         "briefReferences": array_of(TEXT, 4, 1),
+        "taskMode": TASK_MODE,
+        "reuseProjectStyle": {"type": "boolean"},
     }, ["platform", "goal", "audience", "priority"], read_only=False),
-    tool("search_patterns", "Search Grok iOS and categorized Pixlpin web screenshots. Filter by app, category, screen type, component or state. Pass workflowId during design research, then open selected matches with read_pattern.", {
+    tool("search_patterns", "Find relevant visual patterns for design work, including full landing pages, Grok iOS and categorized Pixlpin screens. For substantial landing pages compare hero, product demonstrations and conversion. Open selected images with read_pattern. Skip for unrelated coding or minor edits.", {
         "query": TEXT, "platform": PLATFORM,
         "kind": {"type": "string", "enum": ["screenshot", "component", "animation", "pattern"]},
         "workflowId": WORKFLOW_ID, "allowCrossPlatform": {"type": "boolean"},
         "app": TEXT, "category": TEXT, "screenType": TEXT, "state": TEXT, "component": TEXT,
+        "fullPageOnly": {"type": "boolean"},
+        "offset": COUNT,
+        "limit": {"type": "integer", "minimum": 1, "maximum": 12},
     }, ["query"], read_only=False),
     tool("search_brand_logos", "Look up the pinned local theSVG catalogue by brand name or slug before planning a web design.", {
         "query":TEXT,
@@ -174,8 +189,8 @@ TOOLS = [
     tool("read_brand_logo", "Return the exact local theSVG asset and its verified project path. Retrieve every slug declared in plan_design.", {
         "workflowId":WORKFLOW_ID,"slug":TEXT,
     }, ["workflowId","slug"], read_only=False),
-    tool("read_pattern", "Open a screenshot by ID. Returns the reference metadata and an actual JPEG preview. Pass workflowId to register the reference for a design project.", {
-        "id": REFERENCE_ID, "workflowId": WORKFLOW_ID,
+    tool("read_pattern", "Open an actual image. A full landing page has three section IDs: hero, features and conversion. Open the full page first and then each detail with sectionId before approving a direction.", {
+        "id": REFERENCE_ID, "workflowId": WORKFLOW_ID, "sectionId": LANDING_SECTION,
     }, ["id"], read_only=False),
     tool("open_reference_flow", "Open a curated sequence of related Grok Bot screens as ordered images. Counts opened frames as research evidence for the workflow.", {
         "workflowId": WORKFLOW_ID,
@@ -199,10 +214,11 @@ TOOLS = [
     }, ["workflowId", "auditConfig"], read_only=False),
     tool("open_design_render", "Load real PNG render files from the configured project. Use the images to critique the implemented UI and reopen after making a correction.", {
         "workflowId": WORKFLOW_ID, "screenshots": array_of(TEXT, 3, 1),
-        "comparisonPairs": array_of(record({"id":REFERENCE_ID,"screenshot":TEXT}), 6, 1),
+        "comparisonPairs": array_of(COMPARISON_PAIR, 6, 1),
     }, ["workflowId", "screenshots"], read_only=False),
     tool("record_design_review", "Finish a Cosmos workflow by recording an inspected render, one concrete visual correction and fresh verification. Pending or failed checks keep the workflow in review.", {
         "workflowId": WORKFLOW_ID, "renderEvidence": TEXT, "visualCorrection": TEXT, "browserReport": TEXT,
+        "saveProjectStyle": {"type": "boolean"},
         "visualResults": array_of(VISUAL_RESULT, 12, 1),
         "skillEvidence": array_of(record({"skill":{"type":"string","enum":sorted(PLAYBOOKS)},"decision":TEXT,"path":TEXT,"excerpt":TEXT}), 12, 1),
         "checks": array_of(record({
@@ -241,18 +257,20 @@ COMPOSITIONS = {
 
 
 def search_patterns(query, platform=None, kind=None, workflowId=None, allowCrossPlatform=False,
-                    app=None, category=None, screenType=None, state=None, component=None):
+                    app=None, category=None, screenType=None, state=None, component=None,
+                    fullPageOnly=False, offset=0, limit=5):
     current = session(workflowId, "research") if workflowId else None
     target = platform or (current.reference_platform if current else None)
     if current and target != current.platform and not (allowCrossPlatform or target == current.reference_platform):
         raise ValueError("Use allowCrossPlatform to explicitly study interactions from another platform.")
-    matches, expanded = find(query, target, kind, app, category, screenType, state, component)
+    matches, expanded, next_offset = find(query, target, kind, app, category, screenType, state, component,
+                                          fullPageOnly, offset, limit)
     matched = {entry["id"] for entry in matches}
     if current:
         current.search_count += 1
         current.offered.update(matched)
     return {
-        "matches": matches, "count": len(matches), "workflowId": workflowId,
+        "matches": matches, "count": len(matches), "workflowId": workflowId, "nextOffset": next_offset,
         "referencePlatform": target, "expandedToRelatedInteractions": expanded,
         "status": "found" if matches else "empty",
         "flows": [{"id": key, "title": flow["title"], "frames": len(flow["ids"]), "ids": flow["ids"]}
@@ -321,7 +339,7 @@ def skill_evidence(current, evidence):
 def plan_design(platform, goal, audience, priority, constraints=None, stack=None,
                 referencePlatform=None, app=None, category=None, screenType=None,
                 allowCrossPlatform=False, designMode="inspiration", reproductionAuthorized=False,
-                brandLogos=None, logoExclusion=None, briefReferences=None):
+                brandLogos=None, logoExclusion=None, briefReferences=None, taskMode="create", reuseProjectStyle=False):
     brief = f"{goal} {constraints or ''}"
     words = set(normalize(brief).split())
     app = app or infer_app(brief)
@@ -334,10 +352,22 @@ def plan_design(platform, goal, audience, priority, constraints=None, stack=None
     if designMode == "faithful" and not reproductionAuthorized:
         raise ValueError("Faithful reproduction requires the user's ownership or authorization.")
     terms = tokens(brief.strip())
-    category = category or ("Agent IA" if {"ai","agent"} <= terms or app == "Grok Bot" else None)
+    landing = {"landing", "page"} <= (terms | tokens(screenType or ""))
+    category = category or ("Agent IA" if not landing and ({"ai","agent"} <= terms or app == "Grok Bot") else None)
     screenType = screenType or ("Landing-page" if {"landing","page"} <= terms else
                                 "Chat" if {"chat","input"} & terms or category == "Agent IA" else None)
-    stack = stack or ("heroui" if platform == "web" else "generic")
+    project = project_ui() if platform == "web" else {"status": "native"}
+    if stack is None:
+        stack = "heroui" if platform == "web" and (
+            project["status"] == "unavailable" or project.get("react") or project.get("herouiDeclared")
+        ) else "generic"
+        if platform == "web":
+            try:
+                project_file("components.json")
+            except (ValueError, OSError):
+                pass
+            else:
+                stack = "shadcn"
     if brandLogos and logoExclusion:
         raise ValueError("Declare brandLogos or logoExclusion, not both.")
     slugs = tuple(slug.strip().lower() for slug in brandLogos or [])
@@ -359,7 +389,7 @@ def plan_design(platform, goal, audience, priority, constraints=None, stack=None
     if platform == "ios":
         composition = "Use a native navigation hierarchy and keep the active task in the main content."
         typography = "Use semantic SwiftUI font styles and check large Dynamic Type sizes."
-    workflow = get_design_workflow("design", platform, stack)
+    workflow = get_design_workflow("motion" if taskMode == "motion" else "audit" if taskMode == "audit" else "design", platform, stack)
     workflow_id = uuid4().hex
     if len(SESSIONS) >= MAX_SESSIONS:
         SESSIONS.pop(next(iter(SESSIONS)))
@@ -371,9 +401,26 @@ def plan_design(platform, goal, audience, priority, constraints=None, stack=None
     )
     initial = search_patterns(goal, target, workflowId=workflow_id, allowCrossPlatform=target != platform,
                               app=app, category=category, screenType=screenType)
+    if taskMode == "create" and platform == target == "web" and not attachments:
+        current.landing_candidates = {row["id"] for row in initial["matches"] if row.get("fullPage") and row["previewAvailable"]}
+    current.contract = {
+        "schemaVersion": 1, "workflowId": workflow_id, "mode": taskMode,
+        "target": {"platform": platform, "stack": stack, "projectUI": project},
+        "constraints": {"userSupplied": constraints, "referenceMode": designMode},
+        "goal": goal, "audience": audience, "priority": priority,
+        "acceptance": requirements[platform],
+    }
+    if reuseProjectStyle:
+        current.contract["projectStyle"] = load_style()
     current.offered.update(attachments)
     return {
         "workflowId": workflow_id,
+        "designContract": current.contract,
+        "landingResearch": {
+            "referenceIds": sorted(current.landing_candidates),
+            "requiredSections": LANDING_SECTION["enum"],
+            "instruction": "Open one relevant full page and its three section crops. Map each to a concrete product message, example or conversion goal in the new design. Use original branding, copy and assets.",
+        } if current.landing_candidates else None,
         "stage": "research", "stack":stack, "briefReferences":list(attachments.values()),
         "brandLogos":slugs, "logoExclusion":logoExclusion,
         "nextLogoAction":"Call read_brand_logo for each declared slug." if slugs else
@@ -406,14 +453,22 @@ def reference_entry(current, id):
     return PATTERNS.get(id)
 
 
-def preview(id, current=None):
+def landing_section(entry, section_id):
+    section = next((item for item in entry.get("sections", []) if item["id"] == section_id), None)
+    if section is None:
+        raise ValueError(f"Unknown full-page section {section_id} for {entry['id']}.")
+    return section
+
+
+def preview(id, current=None, section_id=None):
     attachment = current.brief_references.get(id) if current else None
     if attachment:
         metadata, payload = inspect_render([attachment["path"]])[0]
         if metadata["sha256"] != attachment["sha256"]:
             raise ValueError("The attached reference changed after the brief was registered.")
         return payload
-    path = REFERENCES / PATTERNS[id]["preview"]
+    entry = PATTERNS[id]
+    path = REFERENCES / (landing_section(entry, section_id) if section_id else entry)["preview"]
     try:
         data = path.read_bytes()
         if not data.startswith(b"\xff\xd8") or not data.endswith(b"\xff\xd9"):
@@ -423,12 +478,21 @@ def preview(id, current=None):
         raise ValueError(f"Cannot open reference image {id}.") from error
 
 
-def read_pattern(id, workflowId=None):
+def read_pattern(id, workflowId=None, sectionId=None):
     current = session(workflowId, "research") if workflowId else None
     if not reference_entry(current, id):
         raise ValueError("Unknown reference ID. Search the library or register the attachment in the plan.")
     if current and id not in current.offered:
         raise ValueError("Open a result offered to this workflow.")
+    if sectionId:
+        section = landing_section(reference_entry(current, id), sectionId)
+        if current and id not in current.opened:
+            raise ValueError("Open the full landing page before asking for section details.")
+        data = preview(id, current, sectionId)
+        if current:
+            current.opened_sections.add((id, sectionId))
+        return VisualReference({"id": id, "workflowId": workflowId, "section": section,
+                                "status": "opened"}, [("image/jpeg", data)])
     return open_frames([id], workflowId, current)
 
 
@@ -486,11 +550,26 @@ def choose_design_direction(workflowId, direction, referenceDecisions, productQu
             raise ValueError("Record each observed region once per reference.")
         if current.design_mode == "faithful" and any(not item.get("measurements") for item in referenceDecisions):
             raise ValueError("Faithful reproduction requires measurements of proportions, spacing, radii and visible states.")
-    elif ids or not noReferenceReason or current.offered - current.failed.keys():
+    elif not (current.contract["mode"] == "edit" and not current.brief_references and not ids) and (
+        ids or not noReferenceReason or current.offered - current.failed.keys()
+    ):
         raise ValueError("Open an offered image first, or attempt every offered image and report the verified limitation.")
     for id in current.brief_references:
         if id not in ids and id not in current.failed:
             raise ValueError(f"Use at least one concrete decision from the brief reference {id}.")
+    landing_decisions = {}
+    for item in referenceDecisions:
+        id, section_id = item["id"], item.get("sectionId")
+        if section_id:
+            landing_section(reference_entry(current, id), section_id)
+            if (id, section_id) not in current.opened_sections or not item.get("productFeature"):
+                raise ValueError("Open the landing section and name the product feature or conversion goal it demonstrates.")
+            landing_decisions.setdefault(id, set()).add(section_id)
+    if current.landing_candidates - current.failed.keys() and not any(
+        id in current.offered and set(LANDING_SECTION["enum"]) <= sections
+        for id, sections in landing_decisions.items()
+    ):
+        raise ValueError("Use one opened full landing page for hero, features and conversion. Open each crop and supply sectionId and productFeature for each.")
     if current.stack == "heroui" and not (current.brand_slugs or current.logo_exclusion):
         raise ValueError("Declare brandLogos or explain logoExclusion in plan_design.")
     chat_roles, skill_plan = {}, {}
@@ -524,9 +603,12 @@ def choose_design_direction(workflowId, direction, referenceDecisions, productQu
     current.skill_visuals = skill_visuals
     current.copy_sample = copySample
     current.references = list(dict.fromkeys(ids))
+    current.contract.update(direction=direction, primaryAction=primaryAction, composition=referenceDecisions,
+                            visualSignature=visualSignature)
     current.stage = "implementation"
     return {
         "workflowId": workflowId, "stage": current.stage, "direction": direction,
+        "designContract": current.contract,
         "visualSignature": visualSignature, "primaryAction": primaryAction, "copySample": copySample,
         "tokenGenerator": current.tokens["generator"], "skillPlan":current.skill_plan, "auditAgentChat":chat_roles,
         "references": current.references, "referenceDecisions": referenceDecisions, "noReferenceReason": noReferenceReason,
@@ -539,9 +621,7 @@ def get_design_assets(workflowId):
     current = session(workflowId, "implementation")
     component = component_assets() if current.stack == "shadcn" else None
     if current.stack == "heroui":
-        component = {"library":"HeroUI", "version":HERO_VERSION,
-                     "install":f"npm install -E @heroui/react@{HERO_VERSION} @heroui/styles@{HERO_VERSION} @babel/parser",
-                     "required":"Use HeroUI for interactive controls and reusable UI; import Tailwind CSS first."}
+        component = hero_assets(current.contract["target"]["projectUI"])
     current.assets_delivered = True
     return {"workflowId": workflowId, "tokens": current.tokens, "component": component, "brandLogos":current.brand_slugs,
             "apply": "Use the generated tokens and approved component stack. Build the approved screen, then submit its source files and package metadata for verification."}
@@ -666,17 +746,23 @@ def open_design_render(workflowId, screenshots, comparisonPairs=None):
         if id not in current.references or path not in by_path:
             raise ValueError("Pair an approved reference with a screenshot from this call.")
         meta, render = by_path[path]
-        width, height = map(int, reference_entry(current, id)["size"].split("x"))
+        entry = reference_entry(current, id)
+        section_id = pair.get("sectionId")
+        reference_metadata = landing_section(entry, section_id) if section_id else entry
+        width, height = map(int, reference_metadata["size"].split("x"))
         ratio = (meta["width"] / meta["height"]) / (width / height)
-        if not 0.67 <= ratio <= 1.5:
+        comparable = 0.67 <= ratio <= 1.5
+        if not comparable and (not entry.get("fullPage") or current.design_mode == "faithful"):
             raise ValueError("Capture a comparable viewport or crop the same region. The aspect ratios differ too much.")
-        reference = preview(id, current)
+        reference = preview(id, current, section_id)
         index = len(images) + len(paired_images) + 1
         paired_images.extend([(reference_entry(current, id).get("mimeType", "image/jpeg"), reference), ("image/png", render)])
         comparisons.append({**pair, "imageBlocks": [index, index + 1], "referenceSize": [width,height],
                             "renderSize":[meta["width"],meta["height"]], "referenceSha256":hashlib.sha256(reference).hexdigest(),
+                            "comparableAspectRatio": comparable,
                             "renderSha256":meta["sha256"],
-                            "decisionIndices":[i for i, item in enumerate(current.decisions, 1) if item["id"] == id]})
+                            "decisionIndices":[i for i, item in enumerate(current.decisions, 1)
+                                               if item["id"] == id and (not section_id or item.get("sectionId") == section_id)]})
     current.reviewed_images = captures
     current.comparisons = comparisons
     return VisualReference({"workflowId":workflowId, "captures":captures, "comparisons":comparisons,
@@ -686,7 +772,7 @@ def open_design_render(workflowId, screenshots, comparisonPairs=None):
 
 
 def record_design_review(workflowId, renderEvidence, visualCorrection, checks, browserReport=None, skillEvidence=None,
-                         visualResults=None):
+                         visualResults=None, saveProjectStyle=False):
     current = session(workflowId, "review")
     required = set(REVIEW_CHECKS[current.platform])
     results = {item["check"]: item for item in checks}
@@ -750,17 +836,22 @@ def record_design_review(workflowId, renderEvidence, visualCorrection, checks, b
         if not visualResults:
             pending.append("agent-chat-audit")
     pending = sorted(set(pending))
+    saved_style = None
     if not pending:
-        if any(hashlib.sha256(preview(pair["id"], current)).hexdigest() != pair["referenceSha256"] for pair in current.comparisons):
+        if any(hashlib.sha256(preview(pair["id"], current, pair.get("sectionId"))).hexdigest() != pair["referenceSha256"]
+               for pair in current.comparisons):
             raise ValueError("Reference image changed. Reopen the comparison.")
         verified = current.implementation
         if verify_design_source(current, list(verified["artifacts"]), verified["entry"]) != verified:
             raise ValueError("Source files changed. Record implementation again and open fresh render captures.")
         if [meta for meta, _ in inspect_render([entry["path"] for entry in screenshots])] != screenshots:
             raise ValueError("Screenshot files changed. Reopen them for visual review.")
+        if saveProjectStyle:
+            saved_style = save_style(current.contract, current.tokens)
         current.stage = "complete"
     return {
         "workflowId": workflowId, "stage": current.stage, "references": current.references,
+        "savedProjectStyle": saved_style,
         "pendingChecks": pending, "renderEvidence": renderEvidence, "visualCorrection": visualCorrection,
         "checks": checks, "openedScreenshots": screenshots, "sourceVerification": current.implementation,
         "referenceLimit": current.reference_limit,
@@ -811,6 +902,10 @@ def get_design_workflow(task, platform, stack="generic"):
         "execute": EXECUTION,
         "skills": lead,
         "completionChecks": list(completion.values()),
+        **({"motionExample": {"path": "src/cosmos-stagger.mjs",
+                              "content": Path(__file__).with_name("cosmos-stagger.mjs").read_text(),
+                              "apply": "Use animateSequence with ordered elements, per-item frames and an explicit staggerMs. Test the computed delays, playback rate and reduced-motion final state."}}
+           if task == "motion" and platform == "web" else {}),
         "evidence": "Open the actual page and inspect mobile, tablet and desktop. Exercise the primary path using keyboard and pointer, record console and overflow checks, and retest after corrections." if platform == "web"
                     else "Compile and verify VoiceOver, Dynamic Type and Reduce Motion on an Apple target when available.",
     }
@@ -906,8 +1001,8 @@ def dispatch(message):
         requested = params.get("protocolVersion")
         version = requested if isinstance(requested, str) and requested in PROTOCOLS else "2025-03-26"
         result = {"protocolVersion": version, "capabilities": {"tools": {}},
-                  "serverInfo": {"name": "cosmos-local", "version": "2.4.1"},
-                  "instructions": "For UI work, start plan_design. Search and open real references, approve a direction, get design assets, build and submit project files, open fresh rendered screenshots, then record the review. Treat bundled skill stages as implementation requirements. Follow the web or native platform selected by the user."}
+                  "serverInfo": {"name": "cosmos-local", "version": "2.5.0"},
+                  "instructions": "For substantial UI work start plan_design. For a landing page with landingResearch open a complete page and each required section, then map them to actual features and conversion goals. For a small edit preserve the rest. Skip Cosmos for unrelated questions. Build, open real captures and record verified evidence. Preserve the selected web or native platform."}
     elif method == "ping":
         result = {}
     elif method == "tools/list":

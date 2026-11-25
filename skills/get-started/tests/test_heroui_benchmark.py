@@ -46,7 +46,7 @@ def evidence(skills):
 
 def run():
     identity = rpc("initialize", {"protocolVersion":"2025-11-25"})["serverInfo"]
-    assert identity["version"] == "2.4.1", identity
+    assert identity["version"] == json.loads((root.parents[1] / "plugin.json").read_text())["version"], identity
     slugs = ["figma","notion","vercel"]
     assert call("search_brand_logos",query="Figma")["matches"][0]["slug"] == "figma"
     project_plan = {

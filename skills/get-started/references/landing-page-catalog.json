@@ -1,0 +1,1045 @@
+[
+  {
+    "id": "landing-aside",
+    "app": "Aside",
+    "title": "Aside — landing page complète",
+    "collection": "Landing pages éditoriales",
+    "platform": "web",
+    "category": "Landing-page",
+    "screenType": "Landing-page",
+    "kind": "screenshot",
+    "productCategory": "Navigateur et assistant IA",
+    "structure": "Promesse de navigateur agentique, bouton de téléchargement et grande capture de produit sur fond bleu. Intégrations, trois démonstrations, comparaison et gestion des mots de passe montrent différents usages. Panneau bleu clair reprenant la promesse et l’action de téléchargement.",
+    "adapt": "Transposer le rythme et les modes de démonstration au produit du brief avec rédaction et visuels originaux.",
+    "fullPage": true,
+    "preview": "landing-pages/aside.jpg",
+    "size": "404x2048",
+    "tags": [
+      "ai",
+      "browser",
+      "assistant",
+      "integration",
+      "productivity",
+      "password",
+      "blue",
+      "demonstration"
+    ],
+    "sections": [
+      {
+        "id": "hero",
+        "observed": "Promesse de navigateur agentique, bouton de téléchargement et grande capture de produit sur fond bleu.",
+        "boundsPx": [
+          0,
+          0,
+          404,
+          300
+        ],
+        "size": "404x300",
+        "preview": "landing-pages/aside-hero.jpg"
+      },
+      {
+        "id": "features",
+        "observed": "Intégrations, trois démonstrations, comparaison et gestion des mots de passe montrent différents usages.",
+        "boundsPx": [
+          0,
+          410,
+          404,
+          1350
+        ],
+        "size": "404x940",
+        "preview": "landing-pages/aside-features.jpg"
+      },
+      {
+        "id": "conversion",
+        "observed": "Panneau bleu clair reprenant la promesse et l’action de téléchargement.",
+        "boundsPx": [
+          0,
+          1750,
+          404,
+          1900
+        ],
+        "size": "404x150",
+        "preview": "landing-pages/aside-conversion.jpg"
+      }
+    ],
+    "sourceFilename": "Aside landing page.png",
+    "sourceSha256": "0ddb195b69d7677c28dc4a1e2184c1afcf707dc75e9a034be625a458bd442aa6",
+    "previewSha256": "49e2d6bb2821728055cfc888c2c555597ce8d1a47425c0b511fd3a3884cef95e",
+    "provenance": "Capture fournie par l’utilisateur, issue de la sélection Mobbin.",
+    "rights": "private-reference-only; redistribution not established"
+  },
+  {
+    "id": "landing-berd",
+    "app": "Berd",
+    "title": "Berd — landing page complète",
+    "collection": "Landing pages éditoriales",
+    "platform": "web",
+    "category": "Landing-page",
+    "screenType": "Landing-page",
+    "kind": "screenshot",
+    "productCategory": "Studio créatif et agents",
+    "structure": "Fenêtre du produit au premier plan, entourée de personnages et matériaux. Quatre bénéfices, galerie de créations et fiches d’agents organisent les usages. Clôture cinématique plein cadre avec action de téléchargement en haut.",
+    "adapt": "Transposer le rythme et les modes de démonstration au produit du brief avec rédaction et visuels originaux.",
+    "fullPage": true,
+    "preview": "landing-pages/berd.jpg",
+    "size": "576x2048",
+    "tags": [
+      "creative",
+      "studio",
+      "canvas",
+      "agents",
+      "gallery",
+      "playful",
+      "collage",
+      "illustration"
+    ],
+    "sections": [
+      {
+        "id": "hero",
+        "observed": "Fenêtre du produit au premier plan, entourée de personnages et matériaux.",
+        "boundsPx": [
+          0,
+          0,
+          576,
+          395
+        ],
+        "size": "576x395",
+        "preview": "landing-pages/berd-hero.jpg"
+      },
+      {
+        "id": "features",
+        "observed": "Quatre bénéfices, galerie de créations et fiches d’agents organisent les usages.",
+        "boundsPx": [
+          0,
+          490,
+          576,
+          1515
+        ],
+        "size": "576x1025",
+        "preview": "landing-pages/berd-features.jpg"
+      },
+      {
+        "id": "conversion",
+        "observed": "Clôture cinématique plein cadre avec action de téléchargement en haut.",
+        "boundsPx": [
+          0,
+          1650,
+          576,
+          2000
+        ],
+        "size": "576x350",
+        "preview": "landing-pages/berd-conversion.jpg"
+      }
+    ],
+    "sourceFilename": "Berd landing page.png",
+    "sourceSha256": "b0797030d21977e0491fd924bf8dfe18f42ad416f0f6e40b3858595c210598bb",
+    "previewSha256": "40703936ea8e500f56eec388dee34ec13feca26bb459a28ebcccd6c74f3ca70b",
+    "provenance": "Capture fournie par l’utilisateur, issue de la sélection Mobbin.",
+    "rights": "private-reference-only; redistribution not established"
+  },
+  {
+    "id": "landing-cosmos",
+    "app": "Cosmos",
+    "title": "Cosmos — landing page complète",
+    "collection": "Landing pages éditoriales",
+    "platform": "web",
+    "category": "Landing-page",
+    "screenType": "Landing-page",
+    "kind": "screenshot",
+    "productCategory": "Recherche visuelle",
+    "structure": "Promesse et CTA centrés, éléments flottants puis visuel éditorial vidéo. Recherche illustrée, trois modes de découverte et explication de la provenance. Retour au motif du hero autour d’un bouton d’inscription très lisible.",
+    "adapt": "Transposer le rythme et les modes de démonstration au produit du brief avec rédaction et visuels originaux.",
+    "fullPage": true,
+    "preview": "landing-pages/cosmos.jpg",
+    "size": "522x2048",
+    "tags": [
+      "design",
+      "search",
+      "visual",
+      "discovery",
+      "collection",
+      "editorial",
+      "white",
+      "creative"
+    ],
+    "sections": [
+      {
+        "id": "hero",
+        "observed": "Promesse et CTA centrés, éléments flottants puis visuel éditorial vidéo.",
+        "boundsPx": [
+          0,
+          0,
+          522,
+          590
+        ],
+        "size": "522x590",
+        "preview": "landing-pages/cosmos-hero.jpg"
+      },
+      {
+        "id": "features",
+        "observed": "Recherche illustrée, trois modes de découverte et explication de la provenance.",
+        "boundsPx": [
+          0,
+          610,
+          522,
+          1455
+        ],
+        "size": "522x845",
+        "preview": "landing-pages/cosmos-features.jpg"
+      },
+      {
+        "id": "conversion",
+        "observed": "Retour au motif du hero autour d’un bouton d’inscription très lisible.",
+        "boundsPx": [
+          0,
+          1730,
+          522,
+          1950
+        ],
+        "size": "522x220",
+        "preview": "landing-pages/cosmos-conversion.jpg"
+      }
+    ],
+    "sourceFilename": "Cosmos landing page.png",
+    "sourceSha256": "16ec36ccf1ed63607e143abca6829202d8a07ca042d70c7f30dc7772b4f48189",
+    "previewSha256": "a2fe35d4371efdd3d4056e7fb7a66f70d034bf40da2487af101e1873036cabaa",
+    "provenance": "Capture fournie par l’utilisateur, issue de la sélection Mobbin.",
+    "rights": "private-reference-only; redistribution not established"
+  },
+  {
+    "id": "landing-cursor",
+    "app": "Cursor",
+    "title": "Cursor — landing page complète",
+    "collection": "Landing pages éditoriales",
+    "platform": "web",
+    "category": "Landing-page",
+    "screenType": "Landing-page",
+    "kind": "screenshot",
+    "productCategory": "Éditeur de code IA",
+    "structure": "Promesse courte et téléchargement puis produit agrandi dans un cadre. Le texte et les captures alternent de côté pour présenter agents, complétion et collaboration. Bloc de clôture très aéré avec rappel du téléchargement.",
+    "adapt": "Transposer le rythme et les modes de démonstration au produit du brief avec rédaction et visuels originaux.",
+    "fullPage": true,
+    "preview": "landing-pages/cursor.jpg",
+    "size": "372x2048",
+    "tags": [
+      "developer",
+      "code",
+      "editor",
+      "ai",
+      "agent",
+      "developer",
+      "tools",
+      "split",
+      "demo",
+      "cream"
+    ],
+    "sections": [
+      {
+        "id": "hero",
+        "observed": "Promesse courte et téléchargement puis produit agrandi dans un cadre.",
+        "boundsPx": [
+          0,
+          0,
+          372,
+          270
+        ],
+        "size": "372x270",
+        "preview": "landing-pages/cursor-hero.jpg"
+      },
+      {
+        "id": "features",
+        "observed": "Le texte et les captures alternent de côté pour présenter agents, complétion et collaboration.",
+        "boundsPx": [
+          0,
+          325,
+          372,
+          900
+        ],
+        "size": "372x575",
+        "preview": "landing-pages/cursor-features.jpg"
+      },
+      {
+        "id": "conversion",
+        "observed": "Bloc de clôture très aéré avec rappel du téléchargement.",
+        "boundsPx": [
+          0,
+          1760,
+          372,
+          1910
+        ],
+        "size": "372x150",
+        "preview": "landing-pages/cursor-conversion.jpg"
+      }
+    ],
+    "sourceFilename": "Cursor landing page.png",
+    "sourceSha256": "c134aa4cbdaf743198713b8094f204ca025bc23eb5780354711021c94715e70f",
+    "previewSha256": "e6c71bd4ed0b3c83ac9cbeea2ca4ecf84ea25d92fbbda4f6261192396b8ce176",
+    "provenance": "Capture fournie par l’utilisateur, issue de la sélection Mobbin.",
+    "rights": "private-reference-only; redistribution not established"
+  },
+  {
+    "id": "landing-fixa",
+    "app": "Fixa",
+    "title": "Fixa — landing page complète",
+    "collection": "Landing pages éditoriales",
+    "platform": "web",
+    "category": "Landing-page",
+    "screenType": "Landing-page",
+    "kind": "screenshot",
+    "productCategory": "Planification et bien-être",
+    "structure": "Photo plein cadre, promesse centrée et inscription en bas du cadre. Photo d’usage, trois différences puis aperçus du produit et écrans mobiles. Image et message de clôture avec CTA en contraste, avant la FAQ.",
+    "adapt": "Transposer le rythme et les modes de démonstration au produit du brief avec rédaction et visuels originaux.",
+    "fullPage": true,
+    "preview": "landing-pages/fixa.jpg",
+    "size": "408x2048",
+    "tags": [
+      "planning",
+      "adhd",
+      "wellness",
+      "human",
+      "photography",
+      "mobile",
+      "productivity"
+    ],
+    "sections": [
+      {
+        "id": "hero",
+        "observed": "Photo plein cadre, promesse centrée et inscription en bas du cadre.",
+        "boundsPx": [
+          0,
+          0,
+          408,
+          260
+        ],
+        "size": "408x260",
+        "preview": "landing-pages/fixa-hero.jpg"
+      },
+      {
+        "id": "features",
+        "observed": "Photo d’usage, trois différences puis aperçus du produit et écrans mobiles.",
+        "boundsPx": [
+          0,
+          270,
+          408,
+          1355
+        ],
+        "size": "408x1085",
+        "preview": "landing-pages/fixa-features.jpg"
+      },
+      {
+        "id": "conversion",
+        "observed": "Image et message de clôture avec CTA en contraste, avant la FAQ.",
+        "boundsPx": [
+          0,
+          1350,
+          408,
+          1590
+        ],
+        "size": "408x240",
+        "preview": "landing-pages/fixa-conversion.jpg"
+      }
+    ],
+    "sourceFilename": "Fixa landing page.png",
+    "sourceSha256": "57bdcb1ee41c4fd821e2f2241604102e3b8c1b6729a4719e9b670e65ba0ff980",
+    "previewSha256": "d19b70214181112c187e236cc1da2091821002b70d6485ce05c7f3aa596d4ece",
+    "provenance": "Capture fournie par l’utilisateur, issue de la sélection Mobbin.",
+    "rights": "private-reference-only; redistribution not established"
+  },
+  {
+    "id": "landing-jack-jill",
+    "app": "Jack & Jill",
+    "title": "Jack & Jill — landing page complète",
+    "collection": "Landing pages éditoriales",
+    "platform": "web",
+    "category": "Landing-page",
+    "screenType": "Landing-page",
+    "kind": "screenshot",
+    "productCategory": "Recrutement à deux publics",
+    "structure": "Titre éditorial puis deux chemins symétriques, chacun avec CTA et aperçu. Sélecteur de public et trois usages successifs illustrés par des artefacts produit. Bandeau de conclusion compact avec CTA, au-dessus du pied de page.",
+    "adapt": "Transposer le rythme et les modes de démonstration au produit du brief avec rédaction et visuels originaux.",
+    "fullPage": true,
+    "preview": "landing-pages/jack-jill.jpg",
+    "size": "484x2048",
+    "tags": [
+      "recruiting",
+      "hiring",
+      "jobs",
+      "marketplace",
+      "two",
+      "audiences",
+      "serif",
+      "social",
+      "proof"
+    ],
+    "sections": [
+      {
+        "id": "hero",
+        "observed": "Titre éditorial puis deux chemins symétriques, chacun avec CTA et aperçu.",
+        "boundsPx": [
+          0,
+          0,
+          484,
+          375
+        ],
+        "size": "484x375",
+        "preview": "landing-pages/jack-jill-hero.jpg"
+      },
+      {
+        "id": "features",
+        "observed": "Sélecteur de public et trois usages successifs illustrés par des artefacts produit.",
+        "boundsPx": [
+          0,
+          405,
+          484,
+          1045
+        ],
+        "size": "484x640",
+        "preview": "landing-pages/jack-jill-features.jpg"
+      },
+      {
+        "id": "conversion",
+        "observed": "Bandeau de conclusion compact avec CTA, au-dessus du pied de page.",
+        "boundsPx": [
+          0,
+          1800,
+          484,
+          1890
+        ],
+        "size": "484x90",
+        "preview": "landing-pages/jack-jill-conversion.jpg"
+      }
+    ],
+    "sourceFilename": "Jack & Jill landing page.png",
+    "sourceSha256": "0ae253f82327cc1a2cd3241ea795517fe01095df92ea24358ffbbff9619c3ea3",
+    "previewSha256": "c27c440700ca43dab97f0d1086a4631da879a432b65816ee43a96d6b223aa96c",
+    "provenance": "Capture fournie par l’utilisateur, issue de la sélection Mobbin.",
+    "rights": "private-reference-only; redistribution not established"
+  },
+  {
+    "id": "landing-mintlify",
+    "app": "Mintlify",
+    "title": "Mintlify — landing page complète",
+    "collection": "Landing pages éditoriales",
+    "platform": "web",
+    "category": "Landing-page",
+    "screenType": "Landing-page",
+    "kind": "screenshot",
+    "productCategory": "Documentation et connaissance",
+    "structure": "Proposition de valeur à gauche et aperçu de documentation à droite. Grille asymétrique des fonctionnalités, chaque vignette soutenue par un aperçu spécifique. Promesse de clôture et deux voies d’action avant les liens du site.",
+    "adapt": "Transposer le rythme et les modes de démonstration au produit du brief avec rédaction et visuels originaux.",
+    "fullPage": true,
+    "preview": "landing-pages/mintlify.jpg",
+    "size": "362x2048",
+    "tags": [
+      "documentation",
+      "developer",
+      "tools",
+      "enterprise",
+      "bento",
+      "knowledge",
+      "agents",
+      "green"
+    ],
+    "sections": [
+      {
+        "id": "hero",
+        "observed": "Proposition de valeur à gauche et aperçu de documentation à droite.",
+        "boundsPx": [
+          0,
+          0,
+          362,
+          285
+        ],
+        "size": "362x285",
+        "preview": "landing-pages/mintlify-hero.jpg"
+      },
+      {
+        "id": "features",
+        "observed": "Grille asymétrique des fonctionnalités, chaque vignette soutenue par un aperçu spécifique.",
+        "boundsPx": [
+          0,
+          395,
+          362,
+          775
+        ],
+        "size": "362x380",
+        "preview": "landing-pages/mintlify-features.jpg"
+      },
+      {
+        "id": "conversion",
+        "observed": "Promesse de clôture et deux voies d’action avant les liens du site.",
+        "boundsPx": [
+          0,
+          1770,
+          362,
+          1870
+        ],
+        "size": "362x100",
+        "preview": "landing-pages/mintlify-conversion.jpg"
+      }
+    ],
+    "sourceFilename": "Mintlify landing page.png",
+    "sourceSha256": "82d51b1c0462866ae0053fcfa4d6cf0968912845acbe8a4c53ae28bb7d55c584",
+    "previewSha256": "7150c1d60b3793c741593d12ccaa320734346c6a7d0bc534a2d7832926812df4",
+    "provenance": "Capture fournie par l’utilisateur, issue de la sélection Mobbin.",
+    "rights": "private-reference-only; redistribution not established"
+  },
+  {
+    "id": "landing-mobbin",
+    "app": "Mobbin",
+    "title": "Mobbin — landing page complète",
+    "collection": "Landing pages éditoriales",
+    "platform": "web",
+    "category": "Landing-page",
+    "screenType": "Landing-page",
+    "kind": "screenshot",
+    "productCategory": "Bibliothèque de design",
+    "structure": "Titre centré, deux actions et aperçu large de la bibliothèque de recherche. Exemples d’une recherche, grille des types de ressources et encadré de connexion MCP. Promesse reformulée et deux actions sur une surface blanche avant le pied sombre.",
+    "adapt": "Transposer le rythme et les modes de démonstration au produit du brief avec rédaction et visuels originaux.",
+    "fullPage": true,
+    "preview": "landing-pages/mobbin.jpg",
+    "size": "367x2047",
+    "tags": [
+      "design",
+      "library",
+      "search",
+      "screenshots",
+      "flows",
+      "portfolio",
+      "marketplace",
+      "minimal",
+      "white",
+      "grid"
+    ],
+    "sections": [
+      {
+        "id": "hero",
+        "observed": "Titre centré, deux actions et aperçu large de la bibliothèque de recherche.",
+        "boundsPx": [
+          0,
+          0,
+          367,
+          415
+        ],
+        "size": "367x415",
+        "preview": "landing-pages/mobbin-hero.jpg"
+      },
+      {
+        "id": "features",
+        "observed": "Exemples d’une recherche, grille des types de ressources et encadré de connexion MCP.",
+        "boundsPx": [
+          0,
+          460,
+          367,
+          1109
+        ],
+        "size": "367x649",
+        "preview": "landing-pages/mobbin-features.jpg"
+      },
+      {
+        "id": "conversion",
+        "observed": "Promesse reformulée et deux actions sur une surface blanche avant le pied sombre.",
+        "boundsPx": [
+          0,
+          1649,
+          367,
+          1819
+        ],
+        "size": "367x170",
+        "preview": "landing-pages/mobbin-conversion.jpg"
+      }
+    ],
+    "sourceFilename": "Mobbin landing page.png",
+    "sourceSha256": "defdd69506134936c7fe2934d232ba6f0f0a9b84e46bb4ab3ac6bfe73039871e",
+    "previewSha256": "326cccde03b2bc8cd0dcc6bab2ec6fd1752ab0bfd9a62c0efb6a08c6cfae08c7",
+    "provenance": "Capture fournie par l’utilisateur, issue de la sélection Mobbin.",
+    "rights": "private-reference-only; redistribution not established"
+  },
+  {
+    "id": "landing-polar",
+    "app": "Polar",
+    "title": "Polar — landing page complète",
+    "collection": "Landing pages éditoriales",
+    "platform": "web",
+    "category": "Landing-page",
+    "screenType": "Landing-page",
+    "kind": "screenshot",
+    "productCategory": "Facturation développeur",
+    "structure": "Fond noir et aperçu de tableau de bord associé à une promesse et une action discrète. Séquences numérotées, séparateurs et panneaux produit répètent un rythme de démonstration. Composition de points puis CTA isolé, avant la navigation du pied de page.",
+    "adapt": "Transposer le rythme et les modes de démonstration au produit du brief avec rédaction et visuels originaux.",
+    "fullPage": true,
+    "preview": "landing-pages/polar.jpg",
+    "size": "219x2048",
+    "tags": [
+      "billing",
+      "pricing",
+      "payments",
+      "developer",
+      "dark",
+      "dashboard",
+      "api",
+      "mono",
+      "data"
+    ],
+    "sections": [
+      {
+        "id": "hero",
+        "observed": "Fond noir et aperçu de tableau de bord associé à une promesse et une action discrète.",
+        "boundsPx": [
+          0,
+          0,
+          219,
+          180
+        ],
+        "size": "219x180",
+        "preview": "landing-pages/polar-hero.jpg"
+      },
+      {
+        "id": "features",
+        "observed": "Séquences numérotées, séparateurs et panneaux produit répètent un rythme de démonstration.",
+        "boundsPx": [
+          0,
+          240,
+          219,
+          1125
+        ],
+        "size": "219x885",
+        "preview": "landing-pages/polar-features.jpg"
+      },
+      {
+        "id": "conversion",
+        "observed": "Composition de points puis CTA isolé, avant la navigation du pied de page.",
+        "boundsPx": [
+          0,
+          1670,
+          219,
+          1955
+        ],
+        "size": "219x285",
+        "preview": "landing-pages/polar-conversion.jpg"
+      }
+    ],
+    "sourceFilename": "Polar landing page.png",
+    "sourceSha256": "0f6df2deabc90f6ac46dae4a1a29aa19d7c3cbb0758c3f4c810b0c96a126a024",
+    "previewSha256": "18a4c32d99a7040aa925c8077f87d144133f748f71b232fd2c28fc9ee9b109b7",
+    "provenance": "Capture fournie par l’utilisateur, issue de la sélection Mobbin.",
+    "rights": "private-reference-only; redistribution not established"
+  },
+  {
+    "id": "landing-profound",
+    "app": "Profound",
+    "title": "Profound — landing page complète",
+    "collection": "Landing pages éditoriales",
+    "platform": "web",
+    "category": "Landing-page",
+    "screenType": "Landing-page",
+    "kind": "screenshot",
+    "productCategory": "Marketing de recherche IA",
+    "structure": "Promesse centrée et tableau de bord sombre comme premier élément de preuve. Démonstrations successives, cartes de signaux et graphiques pour donner du contexte au produit. Panneau de clôture noir avec rappel de la promesse et deux actions.",
+    "adapt": "Transposer le rythme et les modes de démonstration au produit du brief avec rédaction et visuels originaux.",
+    "fullPage": true,
+    "preview": "landing-pages/profound.jpg",
+    "size": "264x2047",
+    "tags": [
+      "marketing",
+      "analytics",
+      "ai",
+      "search",
+      "dashboard",
+      "enterprise",
+      "dark",
+      "case",
+      "study"
+    ],
+    "sections": [
+      {
+        "id": "hero",
+        "observed": "Promesse centrée et tableau de bord sombre comme premier élément de preuve.",
+        "boundsPx": [
+          0,
+          0,
+          264,
+          240
+        ],
+        "size": "264x240",
+        "preview": "landing-pages/profound-hero.jpg"
+      },
+      {
+        "id": "features",
+        "observed": "Démonstrations successives, cartes de signaux et graphiques pour donner du contexte au produit.",
+        "boundsPx": [
+          0,
+          480,
+          264,
+          1010
+        ],
+        "size": "264x530",
+        "preview": "landing-pages/profound-features.jpg"
+      },
+      {
+        "id": "conversion",
+        "observed": "Panneau de clôture noir avec rappel de la promesse et deux actions.",
+        "boundsPx": [
+          0,
+          1719,
+          264,
+          1864
+        ],
+        "size": "264x145",
+        "preview": "landing-pages/profound-conversion.jpg"
+      }
+    ],
+    "sourceFilename": "Profound landing page.png",
+    "sourceSha256": "85a1eadd5c70dce2c6629a8c7d225973755d8546239a3f26f91f73a29c080638",
+    "previewSha256": "29134fa56257eb103f9d83210e3cd42c994b0aecbf48c65dc0122e1740bad97b",
+    "provenance": "Capture fournie par l’utilisateur, issue de la sélection Mobbin.",
+    "rights": "private-reference-only; redistribution not established"
+  },
+  {
+    "id": "landing-runner",
+    "app": "Runner",
+    "title": "Runner — landing page complète",
+    "collection": "Landing pages éditoriales",
+    "platform": "web",
+    "category": "Landing-page",
+    "screenType": "Landing-page",
+    "kind": "screenshot",
+    "productCategory": "Assistant d’automatisation",
+    "structure": "Titre éditorial à gauche, action à droite, puis large vue du produit. Grille de cas d’usage suivie d’une comparaison qui donne du contexte à chaque bénéfice. Clôture sur fond sombre avec promesse, champ d’action et visuel éditorial.",
+    "adapt": "Transposer le rythme et les modes de démonstration au produit du brief avec rédaction et visuels originaux.",
+    "fullPage": true,
+    "preview": "landing-pages/runner.jpg",
+    "size": "268x2048",
+    "tags": [
+      "automation",
+      "ai",
+      "agent",
+      "integrations",
+      "pricing",
+      "workflows",
+      "editorial",
+      "productivity"
+    ],
+    "sections": [
+      {
+        "id": "hero",
+        "observed": "Titre éditorial à gauche, action à droite, puis large vue du produit.",
+        "boundsPx": [
+          0,
+          0,
+          268,
+          225
+        ],
+        "size": "268x225",
+        "preview": "landing-pages/runner-hero.jpg"
+      },
+      {
+        "id": "features",
+        "observed": "Grille de cas d’usage suivie d’une comparaison qui donne du contexte à chaque bénéfice.",
+        "boundsPx": [
+          0,
+          235,
+          268,
+          755
+        ],
+        "size": "268x520",
+        "preview": "landing-pages/runner-features.jpg"
+      },
+      {
+        "id": "conversion",
+        "observed": "Clôture sur fond sombre avec promesse, champ d’action et visuel éditorial.",
+        "boundsPx": [
+          0,
+          1735,
+          268,
+          1970
+        ],
+        "size": "268x235",
+        "preview": "landing-pages/runner-conversion.jpg"
+      }
+    ],
+    "sourceFilename": "Runner landing page.png",
+    "sourceSha256": "1df70a209b9b3e8d1394b10b09d742d263f7cd15b6f088d123b3754e118efb16",
+    "previewSha256": "94fcd1473056ecda766d066240ffb740824a42768b27230ac5d1b8e22ad02570",
+    "provenance": "Capture fournie par l’utilisateur, issue de la sélection Mobbin.",
+    "rights": "private-reference-only; redistribution not established"
+  },
+  {
+    "id": "landing-serus",
+    "app": "Serus",
+    "title": "Serus — landing page complète",
+    "collection": "Landing pages éditoriales",
+    "platform": "web",
+    "category": "Landing-page",
+    "screenType": "Landing-page",
+    "kind": "screenshot",
+    "productCategory": "Confidentialité personnelle",
+    "structure": "Promesse et actions à gauche, smartphone dans une photographie sombre à droite. Mosaïque d’appareils, recherche puis conversation illustrant le résultat. Panneau d’inscription avec actions contrastées et photographie d’objet.",
+    "adapt": "Transposer le rythme et les modes de démonstration au produit du brief avec rédaction et visuels originaux.",
+    "fullPage": true,
+    "preview": "landing-pages/serus.jpg",
+    "size": "347x2048",
+    "tags": [
+      "privacy",
+      "security",
+      "fintech",
+      "device",
+      "photography",
+      "editorial",
+      "search",
+      "pricing"
+    ],
+    "sections": [
+      {
+        "id": "hero",
+        "observed": "Promesse et actions à gauche, smartphone dans une photographie sombre à droite.",
+        "boundsPx": [
+          0,
+          0,
+          347,
+          210
+        ],
+        "size": "347x210",
+        "preview": "landing-pages/serus-hero.jpg"
+      },
+      {
+        "id": "features",
+        "observed": "Mosaïque d’appareils, recherche puis conversation illustrant le résultat.",
+        "boundsPx": [
+          0,
+          220,
+          347,
+          1005
+        ],
+        "size": "347x785",
+        "preview": "landing-pages/serus-features.jpg"
+      },
+      {
+        "id": "conversion",
+        "observed": "Panneau d’inscription avec actions contrastées et photographie d’objet.",
+        "boundsPx": [
+          0,
+          1725,
+          347,
+          1875
+        ],
+        "size": "347x150",
+        "preview": "landing-pages/serus-conversion.jpg"
+      }
+    ],
+    "sourceFilename": "Serus landing page.png",
+    "sourceSha256": "a80fb4920e30b2cfb9f5345a1bb2e366f810da009992f1b9c642b13ba4c9a694",
+    "previewSha256": "907026386b0ed4a4261390a22fe21f11296688587b1eae5ece3f502bb75fd1a4",
+    "provenance": "Capture fournie par l’utilisateur, issue de la sélection Mobbin.",
+    "rights": "private-reference-only; redistribution not established"
+  },
+  {
+    "id": "landing-spacexai",
+    "app": "SpaceXAI",
+    "title": "SpaceXAI — landing page complète",
+    "collection": "Landing pages éditoriales",
+    "platform": "web",
+    "category": "Landing-page",
+    "screenType": "Landing-page",
+    "kind": "screenshot",
+    "productCategory": "Plateforme IA multimodale",
+    "structure": "Titre centré et deux actions distinctes, produit et documentation. Mosaïque des modalités suivie de la démonstration API avec code et variantes de langage. Deux trajectoires de démarrage, autonomie ou assistance, avec listes et CTA propres.",
+    "adapt": "Transposer le rythme et les modes de démonstration au produit du brief avec rédaction et visuels originaux.",
+    "fullPage": true,
+    "preview": "landing-pages/spacexai.jpg",
+    "size": "770x2048",
+    "tags": [
+      "ai",
+      "api",
+      "multimodal",
+      "models",
+      "developer",
+      "code",
+      "bento",
+      "feature",
+      "demos"
+    ],
+    "sections": [
+      {
+        "id": "hero",
+        "observed": "Titre centré et deux actions distinctes, produit et documentation.",
+        "boundsPx": [
+          0,
+          0,
+          770,
+          260
+        ],
+        "size": "770x260",
+        "preview": "landing-pages/spacexai-hero.jpg"
+      },
+      {
+        "id": "features",
+        "observed": "Mosaïque des modalités suivie de la démonstration API avec code et variantes de langage.",
+        "boundsPx": [
+          0,
+          265,
+          770,
+          935
+        ],
+        "size": "770x670",
+        "preview": "landing-pages/spacexai-features.jpg"
+      },
+      {
+        "id": "conversion",
+        "observed": "Deux trajectoires de démarrage, autonomie ou assistance, avec listes et CTA propres.",
+        "boundsPx": [
+          0,
+          1415,
+          770,
+          1745
+        ],
+        "size": "770x330",
+        "preview": "landing-pages/spacexai-conversion.jpg"
+      }
+    ],
+    "sourceFilename": "SpaceXAI landing page.png",
+    "sourceSha256": "bca5a7d7b32e23bb4d8d62e90aa58748609933b36add3d8824e6b4b3e9fce0d9",
+    "previewSha256": "a5fee1dc8a12c22a08cbf39c7e40ef33ec635db7f73577eaa0bfe2033d341d25",
+    "provenance": "Capture fournie par l’utilisateur, issue de la sélection Mobbin.",
+    "rights": "private-reference-only; redistribution not established"
+  },
+  {
+    "id": "landing-vercel",
+    "app": "Vercel",
+    "title": "Vercel — landing page complète",
+    "collection": "Landing pages éditoriales",
+    "platform": "web",
+    "category": "Landing-page",
+    "screenType": "Landing-page",
+    "kind": "screenshot",
+    "productCategory": "Infrastructure et développeurs",
+    "structure": "Titre et CTA à gauche, symbole central coloré et preuves de marque en dessous. Trois cas client donnent à voir une fonctionnalité à la fois, en alternant texte et démonstration. Promesse centrale, bouton et commande de démarrage avant le pied de page.",
+    "adapt": "Transposer le rythme et les modes de démonstration au produit du brief avec rédaction et visuels originaux.",
+    "fullPage": true,
+    "preview": "landing-pages/vercel.jpg",
+    "size": "510x2048",
+    "tags": [
+      "infrastructure",
+      "developer",
+      "hosting",
+      "platform",
+      "agents",
+      "enterprise",
+      "case",
+      "study",
+      "agents"
+    ],
+    "sections": [
+      {
+        "id": "hero",
+        "observed": "Titre et CTA à gauche, symbole central coloré et preuves de marque en dessous.",
+        "boundsPx": [
+          0,
+          0,
+          510,
+          333
+        ],
+        "size": "510x333",
+        "preview": "landing-pages/vercel-hero.jpg"
+      },
+      {
+        "id": "features",
+        "observed": "Trois cas client donnent à voir une fonctionnalité à la fois, en alternant texte et démonstration.",
+        "boundsPx": [
+          0,
+          380,
+          510,
+          1210
+        ],
+        "size": "510x830",
+        "preview": "landing-pages/vercel-features.jpg"
+      },
+      {
+        "id": "conversion",
+        "observed": "Promesse centrale, bouton et commande de démarrage avant le pied de page.",
+        "boundsPx": [
+          0,
+          1530,
+          510,
+          1700
+        ],
+        "size": "510x170",
+        "preview": "landing-pages/vercel-conversion.jpg"
+      }
+    ],
+    "sourceFilename": "Vercel landing page.png",
+    "sourceSha256": "42682c0dc35c882acdbac48e1cc167b59100c984eb92d5819ac0ceecfffe406e",
+    "previewSha256": "ca6a1d548c4ca3610010e9975532f16d9798819c0f7831514cff3b5572738204",
+    "provenance": "Capture fournie par l’utilisateur, issue de la sélection Mobbin.",
+    "rights": "private-reference-only; redistribution not established"
+  },
+  {
+    "id": "landing-x-money",
+    "app": "X Money",
+    "title": "X Money — landing page complète",
+    "collection": "Landing pages éditoriales",
+    "platform": "web",
+    "category": "Landing-page",
+    "screenType": "Landing-page",
+    "kind": "screenshot",
+    "productCategory": "Banque et paiement",
+    "structure": "Titre centré autour de la carte, navigation latérale et action d’accès. Aperçu du solde, rendement, grille des usages et éléments de sécurité. FAQ à deux colonnes et action vers le centre d’aide, suivies de mentions légales.",
+    "adapt": "Transposer le rythme et les modes de démonstration au produit du brief avec rédaction et visuels originaux.",
+    "fullPage": true,
+    "preview": "landing-pages/x-money.jpg",
+    "size": "485x2047",
+    "tags": [
+      "fintech",
+      "money",
+      "banking",
+      "card",
+      "savings",
+      "payments",
+      "faq",
+      "minimal"
+    ],
+    "sections": [
+      {
+        "id": "hero",
+        "observed": "Titre centré autour de la carte, navigation latérale et action d’accès.",
+        "boundsPx": [
+          0,
+          0,
+          485,
+          230
+        ],
+        "size": "485x230",
+        "preview": "landing-pages/x-money-hero.jpg"
+      },
+      {
+        "id": "features",
+        "observed": "Aperçu du solde, rendement, grille des usages et éléments de sécurité.",
+        "boundsPx": [
+          0,
+          250,
+          485,
+          1419
+        ],
+        "size": "485x1169",
+        "preview": "landing-pages/x-money-features.jpg"
+      },
+      {
+        "id": "conversion",
+        "observed": "FAQ à deux colonnes et action vers le centre d’aide, suivies de mentions légales.",
+        "boundsPx": [
+          0,
+          1459,
+          485,
+          1639
+        ],
+        "size": "485x180",
+        "preview": "landing-pages/x-money-conversion.jpg"
+      }
+    ],
+    "sourceFilename": "X Money landing page.png",
+    "sourceSha256": "f91abf2a34def181e7a6648f5141338dc1dc01463ea7fba891c988d66de18bdf",
+    "previewSha256": "610cb1df1626d3304c33edc0a94de08fa982cd41f4d48ccdaecbc5a8d625e2f4",
+    "provenance": "Capture fournie par l’utilisateur, issue de la sélection Mobbin.",
+    "rights": "private-reference-only; redistribution not established"
+  }
+]

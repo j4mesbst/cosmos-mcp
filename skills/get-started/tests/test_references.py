@@ -55,7 +55,7 @@ with TemporaryDirectory() as temp:
             workflow = cross["workflowId"]
             empty = plan("xjzqvplmok")
             assert empty["initialResearch"]["status"] == "empty"
-            assert sum(cross["catalog"]["categoriesByPlatform"]["web"].values()) == 3656
+            assert sum(cross["catalog"]["categoriesByPlatform"]["web"].values()) == 3671
             assert cross["catalog"]["categoriesByPlatform"]["web"]["Autres"] == 52
             landing = call("search_patterns", query="page de destination", platform="web", app="apple-web", screenType="Landing-page")[0]
             assert landing["matches"] and all(row["category"] == "Landing-page" for row in landing["matches"])
